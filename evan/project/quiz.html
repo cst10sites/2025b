@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cars quiz</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="menu">
+    <a class="redirect" href="index.html">Home Page</a>
+    <a class="redirect" href="cars1.html">Cars 1</a>
+    <a class="redirect" href="cars3.html">Cars 3</a>
+    <a class="redirect" href="quiz.html">Quiz</a>
+  </div>
+	<h1>Quiz</h1>
+	<div id="evan">
+	<h3>Radio Buttons</h3>
+    <form>
+        <label>What is Mcqueen's best friends's name</label><br>
+        <input id="correct1" type="radio" value="CST10" name="ex2">
+        <label>Mater</label><br>
+        <input id="option2" type="radio" value="PRG11" name="ex2">
+        <label>Sally</label><br>
+        <input id="option3" type="radio" value="CIS12" name="ex2">
+        <label>Doc</label><br>
+        <input type="button" value="Submit" onclick="example2();">
+        <input type="reset"><br> 
+    </form>
+
+    <form>
+        <label>Where does the first race in Cars 2 take place</label><br>
+        <input id="option2" type="radio" value="CST10" name="ex2">
+        <label>Italy</label><br>
+        <input id="correct2" type="radio" value="PRG11" name="ex2">
+        <label>Japan</label><br>
+        <input id="option3" type="radio" value="CIS12" name="ex2">
+        <label>France</label><br>
+        <input type="button" value="Submit" onclick="example3();">
+        <input type="reset"><br> 
+    </form>
+
+   
+    <form>
+        <label>Where does mcqueen originally get arrested in cars 1</label><br>
+        <input id="correct3" type="radio" value="CST10" name="ex2">
+        <label>Radiator Springs</label><br>
+        <input id="option2" type="radio" value="PRG11" name="ex2">
+        <label>Los Angelos</label><br>
+        <input id="option3" type="radio" value="CIS12" name="ex2">
+        <label>Arizona</label><br>
+        <input type="button" value="Submit" onclick="example4();">
+        <input type="reset"><br> 
+    </form>
+
+<script>
+function example2() {
+	var correctAns = document.getElementById("correct1").checked;
+	// this answer will either be true or false
+
+	if (correctAns == true) {
+		alert("Correct!")
+	}
+	else {
+		alert("Try again");
+	}
+}
+
+function example3() {
+    var correctAns = document.getElementById("correct2").checked;
+    // this answer will either be true or false
+
+    if (correctAns == true) {
+        alert("Correct!")
+    }
+    else {
+        alert("Try again");
+    }
+}
+
+function example4() {
+    var correctAns = document.getElementById("correct3").checked;
+    // this answer will either be true or false
+
+    if (correctAns == true) {
+        alert("Correct!")
+    }
+    else {
+        alert("Try again");
+    }
+}
+
+
+
+
+
+</script>
+</div>
+
+
+</body>

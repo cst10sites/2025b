@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--index.html-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lesson 5</title>
+        <link rel="stylesheet" href="styles.css">
+        <style></style>
+    </head>
+    <body>
+        <!--content-->
+        <div id="content">
+            <h1>HTML/CSS Guide</h1>
+            <a class="btn" href="../a3/outside.html">Outside HTML</a>
+            <h2>Common HTML Tags Inside &lt;body&gt;</h2>
+            <table style="width: 100%;">
+                <tr>
+                    <!--table row-->
+                    <th style="width: 33%;">Tag</th>
+                    <th style="width: 33%;">Definition</th>
+                    <th style="width: 33%;">Examples</th>
+                </tr>
+                <tr>
+                    <td>&lt;img src="link" alt="pic"&gt;</td>
+                    <td>Image</td>
+                    <td>
+                        <img alt="Jonesy from Fortnite" style="width: 40%;" src="../a3/RecruitJonesy_Chapter_1.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;p&gt;&lt;/p&gt;</td>
+                    <td>A paragraph.</td>
+                    <td>This is a paragraph.</td>
+                </tr>
+                <tr>
+                    <td>&lt;h1&gt;&lt;/h1&gt;</td>
+                    <td>Heading</td>
+                    <td>
+                        <h1>EEEEE</h1>
+                        <h2>EEEEE</h2>
+                        <h3>EEEEE</h3>
+                        <h4>EEEEE</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;a href="link"&gt;</td>
+                    <td>Hyperlink, a link that opens another page.</td>
+                    <td>Click <a target="_blank" href="https://en.wikipedia.org/wiki/Epic_Games">here</a> to open. </td>
+                </tr>
+                <tr>
+                    <td>&lt;span style="color: blue;"&gt;&lt;/span&gt;</td>
+                    <td>To highlight a part of text.</td>
+                    <td>I'm a <span style="color: blue;">blue</span> word. </td>
+                </tr>
+                <tr>
+                    <td>&lt;s&gt;&lt;/s&gt;</td>
+                    <td>To display a line through text.</td>
+                    <td>
+                        <s>This text is redacted.</s>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</td>
+                    <td>Bulleted list.</td>
+                    <td>
+                        <ul>
+                            <li>Chapter one</li>
+                            <li>Chapter two</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;ol&gt;&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;</td>
+                    <td>Numbered list.</td>
+                    <td>
+                        <ol>
+                            <li>Chapter one, season 6</li>
+                            <li>Chapter two, season 2</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;strong&gt;&lt;/strong&gt;</td>
+                    <td>Use this to bold text.</td>
+                    <td>This is <strong>bold</strong> text. </td>
+                </tr>
+                <tr>
+                    <td>&lt;em&gt;&lt;/em&gt;</td>
+                    <td>Putting emphasis on text.</td>
+                    <td>This text is <em>emphasised</em>. </td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            function showHideMenu() {
+                var links = document.getElementById("moreLinks");
+                if (links.style.display == "block") {
+                    links.style.display = "none"; // hide
+                } else {
+                    links.style.display = "block"; // show
+                }
+            }
+        </script>
+    </body>
+</html>

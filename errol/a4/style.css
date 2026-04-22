@@ -1,0 +1,28 @@
+body {
+	margin: 250px 500px;
+	background-color: #fff5bb;
+	text-align: center	;
+	font-family: Comic Sans MS;
+
+}
+button {
+	color: black;
+	padding: 5px 5px;
+	background-color: #d81367;
+	border-radius: 3px;
+	border:4px solid #f8a8ca;
+border-radius: 0.2px;
+box-shadow: 0 0 1px #f8a8ca,
+0 0 3px #f8a8ca,
+0 0 7px #f8a8ca;
+transition: box-shadow 0.3s ease;
+}
+
+input{
+text-align: center;
+transition: transform 0.3s ease;
+}
+input:hover {
+	transform: scale(1.05);
+}
+

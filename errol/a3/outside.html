@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--index.html-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Assignment 3</title>
+        <link rel="stylesheet" href="styles.css">
+        <style></style>
+    </head>
+    <body>
+        <!--content-->
+        <div id="content">
+            <h1>HTML/CSS Guide</h1>
+            <a class="btn" href="../a3/index.html">Index HTML</a>
+            <h2>Common HTML Tags Outside &lt;body&gt;</h2>
+            <table style="width: 100%;">
+                <tr>
+                    <!--table row-->
+                    <th style="width: 33%;">Tags</th>
+                    <th style="width: 33%;">Definition</th>
+                    <th style="width: 33%;">Examples</th>
+                </tr>
+                <tr>
+                    <td>&lt;!DOCTYPE HTML&gt;</td>
+                    <td>It is information to the browser about what document type to expect.</td>
+                    <td>No examples.</td>
+                </tr>
+                <tr>
+                    <td>&lt;html lang="en"&gt;</td>
+                    <td>Specifies the language of the element's content.</td>
+                    <td>This page is set to "en" for English. This tag helps websites such as Google Translate know the default language for this page is English.</td>
+                </tr>
+                <tr>
+                    <td>&lt;meta charset="UTF-8"&gt;</td>
+                    <td>Allows you to use special characters like emoji and etc.</td>
+                    <td>No examples.</td>
+                </tr>
+                <tr>
+                    <td>&lt;title&gt;&lt;/title&gt;</td>
+                    <td>Defines the title of the document.</td>
+                    <td>
+                        <img alt=fff src="../a3/ugif.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;style&gt;&lt;/style&gt;</td>
+                    <td>Section that describes the internal CSS of the page.</td>
+                    <td style="background-color: mediumslateblue;">This background is green. It is controlled by a class that is defined in style.</td>
+                </tr>
+                <tr>
+                    <td>&lt;link rel="stylesheet" src="file"&gt;</td>
+                    <td>Tag that adds a favicon.</td>
+                    <td>
+                        <img alt="fff" src="ghfd.png">
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;link rel="stylesheet" src="link"&gt;</td>
+                    <td>Link a file to another like linking CSS.</td>
+                    <td>It is not visible</td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            function showHideMenu() {
+                var links = document.getElementById("moreLinks");
+                if (links.style.display == "block") {
+                    links.style.display = "none"; // hide
+                } else {
+                    links.style.display = "block"; // show
+                }
+            }
+        </script>
+    </body>
+</html>

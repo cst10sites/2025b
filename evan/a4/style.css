@@ -1,0 +1,37 @@
+
+		h1 {
+			text-align: centre;
+			color: whitesmoke;
+		}
+
+
+		a.btn {
+			background-color: lightseagreen;
+			color: whitesmoke;
+			text-decoration: none;
+			padding: 10px 20px;
+			border: solid thick whitesmoke;
+			border-radius: 15px;
+			font-size: 1.5em;
+			display: inline-block;
+			text-align: right;
+		}
+
+		body{
+				background-color: lightseagreen;
+				font-family: Verdana;
+				margin: 10% 14%;
+			}
+
+		div#evan {
+				border: 6px;
+				background-color: whitesmoke;
+				padding: 25px 25px;
+				border-color: whitesmoke;
+				border-style: solid; 
+				border-radius: 22px;
+			}
+
+		h3 {
+			color: lightseagreen;
+		}

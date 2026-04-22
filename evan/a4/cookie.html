@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="icon" type="image/x-icon" href="cookie.ico">
+<style>
+	body{
+				background-color: wheat;
+				font-family: Verdana;
+				margin: 10% 35%;
+			}
+	p, h1, h3 {
+		color: sienna;
+	}
+
+	div#content {
+				border: 10px;
+				background-color: burlywood;
+				padding: 35px 55px;
+				border-color: peru;
+				border-style: solid; 
+				border-radius: 50px;
+			}
+	a.btn {
+			background-color: burlywood;
+			color: sienna;
+			text-decoration: none;
+			padding: 10px 20px;
+			border: solid thick sienna;
+			border-radius: 15px;
+			font-size: 1.5em;
+			display: inline-block;
+			text-align: right;
+			font-family: Verdana;
+			text-align: center;
+		}
+	h1, h3 {
+		text-align: center;
+	}
+
+
+</style>
+
+<!--create and edit style.css-->
+</head>
+<body>
+<h1>Cookie Clicker</h1>
+	<div id="content">
+<h3>Click the cookie</h3>
+<input type="image" style="width:300px;" src="https://pngimg.com/d/cookie_PNG13683.png" alt=blahblahblah onclick="updateCPS();"> 
+
+<p id="cpsDisplay"></p>
+
+<hr>
+ <a href="quiz.html" class="btn">HTML/CSS/JS Quiz</a>
+
+<script>
+// global variables
+var nClicks = 0;
+var startTime = new Date();
+
+// basic version of Cookie Clicker code
+function updateCPS() {
+	if (nClicks == 0) {
+		// first click
+		startTime = new Date();
+		nClicks += 1;
+	}
+	else {
+		// subsequent clicks:
+		var currentTime = new Date();
+		var timeElapsed = (currentTime - startTime);
+		// 3. calculate CPS = nClicks ÷ timeElapsed 
+		var CPS = nClicks / (timeElapsed / 1000);
+		var roundedCPS = CPS.toFixed(2);
+		// 4. display CPS using id
+		document.getElementById("cpsDisplay").innerHTML = roundedCPS;
+		// 5. increase nClicks by 1
+		nClicks += 1;
+	}
+
+}
+</script>
+</div>
+</body>
+
+</html>
+

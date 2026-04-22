@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 4</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--create and edit style.css-->
+</head>
+<body>
+    <h2>Cookie Clicker</h2>
+
+    <!-- Image button to trigger the click action -->
+    <img src="https://static.vecteezy.com/system/resources/previews/025/065/196/non_2x/cookie-with-ai-generated-free-png.png"
+         alt="Cookie"
+         onclick="updateCPS();"
+         style="width:200px; cursor:pointer;" />
+
+    <p id="cpsDisplay">Clicks per second (CPS): 0</p>
+
+    <hr>
+    <h2>HTML/CSS/JS Quiz</h2>
+    <p>Click <a href="hehe.html">here</a> to play the quiz.</p>
+
+    <script>
+        // global variables
+        var nClicks = 0;         // Number of clicks
+        var startTime = new Date();  // Time of first click
+
+        // Function to update CPS (Clicks Per Second)
+        function updateCPS() {
+            if (nClicks === 0) {
+                // First click
+                startTime = new Date();  // Reset start time
+            }
+            nClicks += 1;
+
+            if (nClicks > 1) {
+                // Subsequent clicks
+                var currentTime = new Date();  // Get the current time
+                var timeElapsed = (currentTime - startTime) / 1000;  // Time elapsed in seconds
+                var cps = nClicks / timeElapsed;  // Calculate CPS
+
+                // Display CPS rounded to two decimal places
+                document.getElementById("cpsDisplay").innerHTML = "Clicks per second (CPS): " + cps.toFixed(2);
+            } else {
+                document.getElementById("cpsDisplay").innerHTML = "Clicks per second (CPS): --";
+            }
+        }
+
+        // Function to reset CPS
+        function resetCPS() {
+            nClicks = 0;
+            startTime = new Date();
+            document.getElementById("cpsDisplay").innerHTML = "Clicks per second (CPS): 0";
+        }
+    </script>
+</body>
+</html>

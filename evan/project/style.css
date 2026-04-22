@@ -1,0 +1,53 @@
+
+		h1 {
+			text-align: centre;
+			color: whitesmoke;
+		}
+
+
+		a.btn {
+			background-color: darkred;
+			color: whitesmoke;
+			text-decoration: none;
+			padding: 10px 20px;
+			border: solid thick whitesmoke;
+			border-radius: 15px;
+			font-size: 1.5em;
+			display: inline-block;
+			text-align: right;
+		}
+
+		body{
+				background-color: darkred;
+				font-family: Verdana;
+				margin: 10% 14%;
+			}
+
+		div#evan {
+				border: 6px;
+				background-color: whitesmoke;
+				padding: 25px 25px;
+				border-color: whitesmoke;
+				border-style: solid; 
+				border-radius: 22px;
+			}
+
+		h3 {
+			color: darkred;
+		}
+
+		  a.redirect {
+        margin-top: 1%;
+        text-align: centre;
+        background-color: white;
+        background-image: ;
+        color: darkred;
+        width: 10%;
+        padding-left: 0.4%;
+        padding right: 0.4%;
+        height: 60%;
+        font-size: 1.2em;
+        margin-left: 12%;
+        border-radius: 10%;
+        display: inline-block;
+        text-align: center;

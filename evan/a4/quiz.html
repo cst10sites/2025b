@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="abacus.ico">
+
+</head>
+<body>
+	<h1>Quiz</h1>
+	<div id="evan">
+	<h3>Radio Buttons</h3>
+    <form>
+        <label>What is the tag for a dropdown menu</label><br>
+        <input id="correct" type="radio" value="CST10" name="ex2">
+        <label>&lt;select&gt;</label><br>
+        <input id="option2" type="radio" value="PRG11" name="ex2">
+        <label>&lt;drop&gt;</label><br>
+        <input id="option3" type="radio" value="CIS12" name="ex2">
+        <label>&lt;dropdown&gt;</label><br>
+        <input type="button" value="Submit" onclick="example2();">
+        <input type="reset"><br> 
+    </form>
+
+     <h3>Dropdown Menu</h3>
+    <form>
+        <label>What is the correct tag for radio buttons</label>
+       <select id="dropDown" onchange="example4()">
+    <option value="Input">Input</option>
+    <option value="drop">drop</option>
+    <option value="down">down</option>
+</select>
+<p id="DropDisplay"></p>
+        <br>
+        <input type="button" value="OK" onclick="example4();">
+        <input type="reset"><br> 
+    </form>
+
+   
+    <h3>Checkboxes</h3>
+    <form>
+        <label>Which of the following are valid java script key word?</label><br>
+        <input id="choice1" type="checkbox" value="var">
+        <label>var</label>
+        <input id="choice2" type="checkbox" value="java">
+        <label>java</label><br>
+        <input id="choice3" type="checkbox" value="function">
+        <label>function</label>
+        <input id="choice4" type="checkbox" value="javascript">
+        <label>javascript</label><br>
+        <input type="button" value="Submit" onclick="example3();"> <input type="reset"><br> 
+    </form>
+
+      <a href="cookie.html" class="btn">Cookie Clicker</a>
+
+<script>
+function example2() {
+	var correctAns = document.getElementById("correct").checked;
+	// this answer will either be true or false
+
+	if (correctAns == true) {
+		alert("Correct!")
+	}
+	else {
+		alert("Try again");
+	}
+}
+
+function example4() {
+    var choice = document.getElementById("dropDown").value;
+
+    // Convert the input to lowercase for comparison
+    choice = choice.toLowerCase();
+
+    // Debugging: Check if the value is being fetched correctly
+    console.log(choice);
+
+    if (choice == "input") {
+        document.getElementById("DropDisplay").innerHTML = "Correct";
+    } else {
+        document.getElementById("DropDisplay").innerHTML = "Incorrect ";
+    }
+}
+
+function example3() {
+	var choice1 = document.getElementById("choice1").checked; 
+	var choice2 = document.getElementById("choice2").checked; 
+	var choice3 = document.getElementById("choice3").checked; 
+	var choice4 = document.getElementById("choice4").checked; 
+
+	var correct = (choice1 == true && choice2 == false && choice3 == true && choice4 == false);
+
+	if (correct == true) {
+		alert("Mike Green 'Bangggg'");
+	}
+	else {
+		alert("Incorrect");
+	}
+}
+
+</script>
+</div>
+
+
+</body>

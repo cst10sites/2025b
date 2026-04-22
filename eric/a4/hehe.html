@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS/JavaScript Quiz</title>
+    <script>
+        function checkAnswers() {
+            var question1Answer = document.getElementById("question1").value.toLowerCase();
+            var question2Answer = document.querySelector('input[name="question2"]:checked').value;
+            var question3Answers = document.querySelectorAll('input[name="question3"]:checked');
+            var dropdownAnswer = document.getElementById("question4").value;
+
+            var result = "";
+
+            // Check Question 1 (text input)
+            if (question1Answer === "hyper text markup language") {
+                result += "Question 1: Correct!<br>";
+            } else {
+                result += "Question 1: Incorrect. Try again.<br>";
+            }
+
+            // Check Question 2 (radio buttons)
+            if (question2Answer === "JavaScript") {
+                result += "Question 2: Correct!<br>";
+            } else {
+                result += "Question 2: Incorrect. Try again.<br>";
+            }
+
+            // Check Question 3 (checkboxes)
+            var correctAnswers = ["css", "javascript"];
+            var selectedAnswers = [];
+            for (var i = 0; i < question3Answers.length; i++) {
+                selectedAnswers.push(question3Answers[i].value);
+            }
+            if (selectedAnswers.length === correctAnswers.length && correctAnswers.every(value => selectedAnswers.includes(value))) {
+                result += "Question 3: Correct!<br>";
+            } else {
+                result += "Question 3: Incorrect. Try again.<br>";
+            }
+
+            // Check Question 4 (dropdown)
+            if (dropdownAnswer === "CSS") {
+                result += "Question 4: Correct!<br>";
+            } else {
+                result += "Question 4: Incorrect. Try again.<br>";
+            }
+
+            // Display result
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <a href="../a4/hehe2.html "target="_blank">cookie clicker </a>
+
+    <h2>HTML/CSS/JavaScript Quiz</h2>
+    <form>
+        <!-- Question 1: Text input -->
+        <label for="question1">What does HTML stand for?</label><br>
+        <input type="text" id="question1" name="question1"><br><br>
+
+        <!-- Question 2: Radio buttons -->
+        <label>What programming language is used for client-side scripting?</label><br>
+        <input type="radio" id="js" name="question2" value="JavaScript">
+        <label for="js">JavaScript</label><br>
+        <input type="radio" id="css" name="question2" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="html" name="question2" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="java" name="question2" value="Java">
+        <label for="java">Java</label><br><br>
+
+        <!-- Question 3: Checkboxes -->
+        <label for="question3">Which of the following are styling languages?</label><br>
+        <input type="checkbox" name="question3" value="css">CSS<br>
+        <input type="checkbox" name="question3" value="html">HTML<br>
+        <input type="checkbox" name="question3" value="javascript">JavaScript<br>
+        <input type="checkbox" name="question3" value="python">Python<br><br>
+
+        <!-- Question 4: Dropdown menu -->
+        <label for="question4">Which language is used for styling web pages?</label><br>
+        <select id="question4" name="question4">
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+        </select><br><br>
+
+        <!-- Submit Button -->
+        <input type="button" value="Submit Answers" onclick="checkAnswers()">
+    </form>
+
+    <h3>Results:</h3>
+    <div id="result"></div>
+</body>
+</html>

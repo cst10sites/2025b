@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cars</title>
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-image: url('cars.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial Black;
+      text-align: center;
+      color: black;
+    }
+
+    .centered-text {
+      font-size: 2em;
+      padding: 160px 65px 40px;
+    }
+
+    #menu {
+      margin-top: 10px;
+    }
+
+    a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      color: black;
+      border-radius: 5px;
+    }
+
+    a.btn {
+      /* background-image: url(https://www.pngmart.com/files/23/Cars-Logo-PNG-HD.png); */
+    }
+
+    .btn:hover {
+      background-color: #ffaa00;
+    }
+
+    h1 {
+        color: black;
+        margin-left: 55px;
+         text-shadow: 
+        -1px -1px 0 white, /* Top-left */
+        1px -1px 0 white,  /* Top-right */
+        -1px 1px 0 white,  /* Bottom-left */
+        1px 1px 0 white;   /* Bottom-right */
+    }
+
+    a.b {
+      background-color: darkred;
+      color: whitesmoke;
+      text-decoration: none;
+      padding: 10px 20px;
+      border: solid thick whitesmoke;
+      border-radius: 15px;
+      font-size: 1.5em;
+      display: inline-block;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="centered-text">
+    <h1>Cars Trilogy</h1>
+
+    <div id="menu">
+      <a class="btn" href="cars1.html"><img src="cars1logo.png" style="width:240px"></a>
+      <a class="btn" href="cars2.html"><img src="cars2logo.png" style="width:200px"></a>
+      <a class="btn" href="cars3.html"><img src="cars3logo.png" style="width:200px"></a>
+    </div>
+
+
+     <a class="b" href="quiz.html" style="width:150px">Quiz</a>
+  </div>
+</body>
+</html>

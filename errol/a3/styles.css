@@ -1,0 +1,77 @@
+body {
+	font-family: Helvetica;
+	margin: 0px 100px;
+	background-image: url("https://www.chromethemer.com/download/hd-wallpapers/fortnite-7680x4320.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 100% auto;
+	background-color: thistle;
+	background-repeat: no-repeat;
+
+}
+
+div#menu {
+	overflow: hidden;
+	background-color: darkgrey;
+	position: relative;
+}
+
+div#menu #morelinks {
+	display:none; /* hide by default */
+	/* display: block; /* show by default*/
+}
+
+div#menu a{
+	color: white;
+	padding: 16px 20px;
+	text-decoration: none;
+	font-size: 1.25em;
+	display: block;
+}
+
+div#menu a:hover {
+	color: black;
+	background-color: lightgrey;
+}
+
+div#menu a.icon {
+	background: black;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+/* content CSS */
+div#content {
+	padding: 25px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+table, th, td {
+	border: 3px solid white;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+th, td {
+	text-align: center;
+}
+        a.btn {
+            /* only affect <a class="btn" ...> */
+            background-color: darkslateblue;
+            color: white;
+            text-decoration: none; /* remove default underline */
+            padding: 15px 25px;
+            border: solid thick whitesmoke;
+            border-radius: 15px;
+            font-size: 1.5em;
+            display: inline-block;
+        }
+
+        a.btn:hover {
+            background-color: black;
+        }
