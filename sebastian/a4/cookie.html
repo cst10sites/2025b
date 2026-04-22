@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4: Cookie Clicker</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" type="image/x-icon" href="cookie.ico">
+<!--create and edit style.css-->
+</head>
+<body>
+<div id="cookieArea">
+<h1 style="text-align: center;">Cookie Clicker</h1>
+<img id="cookie" alt="cookie" onclick="updateCPS()" src="cookie.png" style="width: 30%; height: 30%; display: block; margin-left: auto; margin-right:auto; ">
+<p id="cpsDisplay" style="text-align:center;"></p>
+<p id="totalClicks" style="text-align:center;"></p>
+<p id="totalCookies" style="text-align:center;"></p>
+<p id="timePassed" style="text-align:center;"></p>
+
+<p id="tester"></p>
+<button onclick="reload()">Reset</button>
+<button id="grandma" onclick="grandma()">1 Grandma. Cost: 1</button>
+<button id="autoClick" onclick="autoClick()">3s Autoclicker Speed. Cost: 2</button>
+<button id="prestige" onclick="prestige()">Prestige. Cost: 10. 1x Multiplier</button>
+
+
+</div>
+<hr>
+<h2>HTML/CSS/JS Quiz</h2>
+<p>Click <a href="quiz.html">here</a> to play the quiz.</p>
+
+
+<script>
+// global variables
+var nClicks = 0;
+var startTime = new Date();
+var yourImg = document.getElementById('cookie');
+var cookieSize = 30
+var cookieCurrency = 0
+var cookieCost = 1
+var cookieGain = 1
+var prestigeLevel = 1
+var prestigeCost = 10
+var autoClickCost = 2
+var autoClickSpeed = 3000
+// basic version of Cookie Clicker code
+function updateCPS() {
+	if (nClicks == 0) {
+		// first click
+		// 1. reset startTime
+		// 2. increase nClicks by 1
+		const startTime = new Date();
+		nClicks ++;
+		cookieGain = 1
+		cookieCurrency = cookieCurrency + cookieGain * prestigeLevel;
+	}
+	else {
+
+		// subsequent clicks:
+		// 1. create variable currentTime
+		// 2. create variable timeElapsed and subtract start and currentTime
+		// 3. calculate CPS = nClicks ÷ timeElapsed 
+		//    BUT timeElapsed be measured in seconds (not milliseconds)
+		// 4. display CPS using id
+		// 5. increase nClicks by 1
+		var currentTime = new Date();
+		var timePassed = (currentTime - startTime)/ 1000;
+		var CPS = nClicks / timePassed;
+		var roundedCPS = CPS.toFixed(2); // 3.12
+		document.getElementById("cpsDisplay").innerHTML = "CPS: " + roundedCPS;
+		document.getElementById("totalClicks").innerHTML = "Total Clicks: " + nClicks;
+		document.getElementById("totalCookies").innerHTML = "Cookies: " + cookieCurrency;
+		cookieCurrency = cookieCurrency + cookieGain * prestigeLevel;
+		nClicks++;
+
+		
+
+		
+		}
+	}
+
+function grandma() {
+	if (cookieCurrency>cookieCost) {
+		cookieCurrency = cookieCurrency - cookieCost;
+		cookieCost = cookieCost * 2;
+		cookieGain= cookieGain + 1;
+		document.getElementById("totalCookies").innerHTML = "Cookies: " + cookieCurrency;
+		document.getElementById("grandma").innerHTML = cookieGain + " Grandmas. Cost: " + cookieCost;
+	}
+}
+
+function prestige() {
+	if (cookieCurrency>prestigeCost) {
+		prestigeLevel = prestigeLevel + 1
+		prestigeCost = prestigeCost * 10
+		cookieCurrency = 0;
+		cookieCost = 1;
+		cookieGain = 1;
+		autoClickSpeed = 3000;
+		autoClickCost = 2;
+		document.getElementById("totalCookies").innerHTML = "Cookies: " + cookieCurrency;
+		document.getElementById("prestige").innerHTML = "Prestige. Cost: " + prestigeCost + " - " + prestigeLevel + "x Multiplyer";
+		document.getElementById("grandma").innerHTML = "1 Grandma. Cost: 1"
+		document.getElementById("autoClick").innerHTML = "3s Autoclicker Speed. Cost:" + autoClickCost
+		clearInterval(autoClickId);
+		autoClickId = setInterval(autoClickerClick, autoClickSpeed);
+	}
+}
+
+function autoClick() {
+	if (cookieCurrency>autoClickCost) {
+		
+		autoClickSpeed = autoClickSpeed *0.8;
+		autoClickAmount = autoClickSpeed / 1000;
+		autoClickAmount = autoClickAmount.toFixed(3)
+		cookieCurrency = cookieCurrency - autoClickCost;
+		autoClickCost = autoClickCost * 3;
+		document.getElementById("totalCookies").innerHTML = "Cookies: " + cookieCurrency;
+		document.getElementById("autoClick").innerHTML = autoClickAmount + "s Autoclicker Speed. Cost:" + autoClickCost
+		clearInterval(autoClickId);
+		autoClickId = setInterval(autoClickerClick, autoClickSpeed);
+
+	}
+}
+function reload() {
+	window.location.replace("../a4/cookie.html");
+}
+
+setInterval(updateTime, 100);
+var autoClickId = setInterval(autoClickerClick, autoClickSpeed);
+
+function updateTime() {
+	var currentTime = new Date();
+	var timePassed = (currentTime - startTime)/ 1000;
+	document.getElementById("timePassed").innerHTML = "Time Passed: " + timePassed + "s"
+	
+}
+
+function autoClickerClick() {
+	cookieCurrency = cookieCurrency + cookieGain * prestigeLevel;
+	document.getElementById("totalCookies").innerHTML = "Cookies: " + cookieCurrency;
+}
+
+
+
+</script>
+</body>
+</html>

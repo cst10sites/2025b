@@ -1,0 +1,40 @@
+body {
+	font-family: Calibri;
+	font-size: 1.1em;
+	background-color: #282828;
+	color: white;
+}
+table, th, td {
+	border: 3px solid white;
+	padding: 100px;
+}
+th {
+	background-color: dimgrey;
+}
+table {
+	border-collapse: collapse;
+	background-color: grey;
+	margin: 10px 12.5%;
+}
+th, td {
+	text-align: left;
+	padding: 10px;
+}
+h1, h2 {
+	text-align: center;
+}
+a.button {
+	/* only affects <a class="button"> */
+	background-color: royalblue;
+	color: white;
+	text-decoration: none;
+	padding: 20px 40px;
+	border: solid 3px white;
+	border-radius: 5px	;
+	display: inline-block;
+	font-size: 25px;
+	margin: 0PX 12.5%;
+}
+div#special {
+	background-color: black;
+}

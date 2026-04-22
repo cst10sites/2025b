@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4: Quiz</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" type="image/x-icon" href="question.ico">
+</head>
+<body>
+	<h1>Quiz! :D</h1>
+	<form>
+	    <label>What Year is it?</label><br>
+	    <input id="option1" type="radio" value="2025" name="ex2">
+	    <label>2025</label><br>
+	    <input id="option2" type="radio" value="2026" name="ex2">
+	    <label>2026</label><br>
+	    <input id="option3" type="radio" value="0252" name="ex2">
+	    <label>0252</label><br>
+	    <input type="button" value="Submit" onclick="q1();">
+	    <input type="reset"><br> 
+	</form>
+	<hr>
+	<form>
+	    <label>&lt;body&gt;, is part of which language?</label>
+	    <select id="mathQuestion">
+	        <option value="4">Python</option>
+	        <option value="-4">Javascript</option>
+	        <option value="5">CSS</option>
+	        <option value="Fish">HTML5</option>
+	    </select>
+	    <br>
+	    <input type="button" value="OK" onclick="q2();">
+	    <input type="reset"><br> 
+	</form>
+	<p id="mathDisplay"></p>
+	<hr>
+<h2>Cookie Clicker</h2>
+<p>Click <a href="cookie.html">here</a> to play cookie clicker.</p>
+	<script>
+
+		function q1() {
+	var correctAns = document.getElementById("option1").checked;
+
+	if (correctAns == true) {
+		alert("Correct!")
+	}
+	else {
+		alert("Nice Try, but you are Incorrect!");
+	}
+}
+
+function q2() {
+	var choice = document.getElementById("mathQuestion").value;
+	choice = choice.toLowerCase();
+
+	if (choice=="fish") {
+		document.getElementById("mathDisplay").innerHTML = "It was OBVIOUSLY HTML, c'mon.";
+	}
+	else {
+		document.getElementById("mathDisplay").innerHTML = "[INCORRECT SOUNDS]";
+	}
+}
+
+	</script> 
+</body>
+</html>
