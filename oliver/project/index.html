@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--index.html-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Cubing</title>
+		<!--External CSS-->
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+		<link rel="stylesheet" href="https://cdn.cubing.net/v0/css/@cubing/icons/css">
+
+
+	
+	</head>
+	<body>
+			<p style="color: white; text-align: center; font-size: 3em;">Speedcubing Information</p>
+		
+
+			<div id="menu">
+				<a href="index.html">Home</a>
+				<div id="moreLinks" onmouseover="showHideMenu1()">
+					<!--only add <a href=...> below-->
+					<a href="Algs/pll.html" onmouseout="showHideMenu1()">pll</a>
+					<a href="Algs/twoLookpll.html" onmouseout="showHideMenu1()">2 look pll</a>
+					<a href="Algs/oll.html" onmouseout="showHideMenu1()">oll</a>
+					<a href="Algs/twoLookoll.html" onmouseout="showHideMenu1()">2 look oll</a>
+				</div>
+				<a id="icon" onmouseover="showHideMenu1()" onmouseout="showHideMenu1()">Algs</a>
+				<a id="icon2" onmouseover="showHideMenu2()" onmouseout="showHideMenu2()">Timers</a>
+				<a id="icon3" onmouseover="showHideMenu3()" onmouseout="showHideMenu3()">Tutorials</a>
+
+				<div id="moreLinks2" onmouseover="showHideMenu2()">
+                    <a href="Timers/threeByThreeTimer.html" onmouseout="showHideMenu2()">3x3 timer</a>
+                    <a href="Timers/twoBytwoTimer.html" onmouseout="showHideMenu2()">2x2 timer</a>
+                    <a href="Timers/fourByFourTimer.html" onmouseout="showHideMenu2()">4x4 timer</a>
+                    <a href="Timers/fiveByFiveTimer.html" onmouseout="showHideMenu2()">5x5 timer</a>
+                    <a href="Timers/sixBySixTimer.html" onmouseout="showHideMenu2()">6x6 timer</a>
+                    <a href="Timers/sevenBySevenTimer.html" onmouseout="showHideMenu2()">7x7 timer</a>
+                    <a href="Timers/3blindTimer.html" onmouseout="showHideMenu2()">3blind timer</a>
+                    <a href="Timers/ohTimer.html" onmouseout="showHideMenu2()">OH timer</a>
+                    <a href="Timers/clockTimer.html" onmouseout="showHideMenu2()">Clock timer</a>
+                    <a href="Timers/megaminxTimer.html" onmouseout="showHideMenu2()">Megaminx timer</a>
+                    <a href="Timers/pyraminxTimer.html" onmouseout="showHideMenu2()">Pyraminx timer</a>
+                    <a href="Timers/skewbTimer.html" onmouseout="showHideMenu2()">Skewb timer</a>
+                    <a href="Timers/SquareOneTimer.html" onmouseout="showHideMenu2()">SQ-1 timer</a>
+                    <a href="Timers/4blindTimer.html" onmouseout="showHideMenu2()">4blind timer</a>
+                    <a href="Timers/blindTimer.html" onmouseout="showHideMenu2()">5blind timer</a>
+				</div>
+
+				<div id="moreLinks3" onmouseover="showHideMenu3()">
+					<a href="Tutorials/threeByThreeTutorials.html" onmouseout="showHideMenu3()">3x3</a>
+					<a href="Tutorials/twoByTwoTutorial.html" onmouseout="showHideMenu3()">2x2</a>
+					<a href="Tutorials/fourByFourTutorial.html" onmouseout="showHideMenu3()">4x4</a>
+					<a href="Tutorials/fiveByFiveTutorial.html" onmouseout="showHideMenu3()">5x5</a>
+					<a href="Tutorials/sixBySixTutorial.html" onmouseout="showHideMenu3()">6x6</a>
+					<a href="Tutorials/sevenBySevenTutorial.html" onmouseout="showHideMenu3()">7x7</a>
+					<a href="Tutorials/threeByThreeBlindtutorial.html" onmouseout="showHideMenu3()">3blind</a>
+					<a href="Tutorials/fmcTutorial.html" onmouseout="showHideMenu3()">FMC</a>
+					<a href="Tutorials/ohTuturial.html" onmouseout="showHideMenu3()">OH</a>
+					<a href="Tutorials/clockTutorial.html" onmouseout="showHideMenu3()">Clock</a>
+					<a href="Tutorials/megaminxTutorial.html" onmouseout="showHideMenu3()">Megaminx</a>
+					<a href="Tutorials/pyraminxTutorial.html" onmouseout="showHideMenu3()">Pyraminx</a>
+					<a href="Tutorials/skewbTutorial.html" onmouseout="showHideMenu3()">Skewb</a>
+					<a href="Tutorials/squareOneTutorial.html" onmouseout="showHideMenu3()">SQ-1</a>
+					<a href="Tutorials/fourByFourBlindTutorial.html" onmouseout="showHideMenu3()">4blind</a>
+					<a href="Tutorials/fiveByFiveBlindTutorial.html" onmouseout="showHideMenu3()">5blind</a>
+					<a href="Tutorials/multiBlindTutorial.html" onmouseout="showHideMenu3()">Multi blind</a>
+
+				</div>
+			</div><!--end of menu-->
+
+
+<!--Buttons-->
+	<div class="events">
+   
+        <a href="mainEvents/threeByThree.html" class="eventsIn">3x3 <span class="cubing-icon event-333"></span></a>
+    
+        <a  href="mainEvents/twoByTwo.html" class="eventsIn">2x2 <span class="cubing-icon event-222"></span></a>
+    
+		<a href="mainEvents/fourByFour.html" class="eventsIn">4x4 <span class="cubing-icon event-444"></span></a>
+    
+		<a href="mainEvents/fiveByFive.html" class="eventsIn">5x5 <span class="cubing-icon event-555"></span></a>
+    
+	</div>
+
+<div class="events">
+	
+    	<a href="mainEvents/sixBySix.html" class="eventsIn">6x6 <span class="cubing-icon event-666"></span></a>
+ 
+    	<a href="mainEvents/sevenBySeven.html" class="eventsIn">7x7 <span class="cubing-icon event-777"></span></a>
+    
+    	<a href="mainEvents/threeByThreeBlind.html" class="eventsIn">3x3 blind <span class="cubing-icon event-333bf"></span></a>
+  
+    	<a href="mainEvents/fmc.html" class="eventsIn">FMC <span class="cubing-icon event-333fm"></span></a>
+   
+</div>
+
+<div class="events">
+	
+    	<a href="mainEvents/oh.html" class="eventsIn">One Handed <span class="cubing-icon event-333oh"></span></a>
+  
+    	<a href="mainEvents/clock.html" class="eventsIn">Clock <span class="cubing-icon event-clock"></span></a>
+  
+    	<a href="mainEvents/megaminx.html" class="eventsIn">Megaminx <span class="cubing-icon event-minx"></span></a>
+
+    	<a href="mainEvents/pyraminx.html" class="eventsIn">Pyraminx <span class="cubing-icon event-pyram"></span></a>
+</div>
+
+
+<div class="events">
+	
+    	<a href="mainEvents/skewb.html" class="eventsIn">Skewb <span class="cubing-icon event-skewb"></span></a>
+
+    	<a href="mainEvents/squareOne.html" class="eventsIn">Square-1 <span class="cubing-icon event-sq1"></span></a>
+
+    	<a href="mainEvents/fourByFourBlind.html" class="eventsIn">4x4 blind <span class="cubing-icon event-444bf"></span></a>
+
+    	<a href="mainEvents/fiveByFiveBlind.html" class="eventsIn">5x5 blind<span class="cubing-icon event-555bf"></span></a>
+</div>
+
+<div class="events">
+
+    	<a href="mainEvents/multiBlind.html" class="eventsIn">Multi-Blind <span class="cubing-icon event-333mbf"></span></a>
+
+</div>
+<!--End of Buttons-->
+
+
+		<script src="script.js"></script>
+	</body>
+</html>

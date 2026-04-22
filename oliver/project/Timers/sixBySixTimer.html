@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../Images/favicon-16x16.png">
+    <title>Timer</title>
+</head>
+<body>
+ <div id="menu">
+                <a href="../index.html">Home</a>
+                <div id="moreLinks" onmouseover="showHideMenu4()">
+                    <!--only add <a href=...> below-->
+                    <a href="../Algs/pll.html" onmouseout="showHideMenu4()">pll</a>
+                    <a href="../Algs/twoLookpll.html" onmouseout="showHideMenu4()">2 look pll</a>
+                    <a href="../Algs/oll.html" onmouseout="showHideMenu4()">oll</a>
+                    <a href="../Algs/twoLookoll.html" onmouseout="showHideMenu4()">2 look oll</a>
+                </div>
+                <a id="icon" onmouseover="showHideMenu4()" onmouseout="showHideMenu4()">Algs</a>
+                <a id="icon2" onmouseover="showHideMenu5()" onmouseout="showHideMenu5()">Timers</a>
+                <a id="icon3" onmouseover="showHideMenu6()" onmouseout="showHideMenu6()">Tutorials</a>
+
+                <div id="moreLinks2" onmouseover="showHideMenu5()">
+                    <a href="threeByThreeTimer.html" onmouseout="showHideMenu5()">3x3 timer</a>
+                    <a href="twoBytwoTimer.html" onmouseout="showHideMenu5()">2x2 timer</a>
+                    <a href="fourByFourTimer.html" onmouseout="showHideMenu5()">4x4 timer</a>
+                    <a href="fiveByFiveTimer.html" onmouseout="showHideMenu5()">5x5 timer</a>
+                    <a href="sixBySixTimer.html" onmouseout="showHideMenu5()">6x6 timer</a>
+                    <a href="sevenBySevenTimer.html" onmouseout="showHideMenu5()">7x7 timer</a>
+                    <a href="3blindTimer.html" onmouseout="showHideMenu5()">3blind timer</a>
+                    <a href="ohTimer.html" onmouseout="showHideMenu5()">OH timer</a>
+                    <a href="clockTimer.html" onmouseout="showHideMenu5()">Clock timer</a>
+                    <a href="megaminxTimer.html" onmouseout="showHideMenu5()">Megaminx timer</a>
+                    <a href="pyraminxTimer.html" onmouseout="showHideMenu5()">Pyraminx timer</a>
+                    <a href="skewbTimer.html" onmouseout="showHideMenu5()">Skewb timer</a>
+                    <a href="SquareOneTimer.html" onmouseout="showHideMenu5()">SQ-1 timer</a>
+                    <a href="4blindTimer.html" onmouseout="showHideMenu5()">4blind timer</a>
+                    <a href="blindTimer.html" onmouseout="showHideMenu5()">5blind timer</a>
+            </div>
+
+                <div id="moreLinks3" onmouseover="showHideMenu3()">
+                    <a href="../Tutorials/threeByThreeTutorials.html" onmouseout="showHideMenu6()">3x3</a>
+                    <a href="../Tutorials/twoByTwoTutorial.html" onmouseout="showHideMenu6()">2x2</a>
+                    <a href="../Tutorials/fourByFourTutorial.html" onmouseout="showHideMenu6()">4x4</a>
+                    <a href="../Tutorials/fiveByFiveTutorial.html" onmouseout="showHideMenu6()">5x5</a>
+                    <a href="../Tutorials/sixBySixTutorial.html" onmouseout="showHideMenu6()">6x6</a>
+                    <a href="../Tutorials/sevenBySevenTutorial.html" onmouseout="showHideMenu6()">7x7</a>
+                    <a href="../Tutorials/threeByThreeBlindtutorial.html" onmouseout="showHideMenu6()">3blind</a>
+                    <a href="../Tutorials/fmcTutorial.html" onmouseout="showHideMenu6()">FMC</a>
+                    <a href="../Tutorials/ohTuturial.html" onmouseout="showHideMenu6()">OH</a>
+                    <a href="../Tutorials/clockTutorial.html" onmouseout="showHideMenu6()">Clock</a>
+                    <a href="../Tutorials/megaminxTutorial.html" onmouseout="showHideMenu6()">Megaminx</a>
+                    <a href="../Tutorials/pyraminxTutorial.html" onmouseout="showHideMenu6()">Pyraminx</a>
+                    <a href="../Tutorials/skewbTutorial.html" onmouseout="showHideMenu6()">Skewb</a>
+                    <a href="../Tutorials/squareOneTutorial.html" onmouseout="showHideMenu6()">SQ-1</a>
+                    <a href="../Tutorials/fourByFourBlindTutorial.html" onmouseout="showHideMenu6()">4blind</a>
+                    <a href="../Tutorials/fiveByFiveBlindTutorial.html" onmouseout="showHideMenu6()">5blind</a>
+                    <a href="../Tutorials/multiBlindTutorial.html" onmouseout="showHideMenu6()">Multi blind</a>
+
+                </div>
+            </div><!--end of menu-->
+            
+      
+        <h1>6x6 timer</h1>
+    <p style="text-align: center;">Release Space to Start, press any Key to Stop</p>    <h3 style="color: white; text-align: center;">Scramble: </h3><p id="scramble" style="color: white; text-align: center; font-size: 2em;"></p>
+    <div id="timer" style="color: white; font-size: 18em; text-align: center;">0.00</div>
+<br>
+<h3 style="color: white;">Times:</h3>
+    <div id="times" style="color: white;"></div>
+
+
+ <script>var startTime;
+        var timerRunning = false;
+        var timerDisplay = document.getElementById("timer");
+        var scrambleDisplay = document.getElementById("scramble");
+        var timesList = document.getElementById("times");
+
+        document.addEventListener("keyup", (event) => {
+            if (event.code === "Space" && !timerRunning) {
+                startTime = performance.now();
+                timerRunning = true;
+                updateTimer();
+            } else if (timerRunning) {
+                var elapsedTime = (performance.now() - startTime) / 1000;
+                timerDisplay.textContent = `${elapsedTime.toFixed(2)}`;
+                timerRunning = false;
+                
+                // Add the recorded time to the list
+                var timeEntry = document.createElement("div");
+                timeEntry.textContent = ` ${elapsedTime.toFixed(2)} `;
+                timesList.prepend(timeEntry);
+
+                // Generate a new scramble
+                scrambleDisplay.textContent = generateScramble();
+            }
+        });
+
+        function updateTimer() {
+            if (timerRunning) {
+                var elapsedTime = (performance.now() - startTime) / 1000;
+                timerDisplay.textContent = `${elapsedTime.toFixed(2)}`;
+                requestAnimationFrame(updateTimer);
+            }
+        }
+
+        function generateScramble() {
+            const moves = ["U", "D", "L", "R", "F", "B"];
+            const modifiers = ["", "'", "2", "w", "w2", "w'", "3w", "3w2", "3w'"];
+            var scramble = [];
+            var lastMove = "";
+
+            for (var i = 80; i > 0; i--) {
+                var move;
+                do {
+                    move = moves[Math.floor(Math.random() * moves.length)];
+                } while (move === lastMove);
+
+                lastMove = move;
+                let modifier = modifiers[Math.floor(Math.random() * modifiers.length)];
+                scramble.push(move + modifier);
+            }
+
+            return scramble.join(" ");
+        }
+
+        // scramble on page load
+        scrambleDisplay.textContent = generateScramble();
+
+    function showHideMenu4() {
+                var links = document.getElementById("moreLinks");
+                var links2 = document.getElementById("moreLinks2");
+                var links3 = document.getElementById("moreLinks3");
+                if (links.style.display == "block") {
+                    links.style.display = "none"; // hide
+                } else {
+                    links.style.display = "block"; // show
+                }
+
+                if (links2.style.display == "block") {
+                    links2.style.display = "none";
+                }
+
+                if (links3.style.display == "block") {
+                    links3.style.display = "none";
+                }
+
+            
+            }
+
+            function showHideMenu5() {
+                var links2 = document.getElementById("moreLinks2");
+                var links = document.getElementById("moreLinks");
+                var links3 = document.getElementById("moreLinks3");
+                if (links2.style.display == "block") {
+                    links2.style.display = "none"; // hide
+                } else {
+                    links2.style.display = "block"; // show
+                }
+
+                if (links.style.display == "block") {
+                    links.style.display = "none";
+                }
+
+                if (links3.style.display == "block") {
+                    links3.style.display = "none";
+                }
+            }
+
+            function showHideMenu6() {
+                var links2 = document.getElementById("moreLinks2");
+                var links = document.getElementById("moreLinks");
+                var links3 = document.getElementById("moreLinks3");
+                if (links3.style.display == "block") {
+                    links3.style.display = "none"; // hide
+                } else {
+                    links3.style.display = "block"; // show
+                }
+
+                if (links.style.display == "block") {
+                    links.style.display = "none";
+                }
+
+                if (links2.style.display == "block") {
+                    links2.style.display = "none";
+                }
+            }
+</script>
+</body>
+</html>

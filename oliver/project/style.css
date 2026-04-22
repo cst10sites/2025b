@@ -1,0 +1,304 @@
+/*style.css*/
+
+body{
+	font-family: Helvetica;
+	margin: 25px 100px;
+	background-color: black;
+	
+}
+
+
+/*Menu CSS*/
+
+div#menu{
+	/* affects <div id="menu"> */
+	overflow: hidden;
+	background-color: darkgray;
+	position: relative;
+}
+
+
+
+div#menu a {
+	color: white;
+	padding: 16px 20px;
+	text-decoration: none;
+	font-size: 1.25em;
+	display: block; /* show  */
+}
+
+div#menu #moreLinks, #moreLinks2, #moreLinks3 {
+	display: none; 
+	/* hide by default */
+
+}
+
+div#menu a:hover {
+	color: black;
+	background-color: lightgray;
+}
+
+div#menu a#icon {
+	/* reposition ... */
+
+	background-color: darkcyan;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: white;
+}
+
+div#menu a#icon2 {
+
+	background-color: darkcyan;
+	display: block;
+	position: absolute;
+	right: 190px;
+	top: 0;
+	color: white;
+}
+
+div#menu a#icon3 {
+
+	background-color: darkcyan;
+	display: block;
+	position: absolute;
+	right: 75px;
+	top: 0;
+	color: white;
+}
+
+div#menu a#icon:hover {
+	color: black;
+	background-color: cyan;
+	cursor: default;
+}
+
+div#menu a#icon2:hover {
+	color: black;
+	background-color: cyan;
+	cursor: default;
+}
+
+div#menu a#icon3:hover {
+	color: black;
+	background-color: cyan;
+	cursor: default;
+}
+
+
+
+/*Events CSS*/
+
+
+a.eventsIn {
+	background-color: white;
+	padding-top: 0.1%;
+	font-size: 1.75em;
+	margin-top: 1%;
+	border-radius: 25px;
+	width: 20%;
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 3%;
+
+}
+
+a.eventsIn:hover {
+	background-color: lightgray;
+	box-shadow: 5px 5px darkgray;
+	color: cyan;
+	cursor: pointer;
+}
+
+div.events {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    color: darkcyan;
+}
+
+
+a {
+	color: darkcyan;
+	text-decoration: none;
+}
+
+
+/*Main events*/
+
+div.overview {
+	background-color: white;
+	border-radius: 25px;
+	padding: 2%;
+	color: black;
+	border-color: black;
+	border-width: 5px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+div.bestOptions {
+	background-color: white;
+	border-radius: 25px;
+	padding: 2%;
+	color: black;
+	border-color: black;
+	border-width: 5px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+div.eventsContent {
+	display: flex;
+    color: darkcyan;
+    position: relative;
+}
+
+/*Slide-shows*/
+
+
+
+
+.slideshow-container, .slideshow-container2, .slideshow-container3 {
+  position: relative;
+  width: 30%;
+  margin: auto;
+  overflow: hidden;
+  right: 0;
+}
+
+.mySlides {
+  display: none;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 1.2em;
+  color: #333;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* Navigation buttons */
+a.prev, a.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 100;
+  color: black;
+}
+
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+div.allSlides {
+	display: flex;
+    position: relative;
+    right: 0;
+}
+
+/*Algs*/
+
+img.pllimages {
+	width: 50%;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+
+div.individualAlgs {
+	background-color: white;
+	padding-left: 10px;
+	width: 30%;
+	border-radius: 12px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+select.algOptions {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	border-width: 3px;
+	text-align: center;
+	border-color: black;
+	border-radius: 5px;
+}
+
+div.algContainer {
+	display: flex;
+    position: relative;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: 	space-around;
+}
+
+/*ThreeByThree tutorial*/
+
+iframe.threeByThreeTutorial {
+	border-width: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	border-style: solid;
+	border-color: grey;
+	margin-top: 10px;
+}
+
+div.iframeContainer {
+	justify-content: space-around;
+	display: flex;
+	position: relative;
+}
+
+/*Timers*/
+
+
+
+#times, #times2 {
+    display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+}

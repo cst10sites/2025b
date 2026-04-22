@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--index.html-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Cubing</title>
+		<!--External CSS-->
+		<link rel="stylesheet" href="../style.css">	
+		<link rel="icon" type="image/png" sizes="16x16" href="../Images/favicon-16x16.png">
+	
+	</head>
+	<body>
+		
+
+<div id="menu">
+				<a href="../index.html">Home</a>
+				<div id="moreLinks" onmouseover="showHideMenu1()">
+					<!--only add <a href=...> below-->
+                    <a href="pll.html" onmouseout="showHideMenu1()">pll</a>
+                    <a href="twoLookpll.html" onmouseout="showHideMenu1()">2 look pll</a>
+                    <a href="oll.html" onmouseout="showHideMenu1()">oll</a>
+                    <a href="twoLookoll.html" onmouseout="showHideMenu1()">2 look oll</a>
+				</div>
+				<a id="icon" onmouseover="showHideMenu1()" onmouseout="showHideMenu1()">Algs</a>
+				<a id="icon2" onmouseover="showHideMenu2()" onmouseout="showHideMenu2()">Timers</a>
+				<a id="icon3" onmouseover="showHideMenu3()" onmouseout="showHideMenu3()">Tutorials</a>
+
+				<div id="moreLinks2" onmouseover="showHideMenu2()">
+                    <a href="../Timers/threeByThreeTimer.html" onmouseout="showHideMenu2()">3x3 timer</a>
+                    <a href="../Timers/twoBytwoTimer.html" onmouseout="showHideMenu2()">2x2 timer</a>
+                    <a href="../Timers/fourByFourTimer.html" onmouseout="showHideMenu2()">4x4 timer</a>
+                    <a href="../Timers/fiveByFiveTimer.html" onmouseout="showHideMenu2()">5x5 timer</a>
+                    <a href="../Timers/sixBySixTimer.html" onmouseout="showHideMenu2()">6x6 timer</a>
+                    <a href="../Timers/sevenBySevenTimer.html" onmouseout="showHideMenu2()">7x7 timer</a>
+                    <a href="../Timers/3blindTimer.html" onmouseout="showHideMenu2()">3blind timer</a>
+                    <a href="../Timers/ohTimer.html" onmouseout="showHideMenu2()">OH timer</a>
+                    <a href="../Timers/clockTimer.html" onmouseout="showHideMenu2()">Clock timer</a>
+                    <a href="../Timers/megaminxTimer.html" onmouseout="showHideMenu2()">Megaminx timer</a>
+                    <a href="../Timers/pyraminxTimer.html" onmouseout="showHideMenu2()">Pyraminx timer</a>
+                    <a href="../Timers/skewbTimer.html" onmouseout="showHideMenu2()">Skewb timer</a>
+                    <a href="../Timers/SquareOneTimer.html" onmouseout="showHideMenu2()">SQ-1 timer</a>
+                    <a href="../Timers/4blindTimer.html" onmouseout="showHideMenu2()">4blind timer</a>
+                    <a href="../Timers/blindTimer.html" onmouseout="showHideMenu2()">5blind timer</a>
+			</div>
+
+				<div id="moreLinks3" onmouseover="showHideMenu3()">
+					<a href="../Tutorials/threeByThreeTutorials.html" onmouseout="showHideMenu3()">3x3</a>
+					<a href="../Tutorials/twoByTwoTutorial.html" onmouseout="showHideMenu3()">2x2</a>
+					<a href="../Tutorials/fourByFourTutorial.html" onmouseout="showHideMenu3()">4x4</a>
+					<a href="../Tutorials/fiveByFiveTutorial.html" onmouseout="showHideMenu3()">5x5</a>
+					<a href="../Tutorials/sixBySixTutorial.html" onmouseout="showHideMenu3()">6x6</a>
+					<a href="../Tutorials/sevenBySevenTutorial.html" onmouseout="showHideMenu3()">7x7</a>
+					<a href="../Tutorials/threeByThreeBlindtutorial.html" onmouseout="showHideMenu3()">3blind</a>
+					<a href="../Tutorials/fmcTutorial.html" onmouseout="showHideMenu3()">FMC</a>
+					<a href="../Tutorials/ohTuturial.html" onmouseout="showHideMenu3()">OH</a>
+					<a href="../Tutorials/clockTutorial.html" onmouseout="showHideMenu3()">Clock</a>
+					<a href="../Tutorials/megaminxTutorial.html" onmouseout="showHideMenu3()">Megaminx</a>
+					<a href="../Tutorials/pyraminxTutorial.html" onmouseout="showHideMenu3()">Pyraminx</a>
+					<a href="../Tutorials/skewbTutorial.html" onmouseout="showHideMenu3()">Skewb</a>
+					<a href="../Tutorials/squareOneTutorial.html" onmouseout="showHideMenu3()">SQ-1</a>
+					<a href="../Tutorials/fourByFourBlindTutorial.html" onmouseout="showHideMenu3()">4blind</a>
+					<a href="../Tutorials/fiveByFiveBlindTutorial.html" onmouseout="showHideMenu3()">5blind</a>
+					<a href="../Tutorials/multiBlindTutorial.html" onmouseout="showHideMenu3()">Multi blind</a>
+
+				</div>
+			</div><!--end of menu-->
+		<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Aa perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>x L2 D2 L' U' L D2 L' U L'</option>
+						<option>y' x' L' U L' D2 L U' L' D2 L2</option>
+						<option>y x R' U R' D2 R U' R' D2 R2</option>
+						<option>y2 x' R2 D2 R' U' R D2 R' U R'</option>
+					</select>
+				</form>
+				<img src="../images/aaperm.png" alt="aaperm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Ab perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>x' L2 D2 L U L' D2 L U' L</option>
+						<option>y x L U' L D2 L' U L D2 L2</option>
+						<option>y2 x R2 D2 R U R' D2 R U' R</option>
+						<option>y' x' R U' R D2 R' U R D2 R2</option>
+					</select>
+				</form>
+				<img src="../images/abperm.png" alt="abperm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">F perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R</option>
+					</select>
+				</form>
+				<img src="../images/fperm.png" alt="fperm" class="pllimages">
+			</div>
+		</div>
+
+		<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Ga perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R2 U R' U R' U' R U' R2 U' D R' U R D'</option>
+						<option>R2 u R' U R' U' R u' R2 y' R' U R</option>
+					</select>
+				</form>
+				<img src="../images/gaperm.png" alt="gaperm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Gb perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R' U' R U D' R2 U R' U R U' R U' R2 D</option>
+						<option>y F' U' F R2 u R' U R U' R u' R2</option>
+					</select>
+				</form>
+				<img src="../images/gbperm.png" alt="gbperm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Gc perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R2 U' R U' R U R' U R2 U D' R U' R' D</option>
+						<option>y2 R2 F2 R U2 R U2 R' F R U R' U' R' F R2</option>
+						<option>R2 u' R U' R U R' u R2 y R U' R'</option>
+					</select>
+				</form>
+				<img src="../images/gc.png" alt="gcperm" class="pllimages">
+			</div>
+		</div>
+
+		<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Gd perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U R' U' D R2 U' R U' R' U R' U R2 D'</option>
+						<option>R U R' y' R2 u' R U' R' U R' u R2</option>
+					</select>
+				</form>
+				<img src="../images/gdperm.png" alt="gdperm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Ja perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>x R2 F R F' R U2 r' U r U2</option>
+						<option>y2 L' U' L F L' U' L U L F' L2 U L</option>
+						<option>y' R' U L' U2 R U' R' U2 R L</option>
+					</select>
+				</form>
+				<img src="../images/japerm.png" alt="japerm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Jb perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U R' F' R U R' U' R' F R2 U' R'</option>
+					</select>
+				</form>
+				<img src="../images/jbperm.png" alt="jbperm" class="pllimages">
+			</div>
+		</div>
+
+		<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Ra perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U' R' U' R U R D R' U' R D' R' U2 R'</option>
+						<option>R U R' F' R U2 R' U2 R' F R U R U2 R'</option>
+						<option>y' L U2 L' U2 L F' L' U' L U L F L2</option>
+					</select>
+				</form>
+				<img src="../images/raperm.png" alt="raperm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold;">Rb perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R2 F R U R U' R' F' R U2 R' U2 R</option>
+						<option>y' R' U2 R U2 R' F R U R' U' R' F' R2</option>
+						<option>R' U2 R' D' R U' R' D R U R U' R' U' R</option>
+					</select>
+				</form>
+				<img src="../images/rb.png" alt="rbperm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">T perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U R' U' R' F R2 U' R' U' R U R' F'</option>
+					</select>
+				</form>
+				<img src="../images/tperm.png" alt="tperm" class="pllimages">
+			</div>
+		</div>
+
+	<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">E perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>x' R U' R' D R U R' D' R U R' D R U' R' D'</option>
+						<option>x' L' U L D' L' U' L D L' U' L D' L' U L D</option>
+					</select>
+				</form>
+				<img src="../images/eperm.png" alt="eperm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Na perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions" style="font-size: 0.7em"> 
+						<option>R U R' U R U R' F' R U R' U' R' F R2 U' R' U2 R U' R'</option>
+						<option>z U R' D R2 U' R D' U R' D R2 U' R D'</option>
+					</select>
+				</form>
+				<img src="../images/naperm.png" alt="naperm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Nb perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R' U R U' R' F' U' F R U R' F R' F' R U' R</option>
+						<option>z D' R U' R2 D R' U D' R U' R2 D R' U</option>
+					</select>
+				</form>
+				<img src="../images/nbperm.png" alt="nbperm" class="pllimages">
+			</div>
+		</div>
+
+	<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">V perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R' U R' U' y R' F' R2 U' R' U R' F R F</option>
+						<option>R' U R' U' R D' R' D R' U D' R2 U' R2 D R2</option>
+						<option>z D' R2 D R2 U R' D' R U' R U R' D R U' z'</option>
+						<option>R U2 R' D R U' R U' R U R2 D R' U' R D2</option>
+						<option>x' R' F R F' U R U2 R' U' R U' R' U2 R U R' U'</option>
+					</select>
+				</form>
+				<img src="../images/vperm.png" alt="vperm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Y perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>F R U' R' U' R U R' F' R U R' U' R' F R F'</option>
+						<option>F R' F R2 U' R' U' R U R' F' R U R' U' F'</option>
+					</select>
+				</form>
+				<img src="../images/yperm.png" alt="yperm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">H perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>M2 U M2 U2 M2 U M2</option>
+						<option>M2 U' M2 U2 M2 U' M2</option>
+					</select>
+				</form>
+				<img src="../images/hperm.png" alt="hperm" class="pllimages">
+			</div>
+		</div>
+
+		<!---->
+	<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Ua perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>M2 U M U2 M' U M2</option>
+						<option>R U' R U R U R U' R' U' R2</option>
+						<option>y2 R2 U' R' U' R U R U R U' R</option>
+					</select>
+				</form>
+				<img src="../images/uaperm.png" alt="uaperm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Ub perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>M2 U' M U2 M' U' M2</option>
+						<option>R2 U R U R' U' R' U' R' U R'</option>
+						<option>y2 R' U R' U' R' U' R' U R U R2</option>
+						<option>y2 R' U R' U' R3 U' R' U R U R2</option>
+					</select>
+				</form>
+				<img src="../images/ubperm.png" alt="ubperm" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Z perm</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>M' U M2 U M2 U M' U2 M2</option>
+						<option>y M' U' M2 U' M2 U' M' U2 M2</option>
+						<option>y M2 U M2 U M' U2 M2 U2 M'</option>
+						<option>M2 U' M2 U' M' U2 M2 U2 M'</option>
+					</select>
+				</form>
+				<img src="../images/zperm.png" alt="zperm" class="pllimages">
+			</div>
+		</div>
+
+
+
+
+
+			<script src="../script.js"></script>
+			</body>
+		</html>

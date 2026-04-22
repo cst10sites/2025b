@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--index.html-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Cubing</title>
+		<!--External CSS-->
+		<link rel="stylesheet" href="../style.css">	
+		<link rel="icon" type="image/png" sizes="16x16" href="../Images/favicon-16x16.png">
+	
+	</head>
+	<body>
+		<div>
+
+	<div id="menu">
+				<a href="../index.html">Home</a>
+				<div id="moreLinks" onmouseover="showHideMenu1()">
+					<!--only add <a href=...> below-->
+                    <a href="pll.html" onmouseout="showHideMenu1()">pll</a>
+                    <a href="twoLookpll.html" onmouseout="showHideMenu1()">2 look pll</a>
+                    <a href="oll.html" onmouseout="showHideMenu1()">oll</a>
+                    <a href="twoLookoll.html" onmouseout="showHideMenu1()">2 look oll</a>
+				</div>
+				<a id="icon" onmouseover="showHideMenu1()" onmouseout="showHideMenu1()">Algs</a>
+				<a id="icon2" onmouseover="showHideMenu2()" onmouseout="showHideMenu2()">Timers</a>
+				<a id="icon3" onmouseover="showHideMenu3()" onmouseout="showHideMenu3()">Tutorials</a>
+
+				<div id="moreLinks2" onmouseover="showHideMenu2()">
+                    <a href="../Timers/threeByThreeTimer.html" onmouseout="showHideMenu2()">3x3 timer</a>
+                    <a href="../Timers/twoBytwoTimer.html" onmouseout="showHideMenu2()">2x2 timer</a>
+                    <a href="../Timers/fourByFourTimer.html" onmouseout="showHideMenu2()">4x4 timer</a>
+                    <a href="../Timers/fiveByFiveTimer.html" onmouseout="showHideMenu2()">5x5 timer</a>
+                    <a href="../Timers/sixBySixTimer.html" onmouseout="showHideMenu2()">6x6 timer</a>
+                    <a href="../Timers/sevenBySevenTimer.html" onmouseout="showHideMenu2()">7x7 timer</a>
+                    <a href="../Timers/3blindTimer.html" onmouseout="showHideMenu2()">3blind timer</a>
+                    <a href="../Timers/ohTimer.html" onmouseout="showHideMenu2()">OH timer</a>
+                    <a href="../Timers/clockTimer.html" onmouseout="showHideMenu2()">Clock timer</a>
+                    <a href="../Timers/megaminxTimer.html" onmouseout="showHideMenu2()">Megaminx timer</a>
+                    <a href="../Timers/pyraminxTimer.html" onmouseout="showHideMenu2()">Pyraminx timer</a>
+                    <a href="../Timers/skewbTimer.html" onmouseout="showHideMenu2()">Skewb timer</a>
+                    <a href="../Timers/SquareOneTimer.html" onmouseout="showHideMenu2()">SQ-1 timer</a>
+                    <a href="../Timers/4blindTimer.html" onmouseout="showHideMenu2()">4blind timer</a>
+                    <a href="../Timers/blindTimer.html" onmouseout="showHideMenu2()">5blind timer</a>
+			</div>
+
+				<div id="moreLinks3" onmouseover="showHideMenu3()">
+					<a href="../Tutorials/threeByThreeTutorials.html" onmouseout="showHideMenu3()">3x3</a>
+					<a href="../Tutorials/twoByTwoTutorial.html" onmouseout="showHideMenu3()">2x2</a>
+					<a href="../Tutorials/fourByFourTutorial.html" onmouseout="showHideMenu3()">4x4</a>
+					<a href="../Tutorials/fiveByFiveTutorial.html" onmouseout="showHideMenu3()">5x5</a>
+					<a href="../Tutorials/sixBySixTutorial.html" onmouseout="showHideMenu3()">6x6</a>
+					<a href="../Tutorials/sevenBySevenTutorial.html" onmouseout="showHideMenu3()">7x7</a>
+					<a href="../Tutorials/threeByThreeBlindtutorial.html" onmouseout="showHideMenu3()">3blind</a>
+					<a href="../Tutorials/fmcTutorial.html" onmouseout="showHideMenu3()">FMC</a>
+					<a href="../Tutorials/ohTuturial.html" onmouseout="showHideMenu3()">OH</a>
+					<a href="../Tutorials/clockTutorial.html" onmouseout="showHideMenu3()">Clock</a>
+					<a href="../Tutorials/megaminxTutorial.html" onmouseout="showHideMenu3()">Megaminx</a>
+					<a href="../Tutorials/pyraminxTutorial.html" onmouseout="showHideMenu3()">Pyraminx</a>
+					<a href="../Tutorials/skewbTutorial.html" onmouseout="showHideMenu3()">Skewb</a>
+					<a href="../Tutorials/squareOneTutorial.html" onmouseout="showHideMenu3()">SQ-1</a>
+					<a href="../Tutorials/fourByFourBlindTutorial.html" onmouseout="showHideMenu3()">4blind</a>
+					<a href="../Tutorials/fiveByFiveBlindTutorial.html" onmouseout="showHideMenu3()">5blind</a>
+					<a href="../Tutorials/multiBlindTutorial.html" onmouseout="showHideMenu3()">Multi blind</a>
+
+				</div>
+			</div><!--end of menu-->
+			<h2 style="color: white;">First look:</h2>
+<hr>
+		<div class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Line</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>F R U R' U' F'</option>
+						<option>R U R' U' M' U R U' r'</option>
+					</select>
+				</form>
+				<img src="../images/lineoll.png" alt="headlights" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Small L</p>
+				<form>
+					<input type="checkbox" name="doneNotDone">
+					<select class="algOptions"> 
+						<option>f R U R' U' f'</option>
+						<option>y2 F U R U' R' F'</option>
+						<option>y2 r U R' U' r' R U R U' R'</option>
+					</select>
+				</form>
+				<img src="../images/smallloll.png" alt="smallloll" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Dot</p>
+				<form>
+					<input type="checkbox" name="doneNotDone">
+					<select class="algOptions"> 
+						<option>F R U R' U' F' f R U R' U' f'</option>
+					</select>
+				</form>
+				<img src="../images/dotoll.png" alt="dotoll" class="pllimages">
+			</div>
+		</div>
+		</div>
+
+		
+
+
+<h2 style="color: white;">Second look:</h2>
+<hr>
+		<div class="algContainer">	
+		<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Sune</p>
+				<form>
+					<input type="checkbox" name="doneNotDone">
+					<select class="algOptions"> 
+						<option>R U R' U R U2 R'</option>
+						<option>y' R' U2 R U R' U R</option>
+					</select>
+				</form>
+				<img src="../images/oll27.png" alt="oll27" class="pllimages">
+			</div>
+		
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Anti Sune</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U2 R' U' R U' R'</option>
+						<option>y' R' U' R U' R' U2 R</option>
+						<option>y L' U' L U' L' U2 L</option>
+					</select>
+				</form>
+				<img src="../images/oll26.png" alt="oll26" class="pllimages" style="rotate: 270deg;">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">H</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U R' U R U' R' U R U2 R'</option>
+						<option>y F R U R' U' R U R' U' R U R' U' F'</option>
+					</select>
+				</form>
+				<img src="../images/oll21.png" alt="oll21" class="pllimages" style="rotate: 90deg;">
+			</div>
+		</div>
+
+
+
+		<div class="algContainer">	
+		<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">Pi</p>
+				<form>
+					<input type="checkbox" name="doneNotDone">
+					<select class="algOptions"> 
+						<option>R U2 R2 U' R2 U' R2 U2 R</option>
+					</select>
+				</form>
+				<img src="../images/oll22.png" alt="oll22" class="pllimages">
+			</div>
+		
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">U</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R2 D R' U2 R D' R' U2 R'</option>
+					</select>
+				</form>
+				<img src="../images/oll23.png" alt="oll23" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">T</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>r U R' U' r' F R F'</option>
+					</select>
+				</form>
+				<img src="../images/oll24.png" alt="oll24" class="pllimages">
+			</div>
+		</div>
+
+
+		
+
+		<div class="algContainer">
+				<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">L</p>
+				<form>
+					<input type="checkbox" name="doneNotDone">
+					<select class="algOptions"> 
+						<option>F R' F' r U R U' r'</option>
+					</select>
+				</form>
+				<img src="../images/oll25.png" alt="oll25" class="pllimages" style="rotate: 270deg;">
+			</div>
+			
+
+		</div>
+
+
+
+
+
+
+			<script src="../script.js"></script>
+			</body>
+		</html>

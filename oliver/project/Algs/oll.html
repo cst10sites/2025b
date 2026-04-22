@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<!--index.html-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Cubing</title>
+		<!--External CSS-->
+		<link rel="stylesheet" href="../style.css">	
+		<link rel="icon" type="image/png" sizes="16x16" href="../Images/favicon-16x16.png">	
+	
+	</head>
+	<body>
+		
+
+<div id="menu">
+				<a href="../index.html">Home</a>
+				<div id="moreLinks" onmouseover="showHideMenu1()">
+					<!--only add <a href=...> below-->
+                    <a href="pll.html" onmouseout="showHideMenu1()">pll</a>
+                    <a href="twoLookpll.html" onmouseout="showHideMenu1()">2 look pll</a>
+                    <a href="oll.html" onmouseout="showHideMenu1()">oll</a>
+                    <a href="twoLookoll.html" onmouseout="showHideMenu1()">2 look oll</a>
+				</div>
+				<a id="icon" onmouseover="showHideMenu1()" onmouseout="showHideMenu1()">Algs</a>
+				<a id="icon2" onmouseover="showHideMenu2()" onmouseout="showHideMenu2()">Timers</a>
+				<a id="icon3" onmouseover="showHideMenu3()" onmouseout="showHideMenu3()">Tutorials</a>
+
+				<div id="moreLinks2" onmouseover="showHideMenu2()">
+                    <a href="../Timers/threeByThreeTimer.html" onmouseout="showHideMenu2()">3x3 timer</a>
+                    <a href="../Timers/twoBytwoTimer.html" onmouseout="showHideMenu2()">2x2 timer</a>
+                    <a href="../Timers/fourByFourTimer.html" onmouseout="showHideMenu2()">4x4 timer</a>
+                    <a href="../Timers/fiveByFiveTimer.html" onmouseout="showHideMenu2()">5x5 timer</a>
+                    <a href="../Timers/sixBySixTimer.html" onmouseout="showHideMenu2()">6x6 timer</a>
+                    <a href="../Timers/sevenBySevenTimer.html" onmouseout="showHideMenu2()">7x7 timer</a>
+                    <a href="../Timers/3blindTimer.html" onmouseout="showHideMenu2()">3blind timer</a>
+                    <a href="../Timers/ohTimer.html" onmouseout="showHideMenu2()">OH timer</a>
+                    <a href="../Timers/clockTimer.html" onmouseout="showHideMenu2()">Clock timer</a>
+                    <a href="../Timers/megaminxTimer.html" onmouseout="showHideMenu2()">Megaminx timer</a>
+                    <a href="../Timers/pyraminxTimer.html" onmouseout="showHideMenu2()">Pyraminx timer</a>
+                    <a href="../Timers/skewbTimer.html" onmouseout="showHideMenu2()">Skewb timer</a>
+                    <a href="../Timers/SquareOneTimer.html" onmouseout="showHideMenu2()">SQ-1 timer</a>
+                    <a href="../Timers/4blindTimer.html" onmouseout="showHideMenu2()">4blind timer</a>
+                    <a href="../Timers/blindTimer.html" onmouseout="showHideMenu2()">5blind timer</a>
+			</div>
+
+				<div id="moreLinks3" onmouseover="showHideMenu3()">
+					<a href="../Tutorials/threeByThreeTutorials.html" onmouseout="showHideMenu3()">3x3</a>
+					<a href="../Tutorials/twoByTwoTutorial.html" onmouseout="showHideMenu3()">2x2</a>
+					<a href="../Tutorials/fourByFourTutorial.html" onmouseout="showHideMenu3()">4x4</a>
+					<a href="../Tutorials/fiveByFiveTutorial.html" onmouseout="showHideMenu3()">5x5</a>
+					<a href="../Tutorials/sixBySixTutorial.html" onmouseout="showHideMenu3()">6x6</a>
+					<a href="../Tutorials/sevenBySevenTutorial.html" onmouseout="showHideMenu3()">7x7</a>
+					<a href="../Tutorials/threeByThreeBlindtutorial.html" onmouseout="showHideMenu3()">3blind</a>
+					<a href="../Tutorials/fmcTutorial.html" onmouseout="showHideMenu3()">FMC</a>
+					<a href="../Tutorials/ohTuturial.html" onmouseout="showHideMenu3()">OH</a>
+					<a href="../Tutorials/clockTutorial.html" onmouseout="showHideMenu3()">Clock</a>
+					<a href="../Tutorials/megaminxTutorial.html" onmouseout="showHideMenu3()">Megaminx</a>
+					<a href="../Tutorials/pyraminxTutorial.html" onmouseout="showHideMenu3()">Pyraminx</a>
+					<a href="../Tutorials/skewbTutorial.html" onmouseout="showHideMenu3()">Skewb</a>
+					<a href="../Tutorials/squareOneTutorial.html" onmouseout="showHideMenu3()">SQ-1</a>
+					<a href="../Tutorials/fourByFourBlindTutorial.html" onmouseout="showHideMenu3()">4blind</a>
+					<a href="../Tutorials/fiveByFiveBlindTutorial.html" onmouseout="showHideMenu3()">5blind</a>
+					<a href="../Tutorials/multiBlindTutorial.html" onmouseout="showHideMenu3()">Multi blind</a>
+
+				</div>
+			</div><!--end of menu-->
+		<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">27</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U R' U R U2 R'</option>
+						<option>y' R' U2 R U R' U R</option>
+					</select>
+				</form>
+				<img src="../images/oll27.png" alt="oll27" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">26</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U2 R' U' R U' R'</option>
+						<option>y' R' U' R U' R' U2 R</option>
+					</select>
+				</form>
+				<img src="../images/oll26.png" alt="oll26" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">21</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U2 R' U' R U R' U' R U' R'</option>
+						<option>y R U R' U R U' R' U R U2 R'</option>
+					</select>
+				</form>
+				<img src="../images/oll21.png" alt="oll21" class="pllimages">
+			</div>
+		</div>
+
+		<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">22</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U2 R2 U' R2 U' R2 U2 R'</option>
+					</select>
+				</form>
+				<img src="../images/oll22.png" alt="oll22" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">23</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R' U' R U D' R2 U R' U R U' R U' R2 D</option>
+						<option>y F' U' F R2 u R' U R U' R u' R2</option>
+					</select>
+				</form>
+				<img src="../images/oll23.png" alt="oll23" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">24</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>r U R' U' r' F R F'</option>
+						<option>y R U R D R' U' R D' R2</option>
+					</select>
+				</form>
+				<img src="../images/oll24.png" alt="oll24" class="pllimages">
+			</div>
+		</div>
+
+		<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">25</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>F' r U R' U' r' F R</option>
+						<option>y' R' F R B' R' F' R B</option>
+					</select>
+				</form>
+				<img src="../images/oll25.png" alt="oll25" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">33</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U R' U' R' F R F'</option>
+					</select>
+				</form>
+				<img src="../images/oll33.png" alt="oll33" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">45</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>F R U R' U' F'</option>
+					</select>
+				</form>
+				<img src="../images/oll45.png" alt="oll45" class="pllimages">
+			</div>
+		</div>
+
+		<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">5</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>l' U2 L U L' U l</option>
+						<option>y2 r' U2 R U R' U r</option>
+					</select>
+				</form>
+				<img src="../images/oll5.png" alt="oll5" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">6</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>r' U2 R U R' U r</option>
+					</select>
+				</form>
+				<img src="../images/oll6.png" alt="oll6" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">34</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U R2 U' R' F R U R U' F'</option>
+						<option>R U R' U' B' R' F R F' B</option>
+					</select>
+				</form>
+				<img src="../images/oll34.png" alt="oll34" class="pllimages">
+			</div>
+		</div>
+
+	<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">46</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R' U' R' F R F' U R</option>
+					</select>
+				</form>
+				<img src="../images/oll46.png" alt="oll46" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">36</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions" style="font-size: 0.8em"> 
+						<option>y2 L' U' L U' L' U L U L F' L' F</option>
+						<option>R' U' R U' R' U R U R B' R' B</option>
+					</select>
+				</form>
+				<img src="../images/oll36.png" alt="oll36" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">38</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U R' U R U' R' U' R' F R F'</option>
+					</select>
+				</form>
+				<img src="../images/oll38.png" alt="oll38" class="pllimages">
+			</div>
+		</div>
+
+	<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">28</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>r U R' U' r' R U R U' R'</option>
+					</select>
+				</form>
+				<img src="../images/oll28.png" alt="oll28" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">57</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U R' U' M' U R U' r'</option>
+					</select>
+				</form>
+				<img src="../images/oll57.png" alt="oll57" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">31</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R' U' F U R U' R' F' R</option>
+					</select>
+				</form>
+				<img src="../images/oll31.png" alt="oll31" class="pllimages">
+			</div>
+		</div>
+
+	
+	<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">32</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y2 L U F' U' L' U L F L'</option>
+						<option>S R U R' U' R' F R f'</option>
+					</select>
+				</form>
+				<img src="../images/oll32.png" alt="oll32" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">43</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y2 F' U' L' U L F</option>
+						<option>y2 R' U' F R' F' R U R</option>
+						<option>f' L' U' L U f</option>
+					</select>
+				</form>
+				<img src="../images/oll43.png" alt="oll43" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">44</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>F U R U' R' F'</option>
+						<option>y2 f R U R' U' f'</option>
+					</select>
+				</form>
+				<img src="../images/oll44.png" alt="oll44" class="pllimages">
+			</div>
+		</div>
+
+		
+
+
+				<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">51</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y2 F U R U' R' U R U' R' F'</option>
+						<option>f R U R' U' R U R' U' f'</option>
+					</select>
+				</form>
+				<img src="../images/oll51.png" alt="oll51" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">56</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>r' U' r U' R' U R U' R' U R r' U r</option>
+						<option>r U r' U R U' R' U R U' R' r U' r'</option>
+						<option>r U r' U R U' R' U R U' M' U' r'</option>
+					</select>
+				</form>
+				<img src="../images/oll56.png" alt="oll56" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;" >52</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U R' U R U' B U' B' R'</option>
+						<option>y2 R' F' U' F U' R U R' U R</option>
+						<option>R U R' U R U' y R U' R' F'</option>
+					</select>
+				</form>
+				<img src="../images/oll52.png" alt="oll52" class="pllimages">
+			</div>
+		</div>
+
+		<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">55</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y R' F R U R U' R2 F' R2 U' R' U R U R'</option>
+						<option>R U2 R2 U' R U' R' U2 F R F'</option>
+					</select>
+				</form>
+				<img src="../images/oll55.png" alt="oll55" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">9</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U R' U' R' F R2 U R' U' F'</option>
+					</select>
+				</form>
+				<img src="../images/oll9.png" alt="oll9" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">10</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U R' U R' F R F' R U2 R'</option>
+						<option>y2 r U R' U R U' R' U' r' R U R U' R'</option>
+					</select>
+				</form>
+				<img src="../images/oll10.png" alt="oll10" class="pllimages">
+			</div>
+		</div>
+		<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">35</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>F' r U R' U' r' F R U2 R2 F R F' R U2 R'</option>
+					</select>
+				</form>
+				<img src="../images/oll35.png" alt="oll35" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">37</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>F R' F' R U R U' R'</option>
+						<option>F R U' R' U' R U R' F'</option>
+					</select>
+				</form>
+				<img src="../images/oll37.png" alt="oll37" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;" >13</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>F U R U' R2 F' R U R U' R'</option>
+						<option>r U' r' U' r U r' y' R' U R</option>
+					</select>
+				</form>
+				<img src="../images/oll13.png" alt="oll13" class="pllimages">
+			</div>
+		</div>
+
+		<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">15</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y2 l' U' l L' U' L U l' U l</option>
+						<option>r' U' r R' U' R U r' U r</option>
+					</select>
+				</form>
+				<img src="../images/oll15.png" alt="oll15" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">16</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>r U r' R U R' U' r U' r'</option>
+					</select>
+				</form>
+				<img src="../images/oll16.png" alt="oll16" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">48</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>F R U R' U' R U R' U' F'</option>
+					</select>
+				</form>
+				<img src="../images/oll48.png" alt="oll48" class="pllimages">
+			</div>
+		</div>
+
+
+
+
+
+	<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">47</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R' U' R' F R F' R' F R F' U R</option>
+						<option>F' L' U' L U L' U' L U F</option>
+						<option>y' F U R U' R' F' R U R' U R U2 R'</option>
+					</select>
+				</form>
+				<img src="../images/oll47.png" alt="oll47" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">49</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions" style="font-size: 0.8em"> 
+						<option>r U' r2 U r2 U r2 U' r</option>
+					</select>
+				</form>
+				<img src="../images/oll49.png" alt="oll49" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;" >50</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>r' U r2 U' r2 U' r2 U r'</option>
+					</select>
+				</form>
+				<img src="../images/oll50.png" alt="oll50" class="pllimages">
+			</div>
+		</div>
+
+	<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">53</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y l' U2 L U L' U' L U L' U l</option>
+						<option>y' r' U2 R U R' U' R U R' U r</option>
+						<option>r' U' R U' R' U R U' R' U2 r</option>
+					</select>
+				</form>
+				<img src="../images/oll53.png" alt="oll53" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">54</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y' r U2 R' U' R U R' U' R U' r'</option>
+						<option>r U R' U R U' R' U R U2 r'</option>
+					</select>
+				</form>
+				<img src="../images/oll54.png" alt="oll54" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">29</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y R U R' U' R U' R' F' U' F R U R'</option>
+					</select>
+				</form>
+				<img src="../images/oll29.png" alt="oll29" class="pllimages">
+			</div>
+		</div>
+
+	<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">30</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y' F R' F R2 U' R' U' R U R' F2</option>
+					</select>
+				</form>
+				<img src="../images/oll30.png" alt="oll30" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">41</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U R' U R U2 R' F R U R' U' F'</option>
+					</select>
+				</form>
+				<img src="../images/oll41.png" alt="oll41" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold;  color: black;">42</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R' U' R U' R' U2 R F R U R' U' F'</option>
+					</select>
+				</form>
+				<img src="../images/oll42.png" alt="oll42" class="pllimages">
+			</div>
+		</div>
+
+
+				<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">7</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>r U R' U R U2 r'</option>
+					</select>
+				</form>
+				<img src="../images/oll7.png" alt="oll7" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">8</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y2 l' U' L U' L' U2 l</option>
+						<option>y2 R U2 R' U2 R' F R F'</option>
+						<option>r' U' R U' R' U2 r</option>
+					</select>
+				</form>
+				<img src="../images/oll8.png" alt="oll8" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">11</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y2 r U R' U R' F R F' R U2 r'</option>
+						<option>r' R2 U R' U R U2 R' U M'</option>
+					</select>
+				</form>
+				<img src="../images/oll11.png" alt="oll11" class="pllimages">
+			</div>
+		</div>
+
+		<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">12</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>M' R' U' R U' R' U2 R U' R r'</option>
+					</select>
+				</form>
+				<img src="../images/oll12.png" alt="oll12" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">40</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R' F R U R' U' F' U R</option>
+					</select>
+				</form>
+				<img src="../images/oll40.png" alt="oll40" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">39</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>L F' L' U' L U F U' L'</option>
+						<option>y2 R B' R' U' R U B U' R'</option>
+					</select>
+				</form>
+				<img src="../images/oll39.png" alt="oll39" class="pllimages">
+			</div>
+		</div>
+
+
+
+
+
+	<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">1</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>R U2 R2 F R F' U2 R' F R F'</option>
+					</select>
+				</form>
+				<img src="../images/oll1.png" alt="oll1" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">2</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions" style="font-size: 0.8em"> 
+						<option>y' r U r' U2 r U2 R' U2 R U' r'</option>
+						<option>y' F R U R' U' F' f R U R' U' f'</option>
+						<option>y' F R U R' U' S R U R' U' f'</option>
+					</select>
+				</form>
+				<img src="../images/oll2.png" alt="oll2" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">3</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y' r' R2 U R' U r U2 r' U M'</option>
+						<option>y2 F U R U' R' F' U F R U R' U' F'</option>
+						<option>f R U R' U' f' U' F R U R' U' F'</option>
+					</select>
+				</form>
+				<img src="../images/oll3.png" alt="oll3" class="pllimages">
+			</div>
+		</div>
+
+	<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">4</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y' M U' r U2 r' U' R U' R' M'</option>
+						<option>y2 F U R U' R' F' U' F R U R' U' F'</option>
+						<option>f R U R' U' f' U F R U R' U' F'</option>
+					</select>
+				</form>
+				<img src="../images/oll4.png" alt="oll4" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">18</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>r U R' U R U2 r2 U' R U' R' U2 r</option>
+						<option>y R U2 R2 F R F' U2 M' U R U' r'</option>
+					</select>
+				</form>
+				<img src="../images/oll18.png" alt="oll18" class="pllimages">
+			</div>
+<!---->
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">19</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>r' R U R U R' U' M' R' F R F'</option>
+					</select>
+				</form>
+				<img src="../images/oll19.png" alt="oll19" class="pllimages">
+			</div>
+		</div>
+
+	<div  class="algContainer">	
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">17</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>y2 F R' F' R2 r' U R U' R' U' M'</option>
+						<option>R U R' U R' F R F' U2 R' F R F'</option>
+					</select>
+				</form>
+				<img src="../images/oll17.png" alt="oll17" class="pllimages">
+			</div>
+
+			<div class="individualAlgs">
+				<p style="text-align: center; font-size: 1.5em; font-weight: bold; color: black;">20</p>
+				<form>
+					<input type="checkbox"  > 
+
+					<select class="algOptions"> 
+						<option>r U R' U' M2 U R U' R' U' M'</option>
+						<option>r' R U R U R' U' M2 U R U' r'</option>
+					</select>
+				</form>
+				<img src="../images/oll20.png" alt="oll20" class="pllimages">
+			</div>
+		</div>
+
+			<script src="../script.js"></script>
+			</body>
+		</html>
