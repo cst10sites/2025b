@@ -1,0 +1,78 @@
+th,
+td {
+    border: 3px solid white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.main {
+    margin: 20px;
+    background: rgb(0, 0, 255);
+    background: linear-gradient(90deg, rgba(0, 0, 255, 0.8) 0%, rgba(255, 0, 78, 0.8) 100%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+h2.main,
+h3.main,
+h4.main {
+    padding-left: 10px;
+}
+
+h1.main {
+    padding-left: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+body {
+    background-image: url("https://t4.ftcdn.net/jpg/02/66/35/63/360_F_266356338_5sHTI2256ndaVN4Nkrd90Kx87gJ8EV3A.jpg");
+    background-attachment: fixed;
+    background-position: top;
+    background-size: 200% auto;
+    min-width: fit-content;
+}
+
+.example {
+    border-style: solid;
+    border-width: 3px;
+    border-color: bisque;
+    padding: 1px;
+}
+
+li {
+    text-align: left;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a.button {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: right;
+    right: 0;
+}
+
+a.button:hover {
+    background-color: black;
+    color: white;
+}
+
+.iframe {
+    width: 400px;
+    height: 300px
+}

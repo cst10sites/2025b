@@ -1,0 +1,75 @@
+body {
+	font-family: Helvetica;
+	color: saddlebrown;  
+	margin: 0px 100px;
+	background-image: url(https://img.freepik.com/free-vector/detailed-hand-painted-pink-watercolour-background_1048-17039.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top; /* center */
+	background-size: 100% auto;
+	background-color: pink;
+	/*background-repeat: no-repeat;*/
+	/*background-color: skyblue;*/
+}
+mark {
+	color: sienna;
+	background-color: lightpink;
+}
+a {
+	color: palevioletred;
+}
+a.btn {
+	color: whitesmoke;
+	background-color: palevioletred;
+	border-radius: 50px;
+	padding: 10px 15px;
+}
+
+div#menu {
+	overflow: hidden;
+	background-color: pink;
+	position: relative;
+}
+div#menu #moreLinks {
+	display: none; /*hide by default*/
+	/* display: block; /* show by default */
+}
+
+div#menu a{
+	color: pink;
+	padding: 16px 20px;
+	text-decoration: none;
+	font-size: 1.25em;
+	display: block;
+}
+div#menu a.hover {
+	color:pink;
+	background-color: pink;
+}
+div#menu a.icon {
+	background: pink;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+/* div content CSS */
+
+div#content {
+	padding: 40px;
+	color: sienna;
+	background-color: rgba(226, 93, 134, 0.2);
+	/* red green blue: 0 to 255; alpha (0 to 1(decimal)) */
+}
+/* table CSS */
+table, th, td{
+	border:3px solid palevioletred;
+	padding:10px 10px;
+	/* background-color: black; */
+}
+table {
+	border-collapse: collapse;
+}
+th, td{
+	text-align: center; /* left */
+}

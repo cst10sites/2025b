@@ -1,0 +1,58 @@
+body {
+    background-color: burlywood;
+}
+.container {
+    margin: 10px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 15px;
+    * {
+        margin-left: 10px;
+    }
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 10px;
+}
+.container h1 {
+    color: chocolate;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+img {
+    margin-left: 50px;
+    margin-right: auto;
+}
+a {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+.button {
+    display: block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}
+.button {
+    transition: background-color 500ms linear, transform 0.3s ease; 
+}
+.button:hover {
+    
+    background-color: green;
+   
+}.button:hover {
+        transform: scale(1.01);
+    }
+.button:active {
+    background-color: black;
+}
+.hover-image {
+    transition: transform 0.3s ease; 
+    border-radius: 10px;
+  }
+  
+  .hover-image:hover {
+    transform: scale(1.05);
+  }

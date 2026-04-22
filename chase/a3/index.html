@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="Resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Resources/favicon-16x16.png">
+</head>
+
+<body>
+    <div class="main">
+        <h1>HTML/CSS guide</h1>
+        <h2>Common HTML tags</h2>
+        <table style="width:100%; text-align: center;">
+            <tr>
+                <th>Tag</th>
+                <th>Definition</th>
+                <th>Examples</th>
+            </tr>
+            <tr>
+                <td>&lt;p&gt;</td>
+                <td>This tag makes a paragraph on your page</td>
+                <td>
+                    <p>This is a paragraph</p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;img src="picture link" alt="text"&gt;</td>
+                <td>Allows you to add images to your website</td>
+                <td><img src="Resources/OBLOCKBAMBAMBAM.jpg" alt="txt" style="width:200px"></td>
+            </tr>
+            <tr>
+                <td>&lt;div&gt;</td>
+                <td>Allows you to make a group (or container) of tags</td>
+                <td>
+                    <div class="example">
+                        <p>This is in a div</p>
+                    </div>
+                    <p>this isn't in a div</p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;span style="CSS here"&gt;</td>
+                <td>Similar to &lt;div&gt;, it creates a group. However, it doesn't allow you to add tags inside.</td>
+                <td><span style="color: limegreen;">This is in a span</span><br>This isn't in a span</td>
+            </tr>
+            <tr>
+                <td>&lt;iframe src="link" title="name"&gt;</td>
+                <td>Allows you to embed other webpages in your website</td>
+                <td><iframe src="../a2/index.html" title="Assignment 2" class="iframe"></iframe></td>
+            </tr>
+            <tr>
+                <td>&lt;br&gt;</td>
+                <td>This allows your tags to be on a new line</td>
+                <td>
+                    <p>This paragraph is not broken in two. It is one continuous line.</p>
+                    <p>This paragraph is broken in two.<br>It is not one continuous line.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, ...</td>
+                <td>These tags create different size text headers.</td>
+                <td>
+                    <h1>h1 title</h1>
+                    <h2>h2 title</h2>
+                    <h3>h3 title</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;ol&gt; &amp; &lt;ul&gt;</td>
+                <td>These are used to create an ordered lists(ol) and unordered lists(ul). For each item in the list,
+                    &lt;li&gt; is used.</td>
+                <td>
+                    <ol>
+                        <li style="text-align: left;">Ordered list 1</li>
+                        <li style="text-align: left;">Ordered list 2</li>
+                        <li style="text-align: left;">Ordered list 3</li>
+                    </ol>
+                    <ul>
+                        <li style="text-align: left;">Unordered list 1</li>
+                        <li style="text-align: left;">Unordered list 2</li>
+                        <li style="text-align: left;">Unordered list 3</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>&lt;a href="link" alt="text"&gt;</td>
+                <td>Used to define a link</td>
+                <td><a href="index.html">Reload the page!</a></td>
+            </tr>
+            <tr>
+                <td>&lt;table&gt;</td>
+                <td>Used to define a table. Inside, &lt;tr&gt; is used to define a row, &lt;th&gt; for the first row,
+                    and &lt;th&gt; is used for all other rows.</td>
+                <td>
+                    <table>
+                        <tr style="width: fit-content;">
+                            <th>Tag</th>
+                            <th>Definition</th>
+                        </tr>
+                        <tr>
+                            <td>&lt;th&gt;</td>
+                            <td>First row. How many you add defines how many columns.</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;td&gt;</td>
+                            <td>Every following row. Make sure to add the same amount as the number of &lt;th&gt; tags.
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <p style="text-align: right;">
+            <a href="outside.html" class="button">Next Page >></a>
+        </p>
+    </div>
+</body>
+
+</html>

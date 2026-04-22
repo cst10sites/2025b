@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Assignment 3: Outside HTML</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .black {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <link rel="icon" type="image/png" sizes="32x32" href="Resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Resources/favicon-16x16.png">
+</head>
+
+<body>
+    <div class="main">
+        <h1>Common HTML tags outside &lt;body&gt;</h1>
+        <table style="text-align: center;width: 100%;">
+            <tr>
+                <th>&lt;head&gt; Tags</th>
+                <th>Definition</th>
+                <th>Examples (if applicable)</th>
+            </tr>
+            <tr>
+                <td>&lt;!DOCTYPE html&gt;</td>
+                <td>Used to define what type of document it is for the browser.</td>
+                <td>No example applicable</td>
+            </tr>
+            <tr>
+                <td>&lt;html lang="en-US"&gt;...&lt;/html&gt;</td>
+                <td>Defines the language of the page, and is where the HTML is located</td>
+                <td>This page is set to "en-US", so if your browser's default language is English, the translate
+                    function will not activate.</td>
+            </tr>
+            <tr>
+                <td>&lt;meta charset="UTF-8"&gt;</td>
+                <td>Defines the character library (UTF-8 is the best one for English/Latin languages)</td>
+                <td>No example applicable</td>
+            </tr>
+            <tr>
+                <td>&lt;title&gt;</td>
+                <td>Defines the title of the page.</td>
+                <td><img src="Resources/Screenshot_2025-03-06_100715.png" alt="picture of title"></td>
+            </tr>
+            <tr>
+                <td>&lt;style&gt;</td>
+                <td>Used to add CSS to a website without an external CSS file.</td>
+                <td class="black">&lt;style&gt;
+                    .black {
+                    background-color: black;
+                    color: white;
+                    }
+                    &lt;/style&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;link rel="stylesheet" href="styles.css"&gt;</td>
+                <td>Used to add an external CSS file to the page.</td>
+                <td>Both the homepage and this page are connected to the <a href="styles.css" style="color: aqua;">CSS
+                        file</a></td>
+            </tr>
+            <tr>
+                <td>&lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;</td>
+                <td>Used to add a favicon (or the icon on the tab) to your webpage.</td>
+                <td><img src="Resources/Screenshot_2025-03-05_110919.png" alt="example of favicon"></td>
+            </tr>
+
+        </table>
+        <p style="text-align: left;">
+            <a href="index.html" class="button">
+                &lt;&lt; Last page</a>
+        </p>
+    </div>
+</body>
+
+</html>

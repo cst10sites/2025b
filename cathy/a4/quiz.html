@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 4</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<!--create and edit style.css-->
+		<link rel="icon" type="image/x-icon" href="paper.png">
+		<style>
+			div#content {
+				border: 2px solid saddlebrown;
+				border-radius: 12px;
+				padding: 5px;
+				color: rgba(89, 38, 0, 0.9);
+				;
+				background-color: rgba(175, 119, 78, 0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="center">
+			<div id="content">
+				<h1>HTML/CSS Quiz</h1>
+				<form>
+					<label>What is the correct HTML for creating a hyperlink?</label>
+					<br>
+					<input id="option1" type="radio" value="1" name="ex2">
+					<label>&lt;a href="http://www.w3schools.com"&gt;W3Schools&lt;/a&gt;</label>
+					<br>
+					<input id="option2" type="radio" value="2" name="ex2">
+					<label>&lt;a name="http://www.w3schools.com"&gt;W3Schools&lt;/a&gt;</label>
+					<br>
+					<input id="option3" type="radio" value="3" name="ex2">
+					<label>&lt;a&gt;"http://www.w3schools.com"&lt;/a&gt;</label>
+					<br>
+					<input id="option4" type="radio" value="4" name="ex2">
+					<label>&lt;a insert="http://www.w3schools.com"&gt;&lt;/a&gt;</label>
+					<br>
+					<input type="button" value="Submit" onclick="radioq();">
+					<br>
+					<input type="reset">
+					<br>
+				</form>
+				<form>
+					<label>Which of the following changes the background color of an element in CSS?</label>
+					<br>
+					<input id="choice1" type="checkbox" value="bgcolor">
+					<label>background-color: yellow;</label>
+					<input id="choice2" type="checkbox" value="color">
+					<label>color: yellow;</label>
+					<br>
+					<input id="choice3" type="checkbox" value="box">
+					<label>.box { background-color: blue; }</label>
+					<input id="choice4" type="checkbox" value="fontcolor">
+					<label>font-color: green;</label>
+					<br>
+					<input type="button" value="Website" onclick="multiplec();">
+					<br>
+					<input type="reset">
+					<br>
+				</form>
+				<form>
+					<label>Where is the correct place to insert a JavaScript?</label>
+					<select id="scriptValue">
+						<!--no input for dropdown-->
+						<option value="body">the &lt;body&gt; section</option>
+						<option value="head">the &lt;head&gt; section</option>
+						<option value="both">both the &lt;body&gt; and &lt;head&gt; section </option>
+						<option value="title">the &lt;title&gt; section</option>
+						<!-- id in select, value in option-->
+					</select>
+					<br>
+					<input type="button" value="OK" onclick="dropdownq();">
+					<input type="reset">
+					<br>
+				</form>
+				<p id="scriptDisplay">2022&copy;</p>
+				<hr>
+				<h2>Cookie Clicker</h2>
+				<p>Click <a href="cookie.html">here</a> to play the Cookie Clicker. </p>
+			</div>
+		</div>
+		<script>
+			function radioq() {
+				var correctAns = document.getElementById("option1").checked;
+				if (correctAns == true) {
+					alert("Correct!")
+				} else {
+					alert("Try again!");
+				}
+			}
+
+			function multiplec() {
+				var choice1 = document.getElementById("choice1").checked
+				var choice2 = document.getElementById("choice2").checked
+				var choice3 = document.getElementById("choice3").checked
+				var choice4 = document.getElementById("choice4").checked
+				var correct = (choice1 == true && choice2 == false && choice3 == true && choice4 == false);
+				if (correct == true) {
+					alert("Correct");
+				} else {
+					alert("Incorrect");
+				}
+			}
+
+			function dropdownq() {
+				var choice = document.getElementById("scriptValue").value;
+				if (choice == "both") {
+					document.getElementById("scriptDisplay").innerHTML = "That is the correct answer.";
+				} else {
+					document.getElementById("scriptDisplay").innerHTML = "It is not this one.";
+				}
+			}
+		</script>
+	</body>
+</html>

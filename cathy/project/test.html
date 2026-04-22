@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="icon" type="image/x-icon" href="favicon (12).ico">
+  <style>
+    .correct-answer {
+      background-color: #d4edda;
+      border-left: 6px solid #28a745;
+      padding-left: 10px;
+      border-radius: 4px;
+    }
+
+    .incorrect-answer {
+      background-color: #f8d7da;
+      border-left: 6px solid #dc3545;
+      padding-left: 10px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <main class="main-content">
+    <h1>World Religions Quiz</h1>
+    <h3><strong>Instructions:</strong> Some questions have more than one answer, choose carefully!</h3>
+    <div class="center">
+      <div id="content">
+        <form>
+          <label id="q1label">1) Which religion teaches that the soul goes through cycles of rebirth (samsara)?</label>
+          <br>
+          <input id="option1" type="radio" value="1" name="ex2">
+          <label id="label1">Hinduism</label>
+          <br>
+          <input id="option2" type="radio" value="2" name="ex2">
+          <label id="label2">Judaism</label>
+          <br>
+          <input id="option3" type="radio" value="3" name="ex2">
+          <label id="label3">Buddhism</label>
+          <br>
+          <input id="option4" type="radio" value="4" name="ex2">
+          <label id="label4">Islam</label>
+          <br>
+          <input type="button" value="Submit" onclick="radioq();">
+          <br>
+          <input type="reset">
+          <br>
+        </form>
+        <form>
+          <label>2) Which of these religions are monotheistic?</label>
+          <br>
+          <input id="choice1" type="checkbox" value="bgcolor">
+          <label>Judaism</label>
+          <input id="choice2" type="checkbox" value="color">
+          <label>Buddhism</label>
+          <br>
+          <input id="choice3" type="checkbox" value="box">
+          <label>Christianity</label>
+          <input id="choice4" type="checkbox" value="fontcolor">
+          <label>Islam</label>
+          <br>
+          <input id="choice5" type="checkbox" value="idk">
+          <label>Hinduism</label>
+          <br>
+          <input type="button" value="Submit" onclick="multiplec();">
+          <br>
+          <input type="reset">
+          <br>
+        </form>
+         <form>
+          <label>3) What region has the highest concentration of Christians?</label>
+          <br>
+          <input id="31" type="radio" value="1" name="ex2">
+          <label>North America</label>
+          <br>
+          <input id="32" type="radio" value="2" name="ex2">
+          <label>Asia-Pacific</label>
+          <br>
+          <input id="33" type="radio" value="3" name="ex2">
+          <label>Middle East-North Africa</label>
+          <br>
+          <input id="34" type="radio" value="4" name="ex2">
+          <label>Latin America-Carribean</label>
+          <br>
+          <input type="button" value="Submit" onclick="no3();">
+          <br>
+          <input type="reset">
+          <br>
+        </form>
+        <form>
+          <label>4) Who is the youngest religion group on average?</label>
+          <br>
+         <input id="41" type="radio" value="1" name="ex2">
+          <label>Folk Religionists</label>
+          <br>
+           <input id="42" type="radio" value="1" name="ex2">
+          <label>Hindus</label>
+          <br>
+           <input id="43" type="radio" value="1" name="ex2">
+          <label>Muslims</label>
+          <br>
+           <input id="44" type="radio" value="1" name="ex2">
+          <label>Buddhists</label>
+          <br>
+           <input id="45" type="radio" value="1" name="ex2">
+          <label>Christians</label>
+          <br>
+           <input id="46" type="radio" value="1" name="ex2">
+          <label>Unaffliated</label>
+          <br>
+
+<input type="button" value="Submit" onclick="no4();">
+          <br>
+          <input type="reset">
+          <br>
+        </form>
+        <form>
+          <label>5) What are the three main branches of Buddhism?</label>
+          <br>
+          <input id="51" type="radio" value="1" name="ex2">
+          <label>Theravada, Mahayana, Vajrayana</label>
+          <br>
+          <input id="52" type="radio" value="1" name="ex2">
+
+          <label>Dukha, Anatman, Theravada</label>
+          <br>
+          <input id="53" type="radio" value="1" name="ex2">
+          <label>Mahayana, Ashoka, Varjrayana</label>
+          <br>
+          <input id="54" type="radio" value="1" name="ex2">
+          <label>Siddhartha, Bhutan, Khatana</label>
+          <br>
+          <input type="button" value="Submit" onclick="no5();">
+          <input type="reset">
+          <br>
+        </form>
+        <form>
+          <label>6) What religion considers Abraham a key figure?</label>
+          <br>
+          <input id="c61" type="checkbox" value="bgcolor">
+          <label>Judaism</label>
+          <input id="c62" type="checkbox" value="color">
+          <label>Christianity</label>
+          <br>
+          <input id="c63" type="checkbox" value="box">
+          <label>Islam</label>
+          <input id="c64" type="checkbox" value="fontcolor">
+          <label>Buddhism</label>
+          <br>
+          <input id="c65" type="checkbox" value="idk">
+          <label>Hinduism</label>
+          <br>
+          <input type="button" value="Submit" onclick="no6();">
+          <br>
+          <input type="reset">
+        </form> 
+
+        <form>
+          <label>7) What state is the center of Jewish life?</label>
+          <br>
+          <input id="71" type="radio" value="bgcolor"name="ex2">
+          <label>Israel</label>
+              <br>
+          <input id="72" type="radio" value="bgcolor"name="ex2">
+          <label>Rome</label>
+              <br>
+          <input id="73" type="radio" value="bgcolor"name="ex2">
+          <label>Damascus</label>
+            <br>
+          <input id="74" type="radio" value="bgcolor"name="ex2">
+          <label>Santiago</label>
+          <br>
+           <input type="button" value="Submit" onclick="no7();">
+          <br>
+          <input type="reset">
+        </form> 
+        <form>
+          <label>8) Who led the Protestant Reformation in the 16th century?</label>
+          <br>
+           <input id="81" type="radio" value="bgcolor"name="ex2">
+          <label>Moses</label>
+              <br>
+               <input id="82" type="radio" value="bgcolor"name="ex2">
+          <label>Abraham</label>
+              <br>
+               <input id="83" type="radio" value="bgcolor"name="ex2">
+          <label>Martin Luther</label>
+              <br>
+               <input id="84" type="radio" value="bgcolor"name="ex2">
+          <label>Jesus</label>
+              <br>
+               <input type="button" value="Submit" onclick="no8();">
+          <br>
+          <input type="reset">
+        </form>
+        <form>
+          <label>9) Which of these are the five pillars of Islam?</label>
+          <br>
+          <input id="c91" type="checkbox" value="bgcolor">
+          <label>Shahada</label>
+          <br>
+          <input id="c92" type="checkbox" value="bgcolor">
+          <label>Salah</label>
+          <br>
+          <input id="c93" type="checkbox" value="bgcolor">
+          <label>Zakat</label>
+          <br>
+          <input id="c94" type="checkbox" value="bgcolor">
+          <label>Sawm</label>
+          <br>
+          <input id="c95" type="checkbox" value="bgcolor">
+          <label>Hajj</label>
+              <br>
+               <input type="button" value="Submit" onclick="no9();">
+          <br>
+          <input type="reset">
+        </form>
+        <form>
+          <label>10) What is secularism?</label>
+          <br>
+           <input id="101" type="radio" value="bgcolor"name="ex2">
+          <label>The belief in worshipping many gods</label>
+          <br>
+           <input id="102" type="radio" value="bgcolor"name="ex2">
+          <label>A system that separates religion from government affairs</label>
+          <br>
+           <input id="103" type="radio" value="bgcolor"name="ex2">
+          <label>The idea that only one religion is true</label>
+          <br>
+           <input id="81" type="radio" value="bgcolor"name="ex2">
+          <label>A religion that follows strict laws</label>
+           <br>
+               <input type="button" value="Submit" onclick="no10();">
+          <br>
+          <input type="reset">
+
+
+        <p id="scriptDisplay">2025&copy;</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function radioq() {
+      let correct = document.getElementById("option1");
+      let wrong1 = document.getElementById("option2");
+      let wrong2 = document.getElementById("option3");
+      let wrong3 = document.getElementById("option4");
+
+      let label1 = document.getElementById("label1");
+      let label2 = document.getElementById("label2");
+      let label3 = document.getElementById("label3");
+      let label4 = document.getElementById("label4");
+
+      label1.classList.remove("correct-answer", "incorrect-answer");
+      label2.classList.remove("correct-answer", "incorrect-answer");
+      label3.classList.remove("correct-answer", "incorrect-answer");
+      label4.classList.remove("correct-answer", "incorrect-answer");
+
+      if (correct.checked) {
+        label1.classList.add("correct-answer");
+      } else {
+        label1.classList.add("correct-answer");
+        if (wrong1.checked) label2.classList.add("incorrect-answer");
+        if (wrong2.checked) label3.classList.add("incorrect-answer");
+        if (wrong3.checked) label4.classList.add("incorrect-answer");
+      }
+    }
+    function multiplec() {
+    let correct = ['choice1', 'choice3', 'choice4'];
+    for (let i = 1; i <= 5; i++) {
+      let checkbox = document.getElementById('choice' + i);
+      checkbox.classList.remove("correct-answer", "incorrect-answer");
+      if (checkbox.checked) {
+        if (correct.includes(checkbox.id)) {
+          checkbox.classList.add("correct-answer");
+        } else {
+          checkbox.classList.add("incorrect-answer");
+        }
+      }
+    }
+  }
+
+  function no3() {
+    markSingleCorrect('34', 31, 34);
+  }
+
+  function no4() {
+    markSingleCorrect('43', 41, 46);
+  }
+
+  function no5() {
+    markSingleCorrect('51', 51, 54);
+  }
+
+  function no6() {
+    let correct = ['c61', 'c62', 'c63'];
+    for (let i = 61; i <= 65; i++) {
+      let checkbox = document.getElementById('c' + i);
+      checkbox.classList.remove("correct-answer", "incorrect-answer");
+      if (checkbox.checked) {
+        if (correct.includes(checkbox.id)) {
+          checkbox.classList.add("correct-answer");
+        } else {
+          checkbox.classList.add("incorrect-answer");
+        }
+      }
+    }
+  }
+
+  function no7() {
+    markSingleCorrect('71', 71, 74);
+  }
+
+  function no8() {
+    markSingleCorrect('83', 81, 84);
+  }
+
+  function no9() {
+    let correct = ['c91', 'c92', 'c93', 'c94', 'c95'];
+    for (let i = 91; i <= 95; i++) {
+      let checkbox = document.getElementById('c' + i);
+      checkbox.classList.remove("correct-answer", "incorrect-answer");
+      if (checkbox.checked) {
+        if (correct.includes(checkbox.id)) {
+          checkbox.classList.add("correct-answer");
+        } else {
+          checkbox.classList.add("incorrect-answer");
+        }
+      }
+    }
+  }
+
+  function no10() {
+    markSingleCorrect('102', 101, 104);
+  }
+
+  function markSingleCorrect(correctId, startId, endId) {
+    for (let i = startId; i <= endId; i++) {
+      let radio = document.getElementById(i.toString());
+      radio.classList.remove("correct-answer", "incorrect-answer");
+      if (radio.checked) {
+        if (radio.id === correctId) {
+          radio.classList.add("correct-answer");
+        } else {
+          radio.classList.add("incorrect-answer");
+        }
+      }
+    }
+  }
+  </script>
+
+  <nav class="sidebar">
+    <ul>
+      <li><a href="../finalproject/index.html">Home</a></li>
+      <li><a href="../finalproject/christianity.html">Christianity</a></li>
+      <li><a href="../finalproject/islam.html">Islam</a></li>
+      <li><a href="../finalproject/buddhism.html">Buddhism</a></li>
+      <li><a href="../finalproject/judaism.html">Judaism</a></li>
+      <li><a href="../finalproject/hinduism.html">Hinduism</a></li>
+      <li><a href="../finalproject/quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Design Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Web Design Quiz</h1>
+    <form id="quizForm">
+        <fieldset>
+            <legend>1. Which language is used for website design attributes?</legend>
+            <label><input type="checkbox" name="q1" value="HTML"> HTML</label><br>
+            <label><input type="checkbox" name="q1" value="CSS"> CSS</label><br>
+            <label><input type="checkbox" name="q1" value="JavaScript"> JavaScript</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>2. Primary scripting language for web functionality:</legend>
+            <select name="q2" id="q2" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+        </fieldset>
+
+        <br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <p>Click <a href="cookie.html">here</a> to play the Cookie Clicker.</p>
+
+    <script>
+        const checkboxes = document.querySelectorAll('input[name="q1"]');
+        const form = document.getElementById('quizForm');
+        checkboxes.forEach(box => box.addEventListener('change', () => {
+            if (document.querySelectorAll('input[name="q1"]:checked').length > 1) {
+                box.checked = false;
+            }
+        }));
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            const q1Selected = Array.from(checkboxes)
+                .filter(c => c.checked)
+                .map(c => c.value)
+                .sort();
+
+            const q2Selected = document.getElementById('q2').value;
+            const isQ1Correct = q1Selected.length === 1 && q1Selected[0] === 'CSS';
+            const isQ2Correct = q2Selected === 'JavaScript';
+
+            alert(isQ1Correct && isQ2Correct
+                ? 'You got it right. Play the Cookie Clicker now.'
+                : 'Nope. Try again.');
+        });
+    </script>
+</body>
+</html>

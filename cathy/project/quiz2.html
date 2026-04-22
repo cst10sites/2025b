@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="icon" type="image/x-icon" href="favicon (12).ico">
+  <style>
+    .correct-answer {
+      background-color: #d4edda;
+      border-left: 6px solid #28a745;
+      padding-left: 10px;
+      border-radius: 4px;
+    }
+
+    .incorrect-answer {
+      background-color: #f8d7da;
+      border-left: 6px solid #dc3545;
+      padding-left: 10px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <main class="main-content">
+    <h1>World Religions Quiz</h1>
+    <h3><strong>Instructions:</strong> Some questions have more than one answer, choose carefully!</h3>
+    <div class="center">
+      <div id="content">
+        <form>
+          <label id="q1label">1) Which religion teaches that the soul goes through cycles of rebirth (samsara)?</label>
+          <br>
+          <input id="option1" type="radio" value="1" name="ex2">
+          <label id="label1">Hinduism</label>
+          <br>
+          <input id="option2" type="radio" value="2" name="ex2">
+          <label id="label2">Judaism</label>
+          <br>
+          <input id="option3" type="radio" value="3" name="ex2">
+          <label id="label3">Buddhism</label>
+          <br>
+          <input id="option4" type="radio" value="4" name="ex2">
+          <label id="label4">Islam</label>
+          <br>
+          <input type="button" value="Submit" onclick="radioq();">
+          <br>
+          <input type="reset" onclick="resetStyles(this.form)">
+          <br>
+        </form>
+      
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function radioq() {
+      let correct = document.getElementById("option1");
+      let wrong1 = document.getElementById("option2");
+      let wrong2 = document.getElementById("option3");
+      let wrong3 = document.getElementById("option4");
+
+      let label1 = document.getElementById("label1");
+      let label2 = document.getElementById("label2");
+      let label3 = document.getElementById("label3");
+      let label4 = document.getElementById("label4");
+
+      label1.classList.remove("correct-answer", "incorrect-answer");
+      label2.classList.remove("correct-answer", "incorrect-answer");
+      label3.classList.remove("correct-answer", "incorrect-answer");
+      label4.classList.remove("correct-answer", "incorrect-answer");
+
+      if (correct.checked) {
+        label1.classList.add("correct-answer");
+      } else {
+        label1.classList.add("correct-answer");
+        if (wrong1.checked) label2.classList.add("incorrect-answer");
+        if (wrong2.checked) label3.classList.add("incorrect-answer");
+        if (wrong3.checked) label4.classList.add("incorrect-answer");
+      }
+    }
+    function resetStyles(form) {
+  const inputs = form.querySelectorAll('input');
+  inputs.forEach(input => {
+    input.classList.remove('correct-answer', 'incorrect-answer');
+  });
+}
+  </script>
+
+  <nav class="sidebar">
+    <ul>
+      <li><a href="../finalproject/index.html">Home</a></li>
+      <li><a href="../finalproject/christianity.html">Christianity</a></li>
+      <li><a href="../finalproject/islam.html">Islam</a></li>
+      <li><a href="../finalproject/buddhism.html">Buddhism</a></li>
+      <li><a href="../finalproject/judaism.html">Judaism</a></li>
+      <li><a href="../finalproject/hinduism.html">Hinduism</a></li>
+      <li><a href="../finalproject/quiz.html">Quiz</a></li>
+    </ul>
+  </nav>
+</div>
+</body>
+</html>

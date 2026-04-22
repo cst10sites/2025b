@@ -1,0 +1,23 @@
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    background-color: darkslategray;
+    color:white;
+    padding: 10px;
+    border-radius: 10px;
+}
+body {
+    background-color: blanchedalmond;
+    display: flex;
+}
+a {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+form {
+    margin-top: 10px;
+}

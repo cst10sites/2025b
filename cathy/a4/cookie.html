@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 4</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="icon" type="image/x-icon" href="favicon.jpg">
+		<style>
+			body {
+				background-image: url("https://media.istockphoto.com/id/481893966/vector/seamless-background-with-cookies-vector-illustration.jpg?s=612x612&w=0&k=20&c=CnrUvii-dEmTU0rBxe6xXcXLImUBIDvVyJKeOXVwQVA=");
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-position: top;
+				/* center */
+				background-size: 100% auto;
+				background-color: whitesmoke;
+			}
+		</style>
+		<!--create and edit style.css-->
+	</head>
+	<body>
+		<div id="content">
+			<div class="center">
+				<h1 class="round3">Cookie Clicker</h1>
+				<h3>Click on this cookie as fast as possible and see your average clicks per second (cps)</h3>
+				<input type="image" src="https://static.vecteezy.com/system/resources/previews/035/907/580/non_2x/cute-chocolate-chip-cookie-mascot-character-kawaii-cartoon-illustration-free-png.png" alt="a cookie" style="width: 500px;" onclick="updateCPS();">
+				<div id="cpsDisplay"></div>
+				<button onclick="resetWatch();">Reset</button>
+				<p id="timeDisplay" style="color:sienna"></p>
+				<p>Clicks: <span id="clickCount">0</span>
+				</p>
+				<p id="lapDisplay"></p>
+				<hr>
+				<h3>HTML/CSS/JS Quiz</h3>
+				<p>Click <a href="quiz.html">here</a> to play the quiz. </p>
+			</div>
+		</div>
+		<script>
+			// global variables
+			var nClicks = 0;
+			var startTime;
+			var currentTime = new Date();
+			let count = 0;
+			// basic version of Cookie Clicker code
+			function updateCPS() {
+				if (nClicks == 0) {
+					// first click
+					// 1. reset startTime
+					// 2. increase nClicks by 1
+					startTime = new Date();
+					nClicks += 1;
+				} else {
+					// subsequent clicks:
+					// 1. create variable currentTime
+					// 2. create variable timeElapsed and subtract start and currentTime
+					// 3. calculate CPS = nClicks ÷ timeElapsed 
+					//    BUT timeElapsed be measured in seconds (not milliseconds)
+					// 4. display CPS using id
+					// 5. increase nClicks by 1
+					var currentTime = new Date();
+					var timeElapsed = ((currentTime - startTime) / 1000);
+					var cps = nClicks / timeElapsed;
+					var roundedNum = cps.toFixed(1); // 3.1
+					document.getElementById("cpsDisplay").innerHTML = " cps " + roundedNum;
+					nClicks += 1;
+				}
+				count++;
+				document.getElementById('clickCount').textContent = ` ${count} `;
+			}
+			if (nClicks >= 3) { // show CPS only after a few clicks
+				var currentTime = new Date();
+				var timeElapsed = (currentTime - startTime) / 1000;
+				if (timeElapsed > 0) {
+					var cps = nClicks / timeElapsed;
+					var roundedNum = cps.toFixed(1);
+					document.getElementById("cpsDisplay").innerHTML = " cps " + roundedNum;
+				}
+			}
+			// timer
+			var nClicks = 0;
+			var startTime = new Date();
+			var originalTime = new Date();
+
+			function startWatch() {
+				if (nClicks == 0) {
+					startTime = new Date();
+				} else {
+					var currentTime = new Date();
+					var timePassed = (currentTime - startTime) / 1000;
+					nClicks += 1;
+				}
+			}
+
+			function resetWatch() {
+				location.reload();
+			}
+			setInterval(updateTime, 100);
+
+			function updateTime() {
+				if (nClicks > 0) {
+					var currentTime = new Date();
+					var timePassed = (currentTime - originalTime) / 1000;
+					document.getElementById("timeDisplay").innerHTML = timePassed;
+				}
+			}
+		</script>
+	</body>
+</html>

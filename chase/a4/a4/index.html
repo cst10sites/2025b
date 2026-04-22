@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>2 Question Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <a href="Lesson 6/index.html">Go to Cookie clicker</a>
+        <form>
+            <div id="radioarea">
+                <label>What is the main ingredient in Chicken pot pie? </label><br>
+                <input id="option1" type="radio" value="Chicken" name="ex2">
+                <label>Chicken</label><br>
+                <input id="option2" type="radio" value="Beans" name="ex2">
+                <label>Beans</label><br>
+                <input id="option3" type="radio" value="Peas" name="ex2">
+                <label>Peas</label><br>
+            </div>
+
+            <div id="dropdownarea">
+                <label>In what language is Minecraft (java edition) written in?</label><br>
+                <select id="dropdown"><!--no input for dropdown-->
+                    <option value="Javascript">Javascript</option>
+                    <option value="Java">Java</option>
+                    <option value="Lua">Lua</option>
+                    <option value="Python">Python</option>
+                    <!-- id in select, value in option-->
+                </select>
+            </div>
+            <br>
+
+            <label>What's the circumfrence of the sun at 2:17 on tuesday, april 14th 1957?</label><br>
+            <input id="choice1" type="checkbox" value="14827km">
+            <label>14827km</label>
+            <input id="choice2" type="checkbox" value="4cm">
+            <label>4cm</label><br>
+            <input id="choice3" type="checkbox" value="I have no idea">
+            <label>I have no idea</label>
+            <input id="choice4" type="checkbox" value="The correct answer">
+            <label>The wrong answer</label><br>
+
+
+            <input type="button" value="OK" onclick="submitTest();">
+            <input type="reset"><br>
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
