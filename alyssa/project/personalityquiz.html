@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+<title>Plants native to Vancouver</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  
+        <div class="header">
+            <h1>Personality quiz</h1>
+        </div>
+
+        <ul class="ouioui">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="plantfacts.html">Plant facts</a></li>
+  <li><a href="indoorplants.html">Indoor plants</a></li>
+  <li><a href="planttrivia.html">Plant trivia</a></li>
+  <li><a class="active" href="personalityquiz.html">Personality quiz</a></li>
+</ul>
+<div id="content">
+    <div id="idk">
+    <h2>Welcome to plant personality quiz</h2>
+    <p>Take this fun 10 question personality quiz and find out which native Vancouver plant matches your personality the best!</p>
+    <p id="qindex">1/10</p>
+    </div>
+    <div id="quiz">
+        <h2 id="question">Question</h2>
+        <img id="plantimg" src="swordfern.jpeg" alt="image">
+        <p id="description"></p>
+        <div id="answer-buttons">
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+        </div>
+        <div id="slay">
+            <button class='abc' id="prev-btn">Previous</button>
+            <button class='abc' id="next-btn">Next</button>
+        </div>
+        <div id="wekeke">
+            <p style="color: #666; font-size: 20px;">Want to find out which native Vancouver plant you are? Take <a href="https://mrkam-student-websites.on.drv.tw/public/morgan/project/" style="color:#738A6E;">Morgan's quiz</a> to find out!</p>
+        <button class='abc' id="play-btn">Play again!</button>
+    </div>
+    </div>
+</div>
+
+<script>
+const questions = [
+    {
+        question: "Which one sounds most like your personality?",
+        answers: [
+            { text: "Fiery", score: 5 },
+            { text: "Fun", score: 4 },
+            { text: "Calm", score: 3 },
+            { text: "Thoughtful", score: 2 },
+            { text: "Quiet", score: 1 },
+        ]
+    },
+    {
+        question: "Pick your favorite spot:",
+        answers: [
+            { text: "The beach", score: 5 },
+            { text: "Next to a river", score: 4 },
+            { text: "Shady forest", score: 3 },
+            { text: "Open meadows", score: 2 },
+            { text: "Your own room", score: 1 },
+        ]
+    },
+    {
+        question: "Pick your favorite weather:",
+        answers: [
+            { text: "Warm and sunny", score: 5 },
+            { text: "Clear sky", score: 4 },
+            { text: "Rainy", score: 3 },
+            { text: "Cloudy", score: 2 },
+            { text: "Stormy", score: 1 },
+        ]
+    },
+    {
+        question: "Which one describes you best?",
+        answers: [
+            { text: "I’m a survivor!", score: 5 },
+            { text: "I bring fun and laughter", score: 4 },
+            { text: "I’m creative and thoughtful", score: 3 },
+            { text: "I’m caring and kind", score: 2 },
+            { text: "I’m loyal and steady", score: 1 },
+        ]
+    },
+    {
+        question: "How do you deal with a tough day?",
+        answers: [
+            { text: "Push through and grow from it", score: 5 },
+            { text: "Talk about it with someone else", score: 4 },
+            { text: "Write, draw, or journal about it", score: 3 },
+            { text: "Clear your head and reflect on it alone", score: 2 },
+            { text: "Lock yourself in your room and chill", score: 1 },
+        ]
+    },
+    {
+        question: "What’s your ideal way to spend a weekend?",
+        answers: [
+            { text: "Exploring", score: 5 },
+            { text: "Trying something new", score: 4 },
+            { text: "Reading", score: 3 },
+            { text: "Spending quality time with close friends", score: 2 },
+            { text: "Relaxing alone", score: 1 },
+        ]
+    },
+    {
+        question: "Which color palette do you vibe with most?",
+        answers: [
+            { text: "Bright reds and oranges", score: 5 },
+            { text: "Vibrant blues and greens", score: 4 },
+            { text: "Soft pastels", score: 3 },
+            { text: "Earthy browns and greens", score: 2 },
+            { text: "Muted grays and blues", score: 1 },
+        ]
+    },
+    {
+        question: "If you were a sound, what would you be?",
+        answers: [
+            { text: "Fireworks", score: 5 },
+            { text: "Laughter", score: 4 },
+            { text: "Soft music", score: 3 },
+            { text: "Leaves rustling in the breeze", score: 2 },
+            { text: "Gentle rainfall", score: 1 },
+        ]
+    },
+    {
+        question: "Pick your favorite type of plant:",
+        answers: [
+            { text: "Bold flowers with bright colors", score: 5 },
+            { text: "Bushes with sweet berries", score: 4 },
+            { text: "Delicate wildflowers", score: 3 },
+            { text: "Trees", score: 2 },
+            { text: "Low-lying ground cover", score: 1 },
+        ]
+    },
+    {
+        question: "What’s your go-to way to recharge your energy?",
+        answers: [
+            { text: "Adventure!", score: 5 },
+            { text: "Hang out with friends and have fun", score: 4 },
+            { text: "Eat food", score: 3 },
+            { text: "Take a quiet walk in nature", score: 2 },
+            { text: "Sleep", score: 1 },
+        ]
+    }
+];
+
+
+    const questionElement = document.getElementById("question");
+    const answerButton = document.getElementById("answer-buttons");
+    const nextButton = document.getElementById("next-btn");
+    const previousButton = document.getElementById("prev-btn");
+    const description = document.getElementById("description");
+    const indexdisplay = document.getElementById("qindex");
+    const plantpic = document.getElementById("plantimg");
+    const play = document.getElementById("wekeke");
+    const playagain = document.getElementById("play-btn");
+
+    let currentQuestionIndex = 0;
+    let selectedScores = [];
+
+    function startQuiz() {
+        currentQuestionIndex = 0;
+        selectedScores = [];
+        nextButton.innerHTML = "Next";
+        previousButton.style.display = "block";
+        previousButton.disabled = true;
+        description.style.display = "none";
+        play.style.display = "none";
+        plantpic.style.display = "none";
+        nextButton.style.display = "block";
+        showQuestion();
+    }
+
+    function showQuestion() {
+        resetState();
+        let currentQuestion = questions[currentQuestionIndex];
+        let questionNo = currentQuestionIndex + 1;
+        questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+        currentQuestion.answers.forEach(answer => {
+            const button = document.createElement("button");
+            button.innerHTML = answer.text;
+            button.classList.add("btn");
+            answerButton.appendChild(button);
+            button.addEventListener("click", () => selectAnswer(button, answer));
+        });
+
+        // chat gpt helped me debug a lot for this
+        if (selectedScores[currentQuestionIndex] !== undefined) {
+            Array.from(answerButton.children).forEach((btn, idx) => {
+                if (questions[currentQuestionIndex].answers[idx].score === selectedScores[currentQuestionIndex]) {
+                    btn.classList.add("selected");
+                    nextButton.disabled = false;
+                }
+            });
+        } else {
+            nextButton.disabled = true;
+        }
+    }
+
+    function resetState() {
+        nextButton.disabled = true;
+        while (answerButton.firstChild) {
+            answerButton.removeChild(answerButton.firstChild);
+        }
+    }
+
+    function selectAnswer(button, answer) {
+        // Store or update score for this question
+        selectedScores[currentQuestionIndex] = answer.score;
+        nextButton.disabled = false;
+
+        Array.from(answerButton.children).forEach(btn => {
+            btn.classList.remove("selected");
+        });
+        button.classList.add("selected");
+    }
+
+    function showScore() {
+        resetState();
+        const score = selectedScores.reduce((total, curr) => total + (curr || 0), 0);
+
+        let plant = "";
+        let desc = "";
+        let img="";
+
+
+        if (score <= 10) {
+            plant = "Sword Fern";
+            desc = "Sword fern stands tall and evergreen, a steadfast guardian of the forest floor. Its long, arching fronds form quiet green corridors beneath the trees, sheltering seedlings, insects, and tradition. Strong yet subtle, sword fern asks for nothing but gives stability, cover, and ancient beauty. It’s the keeper of memory, present through every season, year after year. Its personality is patient, wise, and grounded—offering structure to the forest and continuity to those who walk its mossy paths.";
+            img="swordfern.jpeg";
+        } else if (score <= 16) {
+            plant = "Red Huckleberry";
+            desc = "Red huckleberry is the quiet host of the forest—a cheerful, unassuming shrub with a generous nature. It doesn’t demand attention, but once you find it, its translucent red berries glow like tiny lanterns. Growing from nurse logs and shaded banks, it’s deeply connected to the forest’s lifecycle. It feeds birds, bears, and people, giving without fanfare. Its personality is humble, dependable, and deeply rooted in community. A symbol of reciprocity and balance, red huckleberry is a gentle reminder that nourishment can come from the simplest places.";
+            img="redhuckleberry.jpg";
+        } else if (score <= 22) {
+            plant = "Nootka Rose";
+            desc = "Nootka rose carries an air of elegance, but don't be fooled—beneath its soft pink petals and sweet fragrance lie thorns of quiet strength. It is both protector and provider: its hips offer nourishment, and its woody stems build tools and baskets. A natural nurturer, this rose grows along the edges—of forests, rivers, and roads—symbolizing thresholds and transitions. Deeply rooted in both land and tradition, it is the gentle yet firm presence that reminds us beauty and strength can coexist.";
+            img="nootkarose.jpg";
+        } else if (score <= 28) {
+            plant = "Pacific Bleeding Heart";
+            desc = "Tucked in the forest’s cool shadows, Pacific bleeding heart is a quiet spirit with a tender soul. Its delicate, heart-shaped flowers nod like a bashful gesture of affection, while its feathery leaves soften the woodland floor. Sensitive to bright light and harsh conditions, it prefers quiet company and gentle spaces. But beneath its fragile appearance lies a subtle power—it spreads steadily, grounding the forest and hinting at hidden resilience. A symbol of love, healing, and emotional strength, this flower invites you to slow down and look closely.";
+            img="pacificbleedingheart.jpg";
+        } else if (score <= 34) {
+            plant = "Vine Maple";
+            desc = "Vine maple is the poetic soul of the understory—flexible, expressive, and always changing. It bends and twists with life’s turns, creating archways and shadows with its elegant limbs. In spring, it’s delicate and green; in fall, it bursts into flame with brilliant reds and golds. A symbol of adaptability and quiet strength, vine maple balances between tree and shrub, standing tall or curving low depending on the landscape. Its personality is creative, patient, and deeply intuitive—always in tune with the forest’s rhythm and the turning of the seasons.";
+            img="vinemaple.jpg";
+        } else if (score <= 40) {
+            plant = "Red Columbine";
+            desc = "Red columbine is the wild performer of the woods—bright, bold, and made to attract attention. Its unique spurred flowers spin like a dancer’s skirt, catching the eye of hummingbirds and forest walkers alike. Columbine doesn’t shout; it sings. It thrives in dappled light, swaying at the edges of streams and meadows with graceful vitality. This plant is joyful and generous, offering its nectar to pollinators while embodying movement, color, and balance. It’s the artist of the plant world, both delicate and daring.";
+            img="redcolumbine.jpg";
+        } else if (score <= 46) {
+            plant = "Salmonberry";
+            desc = "Salmonberry is a vibrant pioneer, bursting onto the forest scene with energy and color. It’s the first to arrive in spring, its berries bright like sunset and its stems rising fast and fierce. Growing in dense thickets, salmonberry marks abundance, renewal, and readiness. Its presence signals that the time for harvesting has begun. It’s generous and tough—feeding wildlife and people alike, standing guard near streams and shorelines. This plant’s personality is full of life and action, embracing change and thriving at the edge of water and land.";
+            img="salmonberry.jpg";
+        } else {
+            plant = "Fireweed";
+            desc = "Fireweed is the bold pioneer of the forest, the first to rise from the ashes with color and confidence. Like a healer arriving after a storm, it brings beauty and restoration to burned or disturbed lands. It thrives in chaos, transforming destruction into vibrancy with its tall, radiant magenta stalks. Fireweed’s spirit is that of a survivor and a nurturer—unafraid of harsh conditions, it clears the path for others to follow, healing soil and supporting pollinators along the way. Its presence speaks to resilience, renewal, and the quiet strength of beginnings.";
+            img="fireweed.webp";
+        }
+
+        questionElement.innerHTML = "You are: " + plant;
+        plantpic.src=img
+        plantpic.alt=plant
+        description.innerHTML = desc;
+        description.style.display = "block";
+        plantpic.style.display = "block";
+        play.style.display = "block";
+        previousButton.style.display = "none";
+        nextButton.style.display = "none";
+    }
+
+    function handleNextButton() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < questions.length) {
+            showQuestion();
+            previousButton.disabled = false;
+            indexdisplay.innerHTML=currentQuestionIndex+1+"/10"
+
+        } else {
+            showScore();
+            indexdisplay.innerHTML=""
+        }
+    }
+
+    function handlePreviousButton() {
+        currentQuestionIndex=currentQuestionIndex-1;
+        if (currentQuestionIndex > 0) {
+            showQuestion();
+            previousButton.disabled = false;
+            indexdisplay.innerHTML=currentQuestionIndex+1+"/10"
+
+        } else {
+            showQuestion();
+            previousButton.disabled = true;
+            indexdisplay.innerHTML=currentQuestionIndex+1+"/10"
+        }
+    }
+
+    nextButton.addEventListener("click", () => {
+        if (currentQuestionIndex < questions.length) {
+            handleNextButton();
+        }
+    });
+
+playagain.addEventListener("click", () => {
+    startQuiz();
+            indexdisplay.innerHTML="1/10"
+});
+
+    previousButton.addEventListener("click", () => {
+    handlePreviousButton();
+});
+
+    startQuiz();
+</script>
+
+</body>
+</html>

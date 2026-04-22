@@ -1,0 +1,77 @@
+body {
+    font-family: Helvetica;
+    font-size: 20px;
+    color: #27231e;
+    margin: 25px 100px;
+    background-color: #f4ded7;
+    text-align: center;
+}
+table,
+th,
+td {
+    border: 2px solid #3a5253;
+}
+
+td,
+th {
+    padding: 5px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    font-size: 1.25em;
+    background-color: #989885;
+}
+
+tr:nth-child(even) {
+    background-color: #acac9f;
+}
+
+tr:nth-child(odd) {
+    background-color: #d9b8aa;
+}
+
+a#hohoho {
+    color: #27231e;
+}
+
+a#hohoho:hover {
+    color: #3a5253;
+}
+
+a#next {
+    border: 2px solid #3a5253;
+    background-color: #acac9f;
+    color: #3a5253;
+    text-decoration: none;
+    padding: 20px;
+    margin: 30px 400px 30px 400px;
+    display: block;
+}
+
+a#next:hover {
+    border: 2px solid #acac9f;
+    background-color: #3a5253;
+    color: #acac9f;
+    text-decoration: none;
+    padding: 20px;
+    margin: 30px 400px 30px 400px;
+    display: block;
+}
+
+#wahaha {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+}
+
+#wahaha:hover {
+    content: url("https://i.pinimg.com/474x/00/db/40/00db4016a5759f170328db600c7ed131.jpg");
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+}

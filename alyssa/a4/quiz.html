@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+<h2>HTML/CSS/JS Quiz</h2>
+<form id="quiz">
+    <label>Write the correct HTML element for a single line break: </label>
+    <input type="text" id="textinput">
+
+
+    <p>What does CSS stand for?</p>
+    <input type="radio" value="radio1" id="radio1" name="abc">
+    <label>Cute Style Sheets</label>
+    <br>
+    <input type="radio" value="radio2" id="radio2" name="abc">
+    <label>Creative Style Sheets</label>
+    <br>
+    <input type="radio" value="radio3" id="radio3" name="abc">
+    <label>Cascading Style Sheets</label>
+    <br>
+    <input type="radio" value="radio4" id="radio4" name="abc">
+    <label>Changing Style Sheets</label>
+
+    <br>
+
+    <p>Choose all the HTML lines that are correct:</p>
+    <input type="checkbox" value="html1" id="choice1">
+    <label>&lt;body style="background-color:yellow;"&gt;&lt;/body&gt;</label>
+    <br>
+    <input type="checkbox" value="html2" id="choice2">
+    <label>&lt;a link="google.com" target="_blank"&gt;Google&lt;/a&gt;</label>
+    <br>
+    <input type="checkbox" value="html3" id="choice3">
+    <label>&lt;button onclick="function();"&gt;Click me!&lt;/button&gt;</label>
+    <br>
+    <input type="checkbox" value="html4" id="choice4">
+    <label>&lt;img url="img.png" alt="img"&gt;&lt;/img&gt;</label>
+
+    <br> <br>
+
+    <p>What is the output of the following code: <br> var a=5;<br>var b=2;<br>var c=a+a*b;<br>console.log(c**b+a);</p>
+    <label>What is the number that gets logged into the console? </label>
+    <select id="qfour">
+        <option value="option1">400</option>
+        <option value="option2">230</option>
+        <option value="option3">45</option>
+        <option value="option4">17059375</option>
+    </select>
+    <br><br>
+    <input type="button" value="Submit" class="ouioui" onclick="check();">
+    <input type="reset" class="ouioui">
+</form>
+
+
+
+<p>Click <a href="cookie.html">here</a> to play the cookie clicker.</p>
+
+<script>
+function check(){
+    var score=0;
+    var answer1result,answer2result,answer3result,answer4result;
+
+    var answer1=document.getElementById('textinput').value;
+    answer1=answer1.toLowerCase();
+
+    if (answer1=="<br>"){
+        score++;
+        answer1result="Question one correct";
+    }
+    else{
+        answer1result="Question one incorrect";
+    }
+
+    var answer2=document.getElementById("radio3").checked;
+    if(answer2){
+        score++;
+        answer2result="Question two correct";
+    }
+    else{
+        answer2result="Question two incorrect";
+    }
+
+    var checkone=document.getElementById("choice1").checked;
+    var checktwo=document.getElementById("choice2").checked;
+    var checkthree=document.getElementById("choice3").checked;
+    var checkfour=document.getElementById("choice4").checked;
+
+    var correct=(checkone && !checktwo  && checkthree && !checkfour);
+    if (correct){
+        score++;
+        answer3result="Question three correct";
+    }
+    else{
+        answer3result="Question three incorrect";
+    }
+
+    var answer4=document.getElementById('qfour').value;
+    if (answer4=='option2'){
+        score++;
+        answer4result="Question four correct";
+    }
+    else{
+        answer4result="Question four incorrect";
+    }
+    if (score==4){
+        alert("Your score is: "+score+"/4"+"\nResults:\n"+answer1result+"\n"+answer2result+"\n"+answer3result+"\n"+answer4result+"\nGood job!! :D");
+    }
+    else {
+        alert("Your score is: "+score+"/4"+"\nResults:\n"+answer1result+"\n"+answer2result+"\n"+answer3result+"\n"+answer4result+"\nTry again :(");
+    }
+}
+</script>
+</body>
+</html>

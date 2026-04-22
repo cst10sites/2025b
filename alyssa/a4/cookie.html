@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<h2>Cookie Clicker</h2>
+<input id="cookie" type="image" src="cookie.png" alt="cookie" onclick="updateClicks()" style="width:20%">
+<p id="cpsDisplay">Clicks per second:</p>
+<p id="clicksDisplay">Total clicks:</p>
+<p id="timeDisplay">Time elapsed:</p>
+<button class="ouioui" onclick="reset()">Reset</button>
+
+<hr>
+<h2>HTML/CSS/JS Quiz</h2>
+<p>Click <a href="quiz.html">here</a> to play the quiz.</p>
+
+<script>
+var nClicks = 0;
+var startTime, currentTime, timeElapsed, intervalID;
+
+function updateClicks() {
+    if (nClicks == 0) {
+        startTime = new Date();
+        nClicks++;
+        intervalID = setInterval(updateTime, 100);
+    }
+    else {
+        nClicks++;
+    }
+    document.getElementById("clicksDisplay").textContent = "Total clicks: " + nClicks;
+}
+
+function updateTime() {
+    currentTime = new Date();
+    timeElapsed = (currentTime - startTime) / 1000;
+    var cps = nClicks / timeElapsed.toFixed(1);
+    document.getElementById("cpsDisplay").textContent = "Clicks per second: " + cps.toFixed(2);
+    document.getElementById("timeDisplay").textContent = "Time elapsed: " + timeElapsed.toFixed(1) + " seconds";
+}
+
+function reset() {
+    nClicks = 0;
+    clearInterval(intervalID);
+    intervalID = null;
+    document.getElementById("cpsDisplay").textContent = "Clicks per second:";
+    document.getElementById("timeDisplay").textContent = "Time elapsed:";
+    document.getElementById("clicksDisplay").textContent = "Total clicks:";
+}
+
+</script>
+</body>
+</html>
