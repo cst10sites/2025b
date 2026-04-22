@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link rel="icon" type="image/x-icon" href="quiz.ico">
+	<title>Quiz</title>
+</head>
+<body>
+<h1>Quiz</h1>
+	<div>
+	<form>
+	    <label>Who made JavaScript?</label><br>
+	    <input id="correct" type="radio" value="man1" name="js1">
+	    <label>Brendan Eich</label><br>
+		<input id="option2" type="radio" value="man2" name="js1">
+		<label>James Gosling</label><br>
+	    <input id="option3" type="radio" value="man3" name="js1">
+	    <label>Tim Berners-Lee</label><br>
+	    <input id="option3" type="radio" value="man4" name="js1">
+	    <label>Guido van Rossum</label><br>	    
+	    <input type="button" value="Submit" onclick="question1();"><br> 
+	    <input type="reset"><br> 
+	</form>
+
+
+	
+	<form>
+	    <label>What is the biggest header you can use</label>
+	    <select id="htmlTag"><!--no input for dropdown-->
+	        <option value="<h1>">&lt;h1&gt;</option>
+	        <option value="<h6>">&lt;h6&gt;</option>
+	        <option value="<header>">&lt;header&gt;</option>
+	        <option value="<head>">&lt;head&gt;</option>
+	        <!-- id in select, value in option-->
+	    </select>
+	    <br>
+	    <input type="button" value="OK" onclick="question2();">
+	    <input type="reset"><br> 
+	</form>
+	<p id="tagDisplay"></p>
+
+
+
+
+	<form>
+	    <label>What tags are required to make an HTML website work?</label><br>
+	    <input id="choice1" type="checkbox" value="head">
+	    <label>&lt;head&gt;</label>
+	    <input id="choice2" type="checkbox" value="body">
+	    <label>&lt;body&gt;</label><br>
+	    <input id="choice3" type="checkbox" value="doc">
+	    <label>&lt;!DOCTYPE html&gt;</label>
+	    <input id="choice4" type="checkbox" value="script">
+	    <label>&lt;script&gt;</label><br>
+	    <input type="button" value="Submit" onclick="question3();"><br> 
+		<input type="reset"><br> 
+	</form>
+
+
+	<h2>"Cookie" Clicker</h2>
+<p>Click <a href="cookie.html">here</a> to play the Cookie Clicker.</p>
+
+</div>	
+
+
+
+
+
+<script src="quizller.js"></script>
+</body>
+</html>

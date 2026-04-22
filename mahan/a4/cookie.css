@@ -1,0 +1,87 @@
+body {
+  background: #fcebd5; 
+  font-family: Lucida Console;
+  text-align: center;
+  padding: 30px;
+}
+
+h1 {
+  color: #4e342e;
+  font-size: 3em;
+  margin-bottom: 30px;
+}
+
+#cookie {
+  width: 250px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 20px;
+}
+
+#Reset {
+  background: #b47850;
+  color: #fff8f0; 
+  padding: 15px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-family: Lucida Console;
+}
+#cookie:active {
+  transform: scale(0.95);
+}
+
+#counter,
+#cps {
+  background: #d2a679;
+  padding: 20px;
+  margin: 15px;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 2em;
+  color: #4b2e2e;
+  font-family: Lucida Console;
+}
+
+.powerup {
+  background: #b47850;
+  color: #fff8f0;
+  padding: 15px 30px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-family: Lucida Console;
+}
+
+.powerup:disabled {
+  background: #aaa;
+}
+
+.sparkle {
+  position: absolute;
+  color: #5e3a29; 
+  font-weight: bold;
+  font-size: 24px;
+  animation: pop 0.8s forwards;
+  pointer-events: none;
+}
+
+a {
+  font-family: Lucida Console;
+}
+
+a:hover {
+  color: #4b2e2e;
+  text-decoration: underline;
+}
+
+@keyframes pop {
+  to {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}

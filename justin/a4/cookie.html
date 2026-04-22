@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!--create and edit style.css-->
+  </head>
+  <body>
+    <div id="content">
+      <h2 style="text-align: center; font-size: 40px;">Cookie Clicker</h2>
+      <input type="image" src="https://static.vecteezy.com/system/resources/previews/035/490/024/non_2x/ai-generated-cookie-clipart-design-illustration-free-png.png" alt="cookie" width="420" height="420" style="display: block; margin-left: auto; margin-right: auto;" onclick="updateCPS();" id="lapButton">
+      <h3 style="text-align: center; font-size: 27px; color: saddlebrown;">CPS</h3>
+      <h4 style="text-align: center; color: orangered;" id="cpsDisplay">. . .</h4>
+    </div>
+    <h2>HOW THIS WORKS</h2>
+    <p>Click on the cookie as fast as you can!</p>
+    <p>
+      <strong> - The faster you click, the higher the number of your CPS will be!</strong>
+    <p>
+      <br>
+      <hr>
+    <h2>HTML/CSS/JS Quiz</h2>
+    <p style="font-size: 20px; text-align: center">Click here to play the quiz:</p>
+    <p style="text-align: center">
+      <a class="btn" href="quiz.html">HTML/CSS/JAVASCRIPT QUIZ</a>
+    </p>
+    <br>
+    <br>
+    <p id="carDisplay">2025&copy; Justin Y studios</p>
+    <script>
+      var nClicks = 0;
+      var startTime = new Date();
+
+      function updateCPS() {
+        if (nClicks == 0) {
+          startTime = new Date();
+          nClicks += 1;
+        } else {
+          var currentTime = new Date();
+          var timeElapsed = (currentTime -= startTime)
+          var CPS = nClicks / (timeElapsed / 1000).toFixed(2)
+          document.getElementById("cpsDisplay").innerHTML = CPS.toFixed(2);
+          nClicks += 1;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+body{
+	margin: 25px 300px;
+	background-color:rebeccapurple;
+	text-align: center;
+	font-family: Comic Sans MS;
+	color:rebeccapurple ;
+}
+
+div{
+	overflow:hidden;
+	background-color:goldenrod ;
+	position: relative;
+			
+
+}
+
+a{
+	color: ghostwhite;
+}
+
+button{
+	background: rebeccapurple;
+	color:white;
+}

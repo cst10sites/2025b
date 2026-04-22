@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="icon" href="quiz.ico" type="image/x-icon">
+    <title>Quiz</title>
+    <script>
+      function example2() {
+        const correct = document.getElementById("correct");
+        if (correct.checked) {
+          alert("Correct!🎉");
+        } else {
+          alert("Not quite. Try again!");
+        }
+      }
+    </script>
+    <script>
+      function example3() {
+        var HTML = document.getElementById('HTML').checked;
+        var CSS = document.getElementById('CSS').checked;
+        var Java = document.getElementById('Java').checked;
+        var JavaScript = document.getElementById('JavaScript').checked;
+        var correct = (HTML == true && CSS == true && JavaScript == false && Java == false);
+        if (correct) {
+          alert("Correct!🎉");
+        } else {
+          alert("Not quite. Try again!");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="section">
+      <h2>Refreshing the page</h2>
+      <form>
+        <label>Which of the following refreshes the page?</label>
+        <br>
+        <input id="HTML" type="checkbox" value="HTML">
+        <label>location.reload();</label>
+        <input id="CSS" type="checkbox" value="CSS">
+        <label>location.href = location.href</label>
+        <br>
+        <input id="Java" type="checkbox" value="Java">
+        <label>window.refresh();</label>
+        <input id="JavaScript" type="checkbox" value="JavaScript">
+        <label>location.refresh();</label>
+        <br>
+        <input type="button" value="Submit" onclick="example3();">
+        <input type="reset">
+        <br>
+      </form>
+    </div>
+    <div class="section">
+      <h2>Adding a line break</h2>
+      <form>
+        <label for="option1">What is the correct HTML element for inserting a line break?</label>
+        <br>
+        <br>
+        <input id="option1" type="radio" value="CSS1" name="ex2">
+        <label for="option1">&lt;break&gt;</label>
+        <br>
+        <input id="correct" type="radio" value="CSS2" name="ex2">
+        <label for="correct">&lt;br&gt;</label>
+        <br>
+        <input id="option3" type="radio" value="CSS3" name="ex2">
+        <label for="option3">&lt;gap&gt;</label>
+        <br>
+        <input id="option4" type="radio" value="CSS4" name="ex2">
+        <label for="option4">&lt;lb&gt;</label>
+        <br>
+        <input type="button" value="Submit" onclick="example2();">
+        <input type="reset" value="Reset">
+        <br>
+        <br>
+      </form>
+    </div>
+    <a href="cookie.html" target="_blank">Click Here To Visit My Cookie Clicker!</a>
+  </body>
+</html>

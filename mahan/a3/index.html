@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--table.html-->
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Internal CSS for demonstration purposes -->
+    <style>
+      .btn {
+        background-color: #4CAF50;
+        color: white;
+        font-family: comic sans-serif;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <h1>HTML and CSS Guide</h1>
+      <h2>Common HTML Tags Inside &lt;body&gt;</h2>
+      <a href="outside.html" class="btn">Go to Outside Page</a>
+      <h2>Table:</h2>
+      <table>
+        <tr>
+          <th style="width: 40%;">Tags</th>
+          <th style="width: 30%;">Definition</th>
+          <th style="width: 30%;">Examples</th>
+        </tr>
+        <tr>
+          <td>&lt;h1&gt;...&lt;h6&gt;&lt;/h6&gt;</td>
+          <td>Heading tags for different levels of headings</td>
+          <td>
+            <h1>h1</h1>
+            <h2>h2</h2>
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;p&gt;&lt;/p&gt;</td>
+          <td>Defines a paragraph</td>
+          <td>
+            <p>This is a paragraph about cookies</p>
+            <p>This is another paragraph about cookies</p>
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;iframe&gt;&lt;/iframe&gt;</td>
+          <td>Allows us to embed another page onto our current page</td>
+          <td>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22575.108564180802!2d-121.8601223616708!3d44.986574698459165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54be4970b21bd04d%3A0xa5071db850b69988!2sPoop%20Creek!5e0!3m2!1sen!2sca!4v1741721860214!5m2!1sen!2sca" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;div&gt;&lt;/div&gt;</td>
+          <td>Defines a division or a section in a HTML document</td>
+          <td>The top of this page uses a div tag</td>
+        </tr>
+        <tr>
+          <td>&amp;frac; &amp;deg;</td>
+          <td>These tags are used for fractions and degree symbols.</td>
+          <td>&frac12;, &deg;360</td>
+        </tr>
+        <tr>
+          <td>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;...&lt;/li&gt;</td>
+          <td>Creates unordered or ordered lists with list items</td>
+          <td>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;span&gt;&lt;/span&gt;</td>
+          <td>Marks up a part of the text its used on</td>
+          <td>Only this text is <span style="color:green">green</span>
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;a href="link"&gt;... &lt;/a&gt;</td>
+          <td>Hyperlink to another page</td>
+          <td>Click <a href="https://www.youtube.com/"> here!</a>
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;img src="link" alt="pic"&gt;</td>
+          <td>Shows an image</td>
+          <td>
+            <img src="https://www.pngplay.com/wp-content/uploads/13/Graphic-Art-PNG-Clipart-Background.png" width="200" height="100" alt="ribbon.png">
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;br&gt; &lt;hr&gt;</td>
+          <td>the hr and br tags are essentially just a line break</td>
+          <td>This table uses line breaks all-throughout</td>
+        </tr>
+      </table>
+    </div>
+    <!--end of content-->
+  </body>

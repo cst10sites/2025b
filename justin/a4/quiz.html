@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>The Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon1.ico">
+  </head>
+  <body>
+    <h1>Quiz</h1>
+    <h2>Welcome!</h2>
+    <h2>Now to the Quiz:</h2>
+    <h3>Section 1: Input answers</h3>
+    <form>
+      <label>What is a scripting language primarily used to make web pages interactive and dynamic?</label>
+      <br>
+      <textarea id="scriptlang" name="scriptlang" placeholder="Type here" rows="4" cols="50"></textarea>
+      <br>
+      <br>
+      <input class="input" type="button" value="Submit" onclick="answer1();">
+      <input class="input" type="reset">
+      <br>
+    </form>
+    <h3>Section 2: Checkboxes</h3>
+    <form>
+      <label>Where is the correct place to insert a JavaScript? (Select all that apply)</label>
+      <br>
+      <input class="input" id="choice1" type="checkbox" value="head">
+      <label>The &lt;head&gt; section</label>
+      <input class="input" id="choice2" type="checkbox" value="body">
+      <label>The &lt;body&gt; section</label>
+      <br>
+      <input class="input" id="choice3" type="checkbox" value="form">
+      <label>The &lt;form&gt; section</label>
+      <input class="input" id="choice4" type="checkbox" value="p">
+      <label>The &lt;p&gt; section</label>
+      <br>
+      <br>
+      <input class="input" type="button" value="Submit" onclick="answer3();">
+      <input class="input" type="reset">
+      <br>
+      <br>
+    </form>
+    <h3>Section 3: Radio buttons</h3>
+    <form>
+      <label>What is the correct HTML for referring to an external style sheet?</label>
+      <br>
+      <input id="option2" type="radio" value="PRG11" name="q2">
+      <label>&lt;style src="mystyle.css"&gt;</label>
+      <br>
+      <input id="option1" type="radio" value="CST10" name="q2">
+      <label>&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;</label>
+      <br>
+      <input id="option3" type="radio" value="CIS12" name="q2">
+      <label>&lt;stylesheet&gt;mystyle.css&lt;/stylesheet&gt;</label>
+      <br>
+      <br>
+      <input class="input" type="button" value="Submit" onclick="answer2();">
+      <input class="input" type="reset">
+      <br>
+      <br>
+    </form>
+    <h3>Section 4: Dropdown Menu</h3>
+    <form>
+      <label>What is a correct syntax for an HTML hyperlink?</label>
+      <select id="hyperlinkValue">
+        <option value="link href">&lt;link href='/home.htm'&gt;Visit W3Schools.com!&lt;/link&gt;</option>
+        <option value="alink href">&lt;alink href='/home.htm'&gt;Visit W3Schools.com!&lt;/alink&gt;</option>
+        <option value="a href">&lt;a href='/home.htm'&gt;Visit W3Schools.com!&lt;/a&gt;</option>
+        <option value="hyperlink href">&lt;hyperlink href='/home.htm'&gt;Visit W3Schools.com!&lt;/hyperlink&gt;</option>
+      </select>
+      <br>
+      <br>
+      <input class="input" type="button" value="OK" onclick="answer4();">
+      <input class="input" type="reset">
+      <br>
+      <br>
+    </form>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <p style="font-size: 20px; text-align: center">Click here to return to the Cookie Clicker!</p>
+    <p style="text-align: center">
+      <a class="btn" href="cookie.html">Cookie Clicker</a>
+    </p>
+    <br>
+    <p id="carDisplay">2025&copy; Justin Y studios</p>
+    <script src="script.js" defer></script>
+  </body>
+</html>

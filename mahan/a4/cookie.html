@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="cookie.css">
+  </head>
+  <body>
+    <h1>Cookie Clicker</h1>
+    <a href="quiz.html" target="_blank">Click Here To Visit My Quiz!</a>
+    <br>
+    <div id="counter">Cookies: 0</div>
+    <div id="cps">CPS: 0</div>
+    <br>
+    <br>
+    <img id="cookie" src="https://vignette.wikia.nocookie.net/cookie-clickers/images/f/fc/Ein_Cookie.png/revision/latest?cb=20150302211125&path-prefix=de" alt="Cookie">
+    <div class="shop">
+      <button class="powerup" id="powerupbutton" onclick="buyPowerup('cursor')"> Buy Cursor +1 - Cost: <span id="cursorCost">10</span>
+      </button>
+    </div>
+    <button type="button" id="Reset" onclick="window.location.reload()">Reset</button>
+    <script src="cookie.js"></script>
+  </body>
+</html>

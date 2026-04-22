@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="refresh" content="15; url=cookie.html">
+	<title>Lesson 4</title>
+</head>
+<body>
+	<h1>Page Redirection</h1>
+	<p>Click <a href="cookie.html">here</a> if re-direction doesnt work</p>
+	<script>
+		function redirect(argument) {
+			window.location.replace("cookie.html")
+		}
+		setInterval(redirect, 1000);
+	</script>
+</body>
+
+</html>

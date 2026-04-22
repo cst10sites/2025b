@@ -1,0 +1,65 @@
+body {
+	font-family: helvetica;
+	margin:25px 100px;
+	background-image: url("https://www.imageworks.com/sites/default/files/2024-09/wtm0300_comp_mkt_lgts_tiff_v53_4kworkres_ncf.1054.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top;
+	background-size: 100% auto;
+	background-color: deepskyblue;
+}
+/*menu CSS*/
+
+div#menu {
+	overflow:hidden;
+	background-color: forestgreen;
+	position: relative;
+}
+
+div#menu #morelinks {
+	display: none;
+
+}
+
+div#menu a{
+	color: white;
+	padding: 16px 20px;
+	text-decoration: none;
+	font-size: 1.25em;
+	display: block;
+}
+
+div#menu a:hover{
+	color: black;
+	background-color: lightgrey;
+}
+div#menu a.icon{
+	background: black;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+div#content{
+	padding: 25px;
+	color: white;
+	background-color: rgba(0, 150, 255, 0.5);
+}
+
+a{
+	color: forestgreen;	
+}
+
+table,th,td{
+	border: 5px solid white;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+th,td{
+	text-align: left;
+	padding: 5px;
+}	

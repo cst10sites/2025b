@@ -1,0 +1,23 @@
+body {
+	margin: 25px 100px;
+	background-image: url("https://cdn.mos.cms.futurecdn.net/93GAa4wm3z4HbenzLbxWeQ.jpg");
+	background-attachment: fixed;
+	background-position: top;
+	background-size: 100% auto;
+}
+
+table , th, td {
+	border: 3px solid black;
+	background-color: white;
+	padding: 20px;
+}
+table {
+	border-collapse: collapse;
+
+th, td {
+	text-align: center;
+}
+
+th {
+	background-color: grey;
+}

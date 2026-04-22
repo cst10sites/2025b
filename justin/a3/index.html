@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        font-family: cursive;
+      }
+
+      table {
+        font-family: verdana;
+      }
+
+      a:link {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: navajowhite;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      hr {
+        margin: 20px 0;
+        border-radius: 5px;
+      }
+
+      a.btn {
+        /* only affect 
+						<a class="btn" ...> */
+        background-color: blue;
+        color: white;
+        text-decoration: none;
+        /* remove default underline */
+        padding: 15px 25px;
+        border: solid thick cyan;
+        border-radius: 15px;
+        font-size: 1.5em;
+        display: inline-block;
+      }
+
+      a.btn:hover {
+        background-color: darkgreen;
+        box-shadow: 5px 10px black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: floralwhite; font-size: 50px;"> HTML/CSS Guide </h1>
+    <h2 style="color: ghostwhite;"> Common HTML Tags inside &lt;body&gt; </h2>
+    <p>
+    <table style="width: 100%">
+      <tr>
+        <!--table row-->
+        <th style="width: 34%;">Tag</th>
+        <!--table header-->
+        <th style="width: 33%;">Definition</th>
+        <th style="width: 33%;">Examples</th>
+      </tr>
+      <tr>
+        <td>&lt;ol&gt;, &lt;ul&gt;, &lt;li&gt;</td>
+        <td>These are list tags. &lt;ol&gt; (standing for Ordered List) displays numbers, while &lt;ul&gt; (standing for Unordered List) is displayed as a bullet point form list with no numbers or indications. To add list items, use the &lt;li&gt; tag for each item.</td>
+        <td>
+          <ol>
+            <li>here</li>
+            <li>is</li>
+            <li>an</li>
+            <li>ordered</li>
+            <li>list</li>
+          </ol>
+          <ul>
+            <li>now</li>
+            <li>this</li>
+            <li>is</li>
+            <li>unordered</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>&lt;img src="link" alt="pic"&gt;</td>
+        <td>The &lt;img&gt; tag allows you to add images. To add the image, you must link the image with src="link". You can either link an URL online with the photo, or from a folder on your files. You can customize the size of the image with style="width=:x%".</td>
+        <td>
+          <img src="https://preview.redd.it/s0yat57tl8f31.jpg?auto=webp&s=ce5bd88e53d88f4550e29c66a926e371d4672acb" alt="StravinskyDisney" style="width:36%">
+        </td>
+      </tr>
+      <tr>
+        <td>&lt;iframe src="link"&gt;</td>
+        <td>The &lt;iframe&gt; tag allows you to embed videos and other. Simmilarly to the preceding tag, you can also alter the size of the embedded video, with the width="x" and height="x" code.</td>
+        <td>
+          <iframe width="570" height="315" src="https://www.youtube.com/embed/oHY6wkFJjLE?si=q-hJZvyeYaMQPJcj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </td>
+      </tr>
+      <tr>
+        <td>&lt;a href="link"&gt;…&lt;/a&gt;</td>
+        <td>The &lt;a href="link"&gt; tag is the hyperlink tag. Input the link (in "") after href=, and input the text you wish to place the link on at the ellipsis.</td>
+        <td>
+          <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Click here if you'd like to win $100!</a>
+        </td>
+      </tr>
+      <tr>
+        <td>&lt;br&gt; and &lt;hr&gt;</td>
+        <td>The &lt;br&gt; tag (meaning break) inserts a single horizontal line break (with no visible line). It is useful for separating text. The &lt;hr&gt; tag is similar, but also creates a visible, thematic line across the break.</td>
+        <td> - BOO! HUUH! <br> - BOO HUUH SHAY SAD! <br> - AAAAAAAAAAZZZZZZZZZZZTTTTTTTTTTTTTTTTT!!!!!!!!!
+          <hr>Shayson Zhao, 2025
+        </td>
+      </tr>
+      <tr>
+        <td>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, etc...</td>
+        <td>These are the header tags. They are automatically inserted in new lines below the text, separating the text below from the above should it be placed in the middle of a paragraph. As the value of the number increases, the header gradually becomes smaller and smaller. Note that there is no h7.</td>
+        <td>
+          <h1>ffff</h1>
+          <h2>fff</h2>
+          <h3>ff</h3>
+          <h4>f</h4>
+          <h5>mf</h5>
+          <h6>mp</h6>
+        </td>
+      </tr>
+      <tr>
+        <td>&lt;span&gt;...&lt;span&gt;</td>
+        <td>The &lt;span&gt; tag is a text container able to be used within paragraphs. It can allow you to stylize your text with colors, change the size of the text, alter the font, and more with style="x".</td>
+        <td>
+          <span style="font-weight:bold">Shayson:</span> I am not <span style="color:orange;font-weight:bold">dededededede!</span> And I do not make the sound <span style="color:yellow;font-family:cursive;font-size:20px;">aaazzzzzzztttttt!</span>
+          <br>
+          <span style="color:yellow;font-family:fantasy;font-size:69px;font-weight:bold">AAAAZZZZZTTTT!!!</span>
+        </td>
+      </tr>
+      <tr>
+        <td>&lt;p&gt;&lt;/p&gt;</td>
+        <td>This is the paragraph tag. You will need to input this to create paragraphs. After inputing the tag, simply press enter, and you can start writing down your information! Just make sure you close the tag after you're done, naturally.</td>
+        <td>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras auctor mattis metus sed efficitur. Pellentesque ultricies, quam sit amet gravida interdum, mauris ligula blandit leo, sed sollicitudin orci enim ut ligula. Donec commodo magna eget nibh consequat, id consectetur est porttitor. Sed nec suscipit ex. Mauris quis ex ex. Nulla vehicula lorem ut consectetur auctor. Integer consequat orci eget ligula mattis rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Curabitur quis tortor eleifend, tincidunt velit vel, imperdiet metus. Nulla porttitor ligula nec lectus faucibus, non pretium ipsum sagittis. Phasellus ut justo quis nunc vulputate consectetur at vitae metus. Morbi gravida tortor in felis dapibus iaculis. Praesent pretium felis augue, ut ornare enim consectetur ut. </p>
+          <p> Morbi ac ullamcorper turpis. Sed nibh enim, dictum in eleifend sit amet, porta et enim. Ut efficitur augue et augue aliquam, auctor pharetra justo dapibus. Ut purus felis, molestie eu fringilla quis, blandit vel velit. Duis pretium viverra laoreet. Praesent fermentum semper arcu vitae elementum. Pellentesque in est ut quam elementum cursus. </p>
+          <p> Proin sit amet nunc aliquet, gravida nulla nec, imperdiet odio. Quisque elementum arcu enim, vel sodales magna blandit in. Nam at varius augue, id pulvinar eros. Ut vulputate nisl rutrum odio molestie porttitor. Vivamus consectetur nisl lectus, ut venenatis tellus semper eget. Etiam ornare eros ut porta egestas. Sed lacinia nibh a mauris imperdiet venenatis a at nisl. Suspendisse condimentum mauris ac porttitor fermentum. Morbi vitae porttitor ex. Morbi vulputate, tellus a lacinia ultricies, lectus lectus varius lorem, quis ornare nisi nunc ac odio. </p>
+        </td>
+      </tr>
+      <tr>
+        <td>&lt;strong&gt;</td>
+        <td>This tag allows you to place emphasis on text by boldening the text!</td>
+        <td>
+          <strong>anphony baloney!</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>&lt;table&gt;, &lt;th&gt;, &lt;tr&gt;, &lt;td&gt;</td>
+        <td>These are the table tags, which is what I'm using right now! Use &lt;table&gt; first to create a table and &lt;th&gt; to create a header for the table. &lt;tr&gt; is about the rows, while &lt;td&gt; is a standard text cell in a table.</td>
+        <td>
+          <table>
+            <tr>
+              <th>Hello</th>
+              <th>Bonjour</th>
+              <th></th>
+            </tr>
+            <tr>
+              <td>Tableception!</td>
+              <td>hahahahaha</td>
+              <td>
+                <table>
+                  <tr>
+                    <th>1</th>
+                    <th>2</th>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>4</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <p>
+      <a class="btn" href="outside.html">Outside</a>
+    </p>
+  </body>
+</html>

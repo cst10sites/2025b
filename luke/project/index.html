@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clown Olympics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://tse1.mm.bing.net/th/id/OIP.S-Js5ztxvB9zeVHU_azTXgHaHa?rs=1&pid=ImgDetMain&cb=idpwebpc1">
+  </head>
+  <body>
+    <header>
+      <h1>Clown Olympics</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="history.html">History</a>
+          </li>
+          <li>
+            <a href="winners.html">Winners</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <main>
+        <section id="overview">
+          <h2>What Is the Clown Olympics?</h2>
+          <p>Clown Olympics is an invented yet humorous tournament that honors comedy, creativity, and clowning from all over the world. Events consist of activities such as unicycle races, juggling marathons, and a good deal of custard pie throwing.</p>
+          <button id="showMoreBtn">Show More</button>
+          <p id="extraInfo" style="display:none; margin-top: 10px;">Clowning festivals are also held in Mexico under the name of "Festival Internacional del Payaso." International clowns come to present comedic styles peculiar to their own culture.</p>
+          <script>
+            const btn = document.getElementById('showMoreBtn');
+            const extraInfo = document.getElementById('extraInfo');
+            btn.addEventListener('click', () => {
+              const isHidden = extraInfo.style.display === 'none';
+              extraInfo.style.display = isHidden ? 'block' : 'none';
+              btn.textContent = isHidden ? 'Show Less' : 'Show More';
+            });
+          </script>
+          <img src="https://i.ytimg.com/vi/r8ngcExGN88/maxresdefault.jpg" alt="Clown" style="max-width:100%; border-radius:10px; margin-top:20px;">
+        </section>
+      </main>
+      <aside>
+        <h2>Current Champion</h2>
+        <p>
+          <strong>
+            <a href="winners.html">David Larible</a>
+          </strong> Is a world-renowned clown known for his expressive comedy and work with Ringling Bros.
+        </p>
+      </aside>
+    </div>
+    <footer> I, Luke, have uploaded all files and verified my code through validator.w3.org. All errors have been corrected. The website is ready for review. </footer>
+  </body>
+</html>

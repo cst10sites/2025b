@@ -1,0 +1,87 @@
+h1 {
+  font-family: verdana;
+  color: brown;
+}
+
+h2 {
+  font-family: fantasy;
+  color: brown;
+}
+
+p {
+  font-family: cursive;
+  color: orangered;
+}
+
+body {
+  background-color: sandybrown;
+}
+
+a:link {
+  color: yellow;
+}
+
+a:visited {
+  color: yellow;
+}
+
+div#content {
+  background-color: darkorange;
+  padding: 50px 26px;
+  border-color: brown;
+  border-width: thick; /* thin */
+  border-style: solid; /* dashed dotted */
+  border-radius: 25px;
+  box-shadow: 5px 10px orange;
+}
+
+h3 {
+  color: saddlebrown;
+  font-family: verdana;
+}
+
+a:visited {
+  color: saddlebrown;
+}
+
+label {
+  color: orangered;
+}
+
+select {
+  color: red;
+  background-color: burlywood;
+}
+
+.input {
+  background-color: orange;
+  color: orangered;
+  border-radius: 25px;
+  border-color: yellow;
+}
+
+textarea {
+  background-color: lightyellow;
+  color: saddlebrown;
+  border-color: brown;
+}
+
+a.btn {
+  background-color: red;
+  color: lightyellow;
+  text-decoration: none;
+  padding: 15px 25px;
+  border: solid thick orangered;
+  border-radius: 20px;
+  font-size: 1.5em;
+  display: inline-block;
+}
+
+a.btn:hover {
+  background-color: orangered;
+  box-shadow: 5px 10px brown;
+}
+
+ul {
+  color: brown;
+}

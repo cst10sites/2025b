@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <link rel="icon" type="image/x-icon" href="favicon2.ico">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        font-family: cursive;
+      }
+
+      table {
+        font-family: verdana;
+      }
+
+      a.btn {
+        /* only affect 
+            
+            <a class="btn" ...> */
+        background-color: blue;
+        color: white;
+        text-decoration: none;
+        /* remove default underline */
+        padding: 15px 25px;
+        border: solid thick cyan;
+        border-radius: 15px;
+        font-size: 1.5em;
+        display: inline-block;
+      }
+
+      a.btn:hover {
+        background-color: darkgreen;
+        box-shadow: 5px 10px black;
+      }
+
+      #style {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: floralwhite; font-size: 50px;"> HTML/CSS Guide </h1>
+    <h2 style="color: ghostwhite;"> Common HTML Tags outside &lt;body&gt; </h2>
+    <table style="width: 100%">
+      <tr>
+        <!--table row-->
+        <th style="width: 34%;">Tag</th>
+        <!--table header-->
+        <th style="width: 33%;">Definition</th>
+        <th style="width: 33%;">Examples</th>
+      </tr>
+      <tr>
+        <td>&lt;!DOCTYPE html&gt;</td>
+        <td>The doctype in HTML is a declaration that tells a browser which version of HTML a document is written in.</td>
+        <td>No examples (None applicable)</td>
+      </tr>
+      <tr>
+        <td>&lt;html lang="en"&gt;</td>
+        <td>Specifies that the language of the document is in a certain language.</td>
+        <td>No examples (None applicable)</td>
+      </tr>
+      <tr>
+        <td>&lt;title&gt;&lt;/title&gt;</td>
+        <td>Sets the title of the page, which will be displayed on the tab of the page.</td>
+        <td>Refer to the title of this page.
+          <hr>
+          <img src="screenshot.png" alt="Screenshot1" style="width:50%">
+        </td>
+      </tr>
+      <tr>
+        <td>&lt;style&gt;</td>
+        <td>A section used to define internal CSS (Cascading Style Sheets) directly in the HTML file. This allows you to stylize tags spcifically.</td>
+        <td id="style">Input &lt;style&gt; in &lt;head&gt; (before &lt;body&gt;), then inside the section put #x (x = any name) followed by a curly bracket ({). Next, press enter, and when you are inside the brackets, type "background-color: black;" and "color: white;" to achieve this effect.</td>
+      </tr>
+      <tr>
+        <td>&lt;link rel="styleheet" href="x"&gt;</td>
+        <td>This is a tag used in HTML to link an external stylesheet CSS file to an HTML document, which can modify and stylize your website.</td>
+        <td>The homepage and this page point to a common style.css file that controls the look of these pages.</td>
+      </tr>
+      <tr>
+        <td>&lt;link rel="icon" type="x" href="y.ico"&gt;</td>
+        <td>Tag that adds a favicon, the icon that displays on the tab of the website. Must insert a file with the .ico extension to work.</td>
+        <td>Refer to the favicons that are both used by this page and the inside page. Below is the favicon used for this page.
+          <hr>
+          <img src="screenshot.png" alt="Screenshot1" style="width:50%">
+        </td>
+      </tr>
+    </table>
+    <p>
+      <a class="btn" href="index.html">Inside</a>
+    </p>
+  </body>
+</html>

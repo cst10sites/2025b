@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 2</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<style>
+		body {
+			background-color: #b87528;
+			color: #b82828;
+
+			font-family: cursive;
+			margin: 100px 100px;
+		}
+
+		a {
+			color: red;
+		}
+
+		ol li {
+			margin-top: 0.5em;
+		}
+
+		strong {
+			color:blue;
+		}
+
+		.content {
+			background-color: lightyellow;
+			padding: 50px 25px;
+			border-color: darkorange; 
+			border-width: thick; /* thin */
+			border-style: solid; /* dashed dotted */
+			border-radius: 50px;
+			box-shadow: 5px 5px yellow;
+		}
+
+		h1 {
+			color: darkred;
+		}
+
+	  .float-right {
+      float: Right; /* You can change to 'right' or 'none' */
+      margin-left: 10px; /* Optional: to add space between the image and the text */
+      position: relative;
+      top: -233px;
+    }
+
+    .center {
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		  width: 50%;
+		}
+
+	  div#menu {
+			overflow: hidden;
+			background-color: orange;
+			position: relative;
+			border-radius: 20px;
+		}
+
+		div#menu #moreLinks {
+			display: none;
+		}
+
+		div#menu a {
+			color:brown;
+			padding: 16px 20px;
+			text-decoration: none;
+			font-size: 1em;
+			display: block;
+		}
+
+		div#menu a:hover {
+			color: darkred;
+			background-color: lightgoldenrodyellow;
+		}
+
+		div#menu a.icon {
+			background: yellow;
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		h1 {text-align: center;}
+
+		h2 {
+			font-size: 29px;
+		}
+
+		p {
+	  	font-size: 20px;
+		}
+
+		ul {
+			font-size: 18px;
+		}
+
+		ol {
+		  font-size: 24px;
+		}
+
+	</style>
+
+</head>
+	 <body>
+      <div id="menu">
+        <a href="..">Home</a>
+       	<div id="moreLinks">
+          <!--only add <a href=...> below-->
+          <a href="../a1/index.html">Assignment One (About me)</a>
+          <a href="../a3/index.html">Assignment Three</a>
+          <a href="../a4/index.html">Assignment Four</a>
+         </div>
+        <a class="icon" onclick="showHideMenu()">...</a>
+      </div>
+		<h1 style="font-size:48px;">The best energizer to open a day!</h1>
+		<div class="content">
+		<p>
+			<img alt="sandwich" style="width:20%" src="sandwich.png">
+		</p>
+		<h2>Introduction</h2>
+		<p>
+			The <strong>Triple-layer peanut butter jelly and ham sandwich &#174;</strong> is a <em>longtime favorite</em> breakfast item of mine. It is a great "rouser" for the morning, a true dish that will awaken and power you for the rest of your day! Whether you feel tired or depressed, this silly yet impressive sandwich will open you to a journey of fun and happiness. Furthermore, the best part is that this snack can be altered or added on without problems, giving you access to many creative and fun imaginative ideas!
+		</p>
+
+		<p>
+			I discovered this fantastic idea back in 2019. In 2024, I attended a (music) camp, in which we often had the option to eat sandwiches. However, there was also a panini press, so I'd usually "upgrade" my sandwich to a panini to enhance the effect. This seems to work well with the recipe I found, so I would suggest improving this improvisatory sandwich if possible. Sometimes the meat we receive will alternate, which made me swap types of meat multiple times. I am glad to say that, so far, all combinations have worked very successfully! Adding additional types of different 
+		</p>
+
+		<p>
+			Notice: not suitable to those with allergies concerning peanuts!
+		</p>
+		<h2>Ingredients</h2>
+		<p>
+			To create this amazing sandwich, you will need:
+		</p>
+			<ul>
+				<li>Bread x3</li>
+				<li>A packet of peanut butter</li>
+				<li>A packet of jelly (any flavor you'd like!)</li>
+				<li>Panini ham (amount should be &gt; 2)</li>
+				<li>Butter</li>
+				<li>A toaster</li>
+				<li>BONUS: Panini press</li>
+			</ul>
+		<p>
+			<img alt="toaster" style="width:27%" src="toaster.jpg" class="float-right">
+		</p>
+		<h2>Instructions</h2>
+		<p>
+			As to <em>how</em> you can create this deliciousness, here are my instructions:
+		</p>
+			<ol>
+				<li>Start defrosting your pieces of ham (1-2 hours in room temperature)</li>
+				<li>Toast your three bread sides for the standard duration (2&frac12; minutes, varies depending on your toaster)</li>
+				<li>While that is going on, open your two packets of peanut butter and jelly (1&frac12; tbsp for each)</li>
+				<li>Mix your peanut butter with your jelly (preferrably in a small bowl)</li>
+				<li>Stack your three bread loafs</li>
+				<li>Apply a sufficient amount of the mixture to the lower toasted bread loafs (&frac13; to the lower loaf and &frac23; to the middle loaf)</li>
+				<li>Add a bit of butter atop the mixtures</li>
+				<li>Place one piece of ham in the center of each sandwich</li>
+				<li>Optional: Push this with the panini press (for approximately 1 minute if you want the best effect)</li>
+				<li>ENJOY</li>
+			</ol>
+
+		<p>
+			<img alt="sandwich2" style="width:69%" src="sandwich2.png" class="center">
+		</p>
+	</div>
+	<script>
+    function showHideMenu() {
+      var links = document.getElementById("moreLinks");
+      if (links.style.display == "block") {
+        links.style.display = "none"; // hide
+      } else {
+        links.style.display = "block"; // show
+      }
+    }
+  </script>
+ </body>
+</html>

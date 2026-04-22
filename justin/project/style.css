@@ -1,0 +1,307 @@
+@import url(https://d3g0gp89917ko0.cloudfront.net/v--4b961b7cc327/common--modules/css/pagerate/PageRateWidgetModule.css);
+@import url(https://d3g0gp89917ko0.cloudfront.net/v--4b961b7cc327/common--theme/base/css/style.css);
+@import url(https://cdn.scpwiki.com/theme/en/sigma/css/sigma.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;600;700&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@1,500&amp;display=swap');
+@import url('https://fonts.cdnfonts.com/css/ironick-nf');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&amp;display=swap');
+
+
+div.feature1box {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 5;
+    grid-area: feature1;
+}
+
+.feature {
+    padding: 0px 10px;
+}
+
+.feature h2 {
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+.feature-subtitle {
+    font-size: 90%;
+}
+
+.feature-subsubtitle {
+    font-size: 85%;
+    font-style: italic;
+}
+
+.feature-blurb {
+    font-style: italic;
+}
+
+.box .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 150%;
+  text-align: left;
+  -webkit-box-shadow: inset 0 0.5em 0 var(--box-accent);
+          box-shadow: inset 0 0.5em 0 var(--box-accent);
+}
+
+.box .title::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  height: auto;
+  background: var(--box-accent);
+  margin-right: 1rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.box .title p {
+  margin: 0;
+  padding: 0 0.325em;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: calc(100% - 5.5rem);
+  line-height: 1.05;
+  padding-block: 0.175em;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  background: var(--box-accent);
+}
+
+.box .footer {
+  font-family: 'PT Sans Narrow', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  font-weight: 400;
+  color: white;
+  font-size: 100%;
+  text-align: right;
+  -webkit-box-shadow: inset 0 -0.45em 0 var(--box-accent);
+          box-shadow: inset 0 -0.45em 0 var(--box-accent);
+}
+
+.box .footer::after {
+  content: "";
+  display: block;
+  width: 1.25rem;
+  height: auto;
+  background: var(--box-accent);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.footer a, .footer a:visited {
+    color: white;
+}
+
+.box .footer p {
+  margin: 0;
+  background: var(--box-accent);
+  padding: 0 0.325em;
+  max-width: calc(100% - 2.5rem);
+}
+
+.box {
+    background: #ffff;
+    -webkit-box-shadow: 0px 0px 6px -3px rgba(5,5,5,0.75);
+            box-shadow: 0px 0px 6px -3px rgba(5,5,5,0.75);
+    border-radius: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+div.newsbox {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: newsbox;
+}
+div.feature1box {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 5;
+    grid-area: feature1;
+}
+div.feature2box {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 5;
+    grid-area: feature2;
+}
+div.feature3box {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-area: feature3;
+}
+div.feature4box {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-area: feature4;
+}
+div.art {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 3;
+    grid-area: art;
+}
+
+#main-content {padding-top: 0;}
+#page-content {
+    --box-accent: #823f3f;
+}
+
+table , th, td {
+  border: 3px solid black;
+  background-color: white;
+  padding: 20px;
+}
+
+th, td {
+  text-align: center;
+}
+
+th {
+  background-color: grey;
+}
+
+.alertbar {
+    color: #700;
+    background: #fff url('https://scp-wiki.wdfiles.com/local--files/theme%3Aredtape/scp_trans.png') center center no-repeat;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 0px 13px -7px rgba(5,5,5,0.75);
+            box-shadow: 0px 0px 13px -7px rgba(5,5,5,0.75);
+    font-family: 'Overpass Mono', monospace;
+    font-weight: 600;
+    font-size: .9rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    padding: 0rem 0.5rem;
+    -webkit-transition: -webkit-box-shadow 300ms ease-in-out;
+    transition: -webkit-box-shadow 300ms ease-in-out;
+    -o-transition: box-shadow 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, -webkit-box-shadow 300ms ease-in-out;
+}
+
+.alertbar:hover {    -webkit-box-shadow: 0px 0px 13px -4px rgba(5,5,5,0.75);    box-shadow: 0px 0px 13px -4px rgba(5,5,5,0.75);}
+
+.alertbar > p:nth-child(1) {margin-top: 0.25rem;margin-bottom: 0.5rem;}
+.alertbar > p:nth-child(n+2) {margin-bottom: 0.25rem;}
+.classified {letter-spacing: 7px; font-size: 3rem;font-family: 'Inter', sans-serif;margin-left: 7px;}
+.classified p {margin: -1.6rem;}
+.classified a, .classified a:hover, .classified a:visited {color: #700; text-decoration: none;}
+
+@media only screen and (max-width: 666px) {
+.alertbar > p:nth-child(1) {margin-bottom: 0.75rem;}
+}
+
+.feature {
+    padding: 0px 10px;
+}
+
+.feature h2 {
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+.feature-subtitle {
+    font-size: 90%;
+}
+
+.feature-subsubtitle {
+    font-size: 85%;
+    font-style: italic;
+}
+
+.feature-blurb {
+    font-style: italic;
+}
+
+iframe.scpnet-interwiki-frame { height: 0; }
+
+div#menu {
+  overflow: hidden;
+  background-color: lightgrey;
+  position: relative;
+  border-radius: 5px;
+}
+
+div#menu #moreLinks {
+  display: none;
+}
+
+div#menu a{
+  color: black;
+  padding: 16px 20px;
+  text-decoration: none;
+  font-size: 1.25em;
+  display: block;
+}
+
+div#menu a:hover {
+  color:red;
+  background-color: grey;
+}
+
+div#menu a.icon {
+  background: grey;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+body#html-body {
+  padding: 75px;
+  border-color: brown;
+  border-width: thick; /* thin */
+  border-style: solid; /* dashed dotted */
+  border-radius: 25px;
+  border-padd
+  box-shadow: 5px 10px orange;
+}
+
+a.btn {
+  background-color: brown;
+  color: lightyellow;
+  text-decoration: none;
+  padding: 15px 25px;
+  border: solid thick orangered;
+  border-radius: 20px;
+  font-size: 1.5em;
+  display: inline-block;
+}
+
+a.btn:hover {
+  background-color: orangered;
+  box-shadow: 5px 10px brown;
+}

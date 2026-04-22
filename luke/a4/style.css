@@ -1,0 +1,105 @@
+
+body {
+  background-color: burlywood;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  color: black;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 50px;
+  color: navajowhite;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 35px;
+  color: goldenrod;
+}
+
+p {
+  font-size: 18px;
+  color: maroon;
+  margin: 10px 0;
+}
+
+
+#startButtonDisplay {
+  width: 200px;
+  height: 200px;
+  margin: 20px 0;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#startButtonDisplay:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+button {
+  background-color: blanchedalmond;
+  border-radius: 12px;
+  border-color: bisque;
+  color: saddlebrown;
+  font-size: 20px;
+  padding: 12px 24px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+
+button:hover {
+  background-color: palegoldenrod;
+}
+
+
+#clicksDisplay,
+#CPS,
+#timeDisplay {
+  font-size: 36px;
+  font-weight: bold;
+  color: goldenrod;
+  margin: 10px 0;
+}
+
+#gameContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#gameContainer p {
+  font-size: 24px;
+  color: saddlebrown;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+button:active {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+  
+  #startButtonDisplay {
+    width: 150px;
+    height: 150px;
+  }
+  
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  #gameContainer {
+    width: 90%;
+    padding: 15px;
+  }
+
