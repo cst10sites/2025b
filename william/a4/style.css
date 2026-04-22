@@ -1,0 +1,33 @@
+body {
+	background-color: brown;
+	font-family: Arial;
+}
+
+img:active {
+	scale: 95%;
+}
+#cookieclicker {
+	text-align: center;
+}
+
+#info {
+	background-color: lightgrey;
+	border: 3px solid black;
+	border-radius: 5px;
+}
+
+#achievement {
+	background-color: lightgrey;
+	border: 5px solid black;
+	border-radius: 5px;
+}
+
+button {
+	background-color: lightgrey;
+	border: 3px solid black;
+	border-radius: 5px;
+}
+
+button:hover {
+	scale: 110%;
+}

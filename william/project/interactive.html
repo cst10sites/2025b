@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link href="style.css" rel="stylesheet" type="text/css" id="stylesrc">
+		<link href="interactivestyle.css" rel="stylesheet" type="text/css">
+		<link rel="icon" href="mclaren_logo_icon_145799.webp">
+		<title>The McLaren P1™</title>
+	</head>
+	<body>
+		<div class="nav">
+			<span><a href="index.html"><img src="McLaren_P1_Logo.webp" style="width:100px; padding-right: 50px;" alt="McLaren P1 Logo"></a></span>
+			<a href="history.html" class="navanchor">History</a>
+			<a href="specs.html" class="navanchor">Specifications</a>
+			<a href="interactive.html" class="navanchor">Interactive</a>
+			<span id="lightmode" style="padding-left: 500px;"><a id="mode" href="javascript:lightmode();"><img id="sunmoon" src="sun.png" style="width: 25px;" alt="image of sun/moon"></a></span>
+		</div>
+		<h1 style="color: white; text-align: center;">Interactive Acceleration Simulation</h1>
+		<div id="interact">
+			<img src="greylight.png" style="width: 30px;" id="light1" alt="image of a car light">
+			<img src="greylight.png" style="width: 30px;" id="light2" alt="image of a car light">
+			<img src="greylight.png" style="width: 30px;" id="light3" alt="image of a car light">
+			<img src="greylight.png" style="width: 30px;" id="light4" alt="image of a car light">
+			<img src="greylight.png" style="width: 30px;" id="light5" alt="image of a car light">
+			<img src="greylight.png" style="width: 30px;" id="light6" alt="image of a car light">
+			<img src="greylight.png" style="width: 30px;" id="light7" alt="image of a car light">
+			<img src="greylight.png" style="width: 30px;" id="light8" alt="image of a car light">
+			<img src="greylight.png" style="width: 30px;" id="light9" alt="image of a car light">
+
+			<br>
+		    <span id="counter">0</span><span style="font-size: 50px;">km/h</span>
+		    <br>
+		    Distance Traveled: <span id="distance">0</span>km
+		    <br>
+		    <br>
+		    <span style="font-size: 20px;"><strong>Gear</strong></span>
+		    <br>
+		    <span id="gear" style="font-size: 30px;"><strong>N</strong></span>
+		    <br>
+		    <br>
+		    <button id="counterButton">Accelerate</button>
+		    <button id="decreaseButton">Brake</button>
+
+
+		</div>
+		
+		<br>
+		<span style="text-align: center; color:white;"><strong>Note: Intervals for acceleration are based off of the acceleration speeds of 1-100, 100-200 and 200-350kmph from official statistics and based off <a style="color: white;" target="_blank" href="https://www.youtube.com/watch?v=hf_OuK6UpVw">this</a> video.</strong></span>
+		<hr>
+		<h1><strong>Quiz</strong></h1>
+		<p id="result"></p>
+		<div id="quiz" style="padding-bottom: 50px;">
+				<form>
+		          <label><strong>Where was the P1™ unveiled?</strong></label><br>
+		          <input id="correctAnwser" type="radio" name="ex2">
+		          <label for="correctAnwser">Paris Auto Show</label><br>
+		          <input id="option4" type="radio" name="ex2">
+		          <label for="option4">Brussels Automotive Confrence</label><br>
+		          <input id="option5" type="radio" name="ex2">
+		          <label for="option5">Monaco Grand Prix</label><br><br>
+		          <input type="reset" class="btnborder"><br> 
+		      </form>
+		      <button onclick="try1()">Submit</button>
+		</div>
+		<script src="quizscript.js"></script>
+		<script src="script.js"></script>
+		<script>
+		      	const countertext = document.getElementById('counter');
+				const button = document.getElementById('counterButton');
+				let counter = 0;
+				let intervalId = null;
+				let currentInterval = null; 
+				const decreaseButton = document.getElementById('decreaseButton');
+				let fastDecreaseId = null;
+				var distanceTraveled = 0;
+				var hrsInterval = 0;
+				var startTime = new Date();
+				var lights = "blank"
+				function updateCounter() {
+				  countertext.textContent = counter;
+				}
+
+				function increaseCounter() {
+				  if (counter < 350) {
+				    counter++;
+				    updateCounter();
+				    updateInterval();
+				  }
+				  
+				}
+
+				function decreaseCounter() {
+				  if (counter > 0) {
+				    counter--;
+				    updateCounter();
+				  } else {
+				    clearInterval(intervalId);
+				    intervalId = null;
+				    currentInterval = null;
+				  }
+				}
+
+				function updateInterval() {
+				  let newInterval = null;
+
+				  if (counter < 100) {
+				    newInterval = 29;
+				  } else if (counter < 200) {
+				    newInterval = 34;
+				  } else if (counter < 300) {
+				    newInterval = 103;
+				  } else if (counter < 350) {
+				    newInterval = 120;
+				  } else if (counter === 350) {
+				    newInterval = 500; // keep calculating distance every 500ms when speed is max
+				  }
+
+				  if (newInterval !== currentInterval) {
+				    clearInterval(intervalId);
+				    currentInterval = newInterval;
+
+				    if (newInterval !== null) {
+				      intervalId = setInterval(increaseCounter, newInterval);
+				    } else {
+				      intervalId = null;
+				    }
+				  }
+				}
+
+				function startIncreasing() {
+				  updateInterval(); 
+				}
+
+				function startDecreasing() {
+				  clearInterval(intervalId);
+				  intervalId = setInterval(decreaseCounter, 100);
+				  currentInterval = null;
+				}
+
+				// Button interaction
+				button.addEventListener('mousedown', startIncreasing);
+				['mouseup', 'mouseleave'].forEach(event =>
+				  button.addEventListener(event, startDecreasing)
+				);
+
+				function startFastDecreasing() {
+				  clearInterval(fastDecreaseId);
+				  fastDecreaseId = setInterval(() => {
+				    if (counter > 0) {
+				      counter--;
+				      updateCounter();
+				    } else {
+				      clearInterval(fastDecreaseId);
+				      fastDecreaseId = null;
+				    }
+				  }, 20.6); 
+				}
+
+				function stopFastDecreasing() {
+				  clearInterval(fastDecreaseId);
+				  fastDecreaseId = null;
+				}
+
+				decreaseButton.addEventListener('mousedown', startFastDecreasing);
+				['mouseup', 'mouseleave'].forEach(event =>
+				  decreaseButton.addEventListener(event, stopFastDecreasing)
+				);
+
+				setInterval(updateDistance, 50);
+
+				function updateDistance() {
+				  const currentTime = new Date();
+				  const timePassed = (currentTime - startTime) / 3600000; 
+				  distanceTraveled += counter * timePassed;
+				  startTime = currentTime; 
+				  console.log("Speed:", counter, "Distance:", distanceTraveled);
+				}
+
+				setInterval(updateDistanceText, 50);
+				// run updateTime every 0.1 seconds
+
+				function updateDistanceText() {
+					document.getElementById("distance").innerHTML = distanceTraveled.toFixed(2);
+				}
+
+				setInterval(updateLightsGear, 50);
+
+				function updateLightsGear() {
+					if (counter < 60 && counter > 0) {
+						document.getElementById("gear").innerHTML = "<strong>1</strong>";
+						if (counter < 15) {
+							lights = "green"
+						} else if (counter > 15 && counter < 45) {
+							lights = "yellow"
+						} else if (counter > 45 && counter < 60) {
+							lights = "red"
+						}
+					} else if (counter < 110 && counter > 60) {
+						document.getElementById("gear").innerHTML = "<strong>2</strong>";
+						if (counter < 75) {
+							lights = "green"
+						} else if (counter < 90 && counter > 75) {
+							lights = "yellow"
+						} else if (counter > 90 && counter < 110) {
+							lights = "red"
+						}
+					} else if (counter > 110 && counter < 160){
+						document.getElementById("gear").innerHTML = "<strong>3</strong>";
+						if (counter < 130) {
+							lights = "green"
+						} else if (counter > 130 && counter < 140) {
+							lights = "yellow"
+						} else if (counter > 140 && counter < 160) {
+							lights = "red"
+						}
+					} else if (counter > 160 && counter < 215){
+						document.getElementById("gear").innerHTML = "<strong>4</strong>";
+						if (counter < 160) {
+							lights = "green"
+						} else if (counter > 160 && counter < 190) {
+							lights = "yellow"
+						} else if (counter > 190 && counter < 215) {
+							lights = "red"
+						}
+					} else if (counter > 215 && counter < 285) {
+						document.getElementById("gear").innerHTML = "<strong>5</strong>";
+						if (counter < 215) {
+							lights = "green"
+						} else if (counter > 215 && counter < 240) {
+							lights = "yellow"
+						} else if (counter > 285 && counter < 240) {
+							lights = "red"
+						}
+					} else if (counter < 350 && counter > 285) {
+						document.getElementById("gear").innerHTML = "<strong>6</strong>";
+						if (counter < 285) {
+							lights = "green"
+						} else if (counter > 285 && counter < 315) {
+							lights = "yellow"
+						} else if (counter > 315 && counter < 350) {
+							lights = "red"
+						}
+					} else if (counter == 0) {
+						lights = "blank"
+						document.getElementById("gear").innerHTML = "<strong>N</strong>";
+					}
+					if (lights == "blank") {
+						document.getElementById("light1").src = "greylight.png";
+						document.getElementById("light2").src = "greylight.png";
+						document.getElementById("light3").src = "greylight.png";
+						document.getElementById("light4").src = "greylight.png";
+						document.getElementById("light5").src = "greylight.png";
+						document.getElementById("light6").src = "greylight.png";
+						document.getElementById("light7").src = "greylight.png";
+						document.getElementById("light8").src = "greylight.png";
+						document.getElementById("light9").src = "greylight.png";
+					} else if (lights == "green") {
+						document.getElementById("light1").src = "greenlight.png";
+						document.getElementById("light2").src = "greenlight.png";
+						document.getElementById("light3").src = "greenlight.png";
+						document.getElementById("light4").src = "greylight.png";
+						document.getElementById("light5").src = "greylight.png";
+						document.getElementById("light6").src = "greylight.png";
+						document.getElementById("light7").src = "greylight.png";
+						document.getElementById("light8").src = "greylight.png";
+						document.getElementById("light9").src = "greylight.png";
+					} else if (lights == "yellow") {
+						document.getElementById("light1").src = "greenlight.png";
+						document.getElementById("light2").src = "greenlight.png";
+						document.getElementById("light3").src = "greenlight.png";
+						document.getElementById("light4").src = "yellowlight.png";
+						document.getElementById("light5").src = "yellowlight.png";
+						document.getElementById("light6").src = "yellowlight.png";
+						document.getElementById("light7").src = "greylight.png";
+						document.getElementById("light8").src = "greylight.png";
+						document.getElementById("light9").src = "greylight.png";
+					} else if (lights == "red") {
+						document.getElementById("light1").src = "greenlight.png";
+						document.getElementById("light2").src = "greenlight.png";
+						document.getElementById("light3").src = "greenlight.png";
+						document.getElementById("light4").src = "yellowlight.png";
+						document.getElementById("light5").src = "yellowlight.png";
+						document.getElementById("light6").src = "yellowlight.png";
+						document.getElementById("light7").src = "redlight.png";
+						document.getElementById("light8").src = "redlight.png";
+						document.getElementById("light9").src = "redlight.png";
+					}
+
+				}
+
+		    </script>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+  background-image: url("https://i.ytimg.com/vi/DelMq1ABRRY/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  background-size: 100% auto;
+  background-color: #98623c;
+}
+
+table,
+th,
+td {
+  border: 6px solid #5c4033;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 5px;
+  text-align: center;
+}
+
+th {
+  font-size: 1.25em;
+  text-decoration: underline;
+  background-color: darkgrey;
+  font-family: cursive;
+}
+
+a.btn {
+  background-color: grey;
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-left: 1200px;
+  color: brown;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1,
+h2,
+p,
+td,
+th {
+  font-family: cursive;
+  color: white;
+}
+
+div#content {
+  padding: 25px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+span {
+  color: blue;
+}
+
+#style {
+  background-color: purple;
+}
+
+a {
+  text-align: center;
+  font-family: cursive;
+}

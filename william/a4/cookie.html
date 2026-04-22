@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 4</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="icon" type="image/x-icon" href="cookie.png">
+		<!--create and edit style.css-->
+	</head>
+	<body>
+		<div id="cookieclicker">
+			<h2>Cookie Clicker</h2>
+			<h3 id="totalClicks">Clicks: 0</h3>
+			<button id="hoverbtn" onclick="updateCPS();" style="background-color: brown; border-style: none;"><img src="cookie.png" style=" width: 200px;" alt="cookie"></button>
+			<p><span id="info" title="CPS is calculated from the time that you first click, to your last click.">?</span><span id="cpsDisplay"> Clicks Per Second: 0</span></p>
+			<button onclick="window.location.replace('');">Reset</button>
+			<p><span id="achievement" title="Achievements Will Appear Here!">No Achievements Yet</span></p>
+			<hr>
+			<h2>HTML/CSS/JS Quiz</h2>
+			<p>Click <a href="quiz.html">here</a> to play the quiz.</p>
+		</div>
+		<script>
+			// global variables
+			var nClicks = 0;
+			var startTime = new Date();
+			var fastCPS = false;
+			var timeachv = false;
+			var extrafastCPS = false;
+			var achvs = 0;
+			// basic version of Cookie Clicker code
+			function updateCPS() {
+				console.log("f");
+				if (nClicks == 0) {
+					// first click
+					const startTime = new Date();
+					nClicks += 1;
+					document.getElementById("cpsDisplay").innerHTML = "Clicks Per Second: 0";
+					document.getElementById("totalClicks").innerHTML = "Clicks: " + nClicks;
+					document.getElementById("achievement").innerHTML = "<img src='cookie.png' style='width: 10px;'> First Steps!";
+					achvs += 1;
+				}
+				else {
+					// subsequent clicks:
+					var currentTime = new Date();
+					var timePassed = (currentTime - startTime) / 1000;
+					var cps = nClicks / timePassed;
+					nClicks = nClicks + 1;
+					var cpsRound = cps.toFixed(2);
+					document.getElementById("cpsDisplay").innerHTML = "Clicks Per Second: " + cpsRound;
+					document.getElementById("totalClicks").innerHTML = "Clicks: " + nClicks;
+					console.log(currentTime);
+				}
+				if (achvs == 7) {
+					document.getElementById("achievement").innerHTML = "🏆 Completionist";
+					document.getElementById("achievement").title = "Recieve all humanly possible achievements. You have completed the game!";
+				}
+				if (nClicks == 100) {
+					document.getElementById("achievement").innerHTML = "<img src='https://www.freeiconspng.com/thumbs/gear-icon/gear-icon-13.png' style='width: 10px;'> Picking up some steam...";
+					document.getElementById("achievement").title = "Get over 100 clicks";
+					achvs += 1;
+
+				}
+				if (nClicks == 1000) {
+					document.getElementById("achievement").innerHTML = "👷 Professional";
+					document.getElementById("achievement").title = "Get over 1000 clicks";
+					achvs += 1;
+				}
+				if (cps >= 6 && fastCPS == false) {
+					document.getElementById("achievement").innerHTML = "⚡ Speedy McGee";
+					document.getElementById("achievement").title = "Get over 6cps";
+					achvs += 1;
+					fastCPS = true;
+				}
+				if (nClicks == 314) {
+					document.getElementById("achievement").innerHTML = "🥧 That's not cookie that's pie!";
+					document.getElementById("achievement").title = "Click 314 times.";
+					achvs += 1;
+				}
+				if (timePassed >= 60 && timeachv == false) {
+					document.getElementById("achievement").innerHTML = "⏰ Time flies...";
+					document.getElementById("achievement").title = "Click for over 60 seconds";
+					timeachv = true;
+					achvs += 1;
+				}
+				if (cps >= 10 && extrafastCPS == false) {
+					document.getElementById("achievement").innerHTML = "🤖 Beep Beep Boop Boop";
+					document.getElementById("achievement").title = "Click Abnormally Fast";
+					extrafastCPS = true;
+				}
+				if (nClicks == 777) {
+					document.getElementById("achievement").innerHTML = "🎰 Jackpot!";
+					document.getElementById("achievement").title = "Click 777 times.";
+					achvs += 1;
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+button {
+	border: solid;
+	border-radius: 5px;
+	border-color: black;
+}
+
+.btnborder {
+	border: solid;
+	border-radius: 5px;
+	border-color: black;
+}

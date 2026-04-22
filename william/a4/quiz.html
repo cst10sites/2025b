@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Quiz</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="icon" type="image/x-icon" href="q.png">
+
+	</head>
+	<body>
+		<h1>HTML Quiz</h1>
+		<hr>
+		<form>
+		    <label>Which is real HTML?</label><br>
+		    <input id="correctLang" type="radio" value="jordan" name="ex2">
+		    <label>&lt;hr&gt;</label><br>
+		    <input id="option2" type="radio" value="lebron" name="ex2">
+		    <label>&lt;words&gt;</label><br>
+		    <input id="option3" type="radio" value="shai" name="ex2">
+		    <label>&lt;writing&gt;</label><br>
+		    <input type="button" value="Submit" onclick="example2();">
+		    <input type="reset"><br> 
+		    <!--name attribute groups radio buttons together-->
+		</form>
+		<form>
+		    <label>What language is used to make styles on webpages?</label>
+		    <select id="lang"><!--no input for dropdown-->
+		        <option value="html">Hyper Text Markup Language</option>
+		        <option value="basic">Basic</option>
+		        <option value="css">Cascading Style Sheets</option>
+		        <option value="js">JavaScript</option>
+		        <!-- id in select, value in option-->
+		    </select>
+		    <br>
+		    <input type="button" value="OK" onclick="example4();">
+		    <input type="reset"><br> 
+		</form>
+		<hr>
+		<p>Go to <a href="cookie.html">Cookie Clicker</a></p>
+		<script>
+			function example4() {
+				var choice = document.getElementById("lang").value;
+
+				var ch = choice.toLowerCase();
+
+				if (ch == "css") {
+					alert("Correct!");
+				}
+				else {
+					alert("Try again!");
+				}
+			}
+			function example2() {
+				var correctAns = document.getElementById("correctLang").checked;
+				// this anwser will either be true or false
+
+				if (correctAns == true) {
+					alert("Correct!");
+				}
+				else {
+					alert("Try again");
+				}
+			}
+		</script>
+	</body>
+</html>

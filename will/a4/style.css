@@ -1,0 +1,51 @@
+body {
+	background-color: lightpink;
+  text-align: center;
+}
+
+h2 {
+
+	color: mediumpurple;
+}
+
+label {
+	font-family: verdana;
+	color: mediumpurple;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+
+div#content {
+	border-radius: 50px;
+	background-color: floralwhite;
+	padding: 50px 300px;
+	border-color: white;
+	border-width: thick;
+	border-style: solid;
+	box-shadow: 10px 10px floralwhite;
+	width: 500px;
+	margin: auto;
+
+}
+
+h1, h2, h3, p, label {
+	font-family: Comic Sans;
+}
+
+a.btn {
+  background-color: mediumpurple;
+  text-decoration: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 1.5em;
+  display: inline-block;
+  color: lightskyblue;
+  text-align: center;
+  font-family: Comic Sans;
+}
+

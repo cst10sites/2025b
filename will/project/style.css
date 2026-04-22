@@ -1,0 +1,136 @@
+			a.btn {
+				/*refers to a class="btn" . . .> */
+				background-color: #FFD580;
+				font-color: white;
+				text-decoration: none;
+				padding: 14px 35px;
+				border-radius: 10px;
+				font-size: 1.5em;
+				display: inline-block;
+				margin-left: 7%;
+				margin-top: -6.5px;
+			}
+
+			a.btn.hover {
+				background-color: lightyellow;
+				box-shadow: 10px 10px black;
+			}
+
+			a{
+				color: dodgerblue;
+				background-image: url(https://img.freepik.com/premium-vector/cheese-texture-pattern_554888-2223.jpg?w=360);
+			}
+
+			a:hover{ 
+				color: yellow;
+			}
+
+			h1 {
+				font-family: courier;
+				text-align: center;
+				font-size: 50em;
+			}
+
+			
+			
+			body {
+				background-color: #FCF4A3;
+				margin: 25px 125px;
+  			
+			}
+
+			
+			div#content {
+				border-radius: 20px;
+				background-color:  #FFD580;
+				padding: 25px 25px;
+				border-color: white;
+				border-width: thick; /* thin */
+				border-style: solid;
+				box-shadow: 10px 10px lightyellow;
+
+			}
+
+			p {
+				font-size: 19px;
+			}
+
+			h2{
+				font-size: 26px;
+			}
+
+			.image-right {
+				float: right;
+				margin-left: 15px;
+				margin-right: 115px;
+			}
+
+			.image-left {
+
+				float: left;
+				margin-left: 20px;
+				margin-right: 25px;
+			}
+
+			.image-center {
+				float: right;
+				margin-left: 6px;
+				margin-right: 20px;
+				margin-top: 10px;
+			}
+
+			div#menu {
+				position: fixed;
+				background-color:#FCF4A3;
+				outline-color: white;
+				width: 110%;
+				height: 10%;
+				outline-style: solid;
+				margin-left: -125px;
+				margin-top: -23px;
+			}
+
+			h1 {
+  				font-size: 85px;
+ 				background-image: -webkit-gradient(
+    			linear,
+    			left top,
+    			right top,
+    			color-stop(0.03, rgb(242,186,14)),
+    			color-stop(0.52, rgb(255,136,0)),
+    			color-stop(0.76, rgb(100,24,120)));
+  				-webkit-background-clip: text;
+  				-webkit-text-fill-color: transparent;
+			}
+
+			table,
+			th,
+			td {
+ 				 border: 6px solid #5c4033;
+			}
+
+			table {
+ 				 border-collapse: collapse;
+  				 width: 100%;
+			}
+
+			td,
+			th {
+  				 padding: 5px;
+  				 text-align: center;
+			}
+
+			th {
+  				font-size: 1.25em;
+  				text-decoration: underline;
+ 				background-color: orange;
+  				font-family: cursive;
+			}
+
+			p, h1, h2, tr, th, td, li {
+				font-family: cursive;
+				
+			}
+
+			
+		

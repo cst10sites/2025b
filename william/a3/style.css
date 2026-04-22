@@ -1,0 +1,44 @@
+
+body {
+	font-family: monospace;
+	background-color: navy;
+	color: white;
+}
+
+table, th, td {
+	border: 5px solid darkslateblue;
+}
+
+table {
+	border-collapse: collapse;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+	text-align: center;
+	padding: 5px;
+}
+
+a {
+	color: magenta;
+}
+
+a:hover {
+	color: white;
+}
+
+.center {
+  text-align: center;
+  list-style-position: inside;
+}
+
+td#example {
+	background-color: darkmagenta;
+}
+
+.btn {
+	font-size: 30px;
+	text-decoration: none;
+	background-color: darkslateblue;
+	border-radius: 5px;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="icon" type=image/x-icon href="https://cdn.pixabay.com/photo/2017/02/11/22/41/quiz-2058888_1280.png">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!--create and edit style.css-->
+<style>
+
+div#content {
+	border-radius: 50px;
+	background-color: floralwhite;
+	padding: 50px 300px;
+	border-color: white;
+	border-width: thick;
+	border-style: solid;
+	box-shadow: 10px 10px white;
+	width: 500px;
+	margin: auto;
+}
+
+h1 {
+	color: mediumpurple;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<h1>HTML/CSS Quiz</h1>
+<br>
+<div id="content">
+<form>
+<!--ask at least two questions related to HTML/CSS/JS-->
+	    <label>Who makes the HTML web standards?</label><br>
+	    <br>
+	    <input id="Consortium" type="radio" value="The world wide web consortium" name="ex2">
+	    <label>The world wide web consortium</label><br>
+	    <input id="Google" type="radio" value="google" name="ex2">
+	    <label>Google</label><br>
+	    <input id="Microsoft" type="radio" value="microsoft" name="ex2">
+	    <label>Microsoft</label><br>
+	    <input id="Mozilla" type="radio" value="microsoft" name="ex2">
+	    <label>Mozilla</label><br>
+	    <input type="button" value="Submit" onclick="example2();">
+	    <input type="reset"><br> 
+</form>
+<br>
+
+	<form>
+	    <label>How do you apply the same style to all &lt;h1&gt; and &lt;h2&gt; tags?</label>
+	    <select id="carValue"><!--no input for dropdown-->
+	        <option value="Volvo">h1.h2 { ... }</option>
+	        <option value="h1h1h1">h1, h2 { ... }</option>
+	        <option value="Fiat">h1 h2 { ... }</option>
+	        <option value="BMW">h1 & h2 { ... }</option>
+	        <!-- id in select, value in option-->
+	    </select>
+	    <br>
+	    <input type="button" value="OK" onclick="example4();">
+	    <input type="reset"><br> 
+	</form>
+	<p id="carDisplay">...</p>
+	<br>
+	<form>
+	    <label>What language is used to make websites function and do things like show alerts?</label><br>
+	    <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
+	    <br><!--no input for textarea-->
+	    <input type="button" value="Submit" onclick="example1();">
+	    <input type="reset"><br> <!--This is a special type of button that resets all values in the form that it belongs to-->    
+	</form>
+<br>
+		<form>
+	    <label>Which CSS properties control the space around and within an elements content box?</label><br>
+	    <input id="choice1" type="checkbox" value="HTML">
+	    <label>margin</label>
+	    <input id="choice2" type="checkbox" value="CSS">
+	    <label>padding</label><br>
+	    <input id="choice3" type="checkbox" value="Java">
+	    <label>color</label>
+	    <input id="choice4" type="checkbox" value="JavaScript">
+	    <label>border-radius</label><br>
+	    <input type="button" value="Submit" onclick="example3();"> <input type="reset"><br> 
+	</form>
+
+
+
+<hr>
+
+<a class="btn" href="cookie.html" target="_blank">Cookie Clicker</a>
+
+</div>
+
+<script>
+	function example3() {
+	var choice1 = document.getElementById("choice1").checked; // HTML
+	var choice2 = document.getElementById("choice2").checked; // CSS
+	var choice3 = document.getElementById("choice3").checked; // Java
+	var choice4 = document.getElementById("choice4").checked; // JS
+
+	// Note: All except for Java is correct
+
+	var correct = (choice1 == true && choice2 == true && choice3 == false && choice4 == false);
+
+	if (correct == true) {
+		alert("Correct");
+	}
+	else {
+		alert("Incorrect");
+	}
+
+}
+
+function example2() {
+	var correctAns = document.getElementById("Consortium").checked;
+	// this answer will either be true or false
+
+	if (correctAns == true) {
+		alert("Correct!")
+	}
+	else {
+		alert("Try again");
+	}
+}
+
+function example1() {
+	var answerTyped = document.getElementById("w3review").value;
+
+	if (answerTyped == "javaScript") {
+		alert("Nice!");
+	}
+
+	else {
+		alert("Incorrect!");
+	}
+}
+
+	function example4() {
+		var choice = document.getElementById("carValue").value;
+		// one of : fiat,volvo,bmw, saab
+
+		choice = choice.toLowerCase();
+
+		if (choice == "h1h1h1") {
+			document.getElementById("carDisplay").innerHTML = "Correct!"
+		}
+
+		else {
+			document.getElementById("carDisplay").innerHTML = "That is not correct!";
+		}
+	}
+
+
+
+</script>
+</body>
+</html>
