@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Raccoon</title>
+  <style>
+    body#heron {
+      font-family: Helvetica, sans-serif;
+      background-color: #303030; 
+      margin: 15px 75px;
+      color: white;
+    }
+
+   div#menu {
+  overflow: hidden;
+  background-color: gray;
+  position: relative;
+}
+
+div#menu a {
+  color:white;
+  padding: 16px 20px;
+  text-decoration: none;
+  font-size: 1.25em;
+  display: block;
+}
+
+div#menu #moreLinks {
+  display: none;
+}
+
+div#menu a:hover {
+  color: black;
+  background-color: lightgray;
+}
+
+div#menu a#icon {
+  /*reposition ...*/
+  background-color: black;
+  color: white;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+    #icon {
+      cursor: pointer;
+    }
+
+    .header {
+      position: relative;
+      width: 100%;
+      height: 150px;
+      background-image: url('2racoon.jpg'); 
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background: rgba(0,0,0,0.3);
+      z-index: 1;
+    }
+
+    .header-text {
+      position: relative;
+      z-index: 2;
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .info {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin: 30px auto;
+      max-width: 900px;
+      flex-wrap: wrap;
+    }
+
+       .imgbackground {
+        flex: 1;
+        max-width: 50%;
+      }
+
+      .imgbackground img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 12px -12px  #464646; 
+      }
+
+      .textcontent {
+        flex: 3;
+        margin-left: 20px;
+        font-size: 19px;
+      }
+
+    .map-facts-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color:#464646;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .quick-facts {
+      flex: 1;
+      min-width: 250px;
+      color: white;
+    }
+
+    .quick-facts h3 {
+      margin-top: 0;
+      font-size: 1.5em;
+    }
+
+    .quick-facts ul {
+      padding-left: 20px;
+    }
+
+    .quick-facts li {
+      margin-bottom: 10px;
+    }
+
+    .audio-container {
+      flex: 1;
+      min-width: 300px;
+      padding: 10px;
+      box-sizing: border-box;
+      color: white;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .map-container {
+      flex: 2;
+      min-width: 300px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 320px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .slideshow-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      position: relative;
+      text-align: center;
+      user-select: none;
+    }
+
+    .mySlides {
+      display: none;
+      animation: fade 1s ease-in-out;
+    }
+
+    @keyframes fade {
+      from {opacity: 0.4;}
+      to {opacity: 1;}
+    }
+
+    .mySlides img {
+      border-radius: 10px;
+      max-width: 60%;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .text {
+      color: #f2f2f2;
+      margin-top: 8px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 12px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 24px;
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      user-select: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .dot-container {
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 14px;
+      width: 14px;
+      margin: 0 6px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .dot.active, .dot:hover {
+      background-color: #555;
+    }
+p{
+  font-size: 19px;
+}
+
+  </style>
+</head>
+<body id="heron">
+
+  <div class="header">
+    <div class="overlay"></div>
+    <div class="header-text">Raccoon</div>
+  </div>
+<div id="menu">
+        <a href="index.html">Home</a>
+        <div id="moreLinks">
+          <!--only add <a href=...-->
+            <a href="coyote.html">Coyote</a>
+          <a href="owl.html">Barred Owl</a>
+          <a href="seal.html">Harbour seal</a>
+          <a href="raccoon.html">Raccoon</a>
+          <a href="heron.html">Heron</a>
+          <a href="eagle.html">Eagle</a>
+            <a href="quiz.html">Memory Game</a>
+            <a href="personality.html">Personality Quiz</a>
+        </div>
+        <a id="icon" onclick="showHideMenu()">...</a>
+      </div>
+
+  <div class="info">
+    <div class="imgbackground">
+      <img src="raccoon.jpg" alt="raccoon">
+    </div>
+    <div class="textcontent">
+      <p>
+        Raccoons are common in Vancouver, BC, especially in urban areas like backyards, parks, and alleys. They're nocturnal meaning most of their activity is during the night and they are also curious, smart and adaptable. Raccoons are also omnivores meaning they eat veggies and meat and anything else they can get their hands on, they often scour garbage bins for food as well.
+      </p>
+    </div>
+  </div>
+
+  <div class="map-facts-container">
+    <div class="quick-facts">
+      <h3>Facts:</h3>
+      <ul>
+        <li><strong>Scientific name:</strong> <em>Procyon lotor</em></li>
+        <li><strong>Average adult size:</strong> 60-80cm in length (not including tail), 4.5-10kg in weight</li>
+        <li><strong>Lifespan:</strong> around 3 years</li>
+        <li><strong>Habitat:</strong> Parks, residential areas, and around garbage bins</li>
+        <li><strong>Food:</strong>  Fruits, vegetables, nuts, grains, insects, fish, amphibians and small mammals</li>
+      </ul>
+    </div>
+
+    <div class="map-container">
+      <h3>Predators:</h3>
+      <p>While raccoons have natural predators like coyotes, what endangers them the most are humans. As urbanization and human expansion has occured the lifespan of raccoons has decreased as encounters with humans and human-made hazards, such as vehicles, can significantly shorten a raccoon's lifespan. </p>
+    </div>
+
+    <div class="audio-container">
+      <p><strong>Listen to a raccoon:</strong></p>
+      <audio controls>
+        <source src="Raccoon.m4a" type="audio/mp4">
+
+      </audio>
+    </div>
+  </div>
+
+  <div class="slideshow-container">
+    <div class="mySlides">
+      <img src="raccoontrash.jpg" alt="Raccoon in bin">
+      <div class="text">Raccoon in a bin</div>
+    </div>
+
+
+    <div class="mySlides">
+      <img src="2racoon.jpg" alt="Two raccoons">
+      <div class="text">Two raccoons</div>
+    </div>
+
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+
+    function showHideMenu() {
+      var links = document.getElementById("moreLinks");
+      if (links.style.display === "block") {
+        links.style.display = "none";
+      } else {
+        links.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>

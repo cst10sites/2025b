@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicontree.ico">
+    <style>
+      .color {
+        color: sandybrown;
+        background-color: forestgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <h1>HTML Guide</h1>
+      <h2>Common HTML Tags outside &lt;body&gt;</h2>
+      <table style="width: 100%">
+        <tr>
+          <th style="width: 30%">Tag</th>
+          <th style="width: 30%">Definition</th>
+          <th style="width: 40%">Example</th>
+        </tr>
+        <tr>
+          <td>&lt;!DOCTYPE html&gt;</td>
+          <td>Informs the browser what language is being used, in this case HTML</td>
+          <td>No example</td>
+        </tr>
+        <tr>
+          <td>&lt;html lang"en"&gt;</td>
+          <td>Sets the langauge of the document to English</td>
+          <td>The default language of this page is English</td>
+        </tr>
+        <tr>
+          <td>&lt;meta charset="UTF-8"&gt;</td>
+          <td>Tells browser what character encoding to use for the document</td>
+          <td>No example</td>
+        </tr>
+        <tr>
+          <td>&lt;title&gt;...&lt;/title&gt;</td>
+          <td>Sets the title for the page</td>
+          <td>
+            <img alt="png" style="width:400px;" src="photo-title.png">
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;style&gt; &lt;/style&gt;</td>
+          <td>Section that describes the internal CSS of the page</td>
+          <td class="color"> &lt;style&gt; <br> .color { <br> color: sandybrown; <br> background-color: forestgreen; <br> } <br> &lt;/style&gt; <br>
+            <br> The code above makes this cell green with a brown font.
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;link rel="stylesheet" href="name-of-your-file.css"&gt;</td>
+          <td>Inserts CSS from a seperate document</td>
+          <td>This page as well as the homepage share the same CSS from the same file</td>
+        </tr>
+        <tr>
+          <td>&lt;link rel="icon" type="image/x-icon" href="your-file.ico"&gt;</td>
+          <td>Tag that adds a favicon, the image next the title</td>
+          <td>
+            <img alt="png" style="width:200px;" src="photo-of-tree.png">
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <a class="btn" href="index.html">Home</a>
+    </div>
+  </body>
+</html>

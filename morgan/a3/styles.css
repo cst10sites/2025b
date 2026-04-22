@@ -1,0 +1,50 @@
+/*css style a3*/
+
+ body {
+  font-family: Candara;
+  margin: 10px 40px;
+  background-color: lightgreen;
+  color: black;
+}
+
+table,
+th,
+td {
+  border: 5px solid seagreen;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color: black;
+}
+th {
+  font-size: 1.5em;
+  background-color: mediumseagreen;
+}
+
+td,
+tr {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+tr:nth-child(odd) /*even*/ {
+  background-color: white;
+}
+
+tr:nth-child(even) /*even*/ {
+  background-color: honeydew;
+}
+
+a.btn {
+  background-color: seagreen;
+  color: white;
+  text-decoration: none;
+  padding: 15px 25px;
+  border: solid thick green;
+  border-radius: 17px;
+  font-size: 1.2em;
+
+

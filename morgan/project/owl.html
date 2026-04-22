@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Barred Owl</title>
+    <link rel="stylesheet" href="morestyles.css">
+    <style>
+      body#owl {
+        font-family: Helvetica, sans-serif;
+        background-color: #533927; 
+        margin: 15px 75px;
+        color: white;
+      }
+
+      .owlheader {
+        position: relative;
+        width: 100%;
+        height: 150px;
+        background-image: url("treebark.jpg"); 
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: sans-serif;
+      }
+
+      .owloverlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      .owlheader-text {
+        position: relative;
+        z-index: 2;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .owlinfo {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        margin: 30px auto;
+        max-width: 900px;
+        flex-wrap: wrap;
+      }
+
+      .owlimgbackground {
+        flex: 1;
+        max-width: 50%;
+      }
+
+      .owlimgbackground img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 12px -12px #7b8e8b; 
+      }
+
+      .owltext {
+        flex: 2;
+        margin-left: 20px;
+      }
+
+
+      .textcontent {
+        flex: 3;
+        margin-left: 20px;
+        font-size: 19px;
+      }
+
+      .map-facts-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #7b8e8b;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+
+      .quick-facts {
+        flex: 1;
+        min-width: 250px;
+        color: white;
+      }
+
+      .quick-facts h3 {
+        margin-top: 0;
+        font-size: 1.5em;
+      }
+
+      .quick-facts ul {
+        padding-left: 20px;
+      }
+
+      .quick-facts li {
+        margin-bottom: 10px;
+}
+      .audio-container {
+        flex: 1;
+        min-width: 300px;
+        padding: 10px;
+        box-sizing: border-box;
+        color: white;
+      }
+
+      audio {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 8px;
+        outline: none;
+      }
+
+      .map-container {
+        flex: 2;
+        min-width: 300px;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 320px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .text {
+        color: #f2f2f2;
+        margin-top: 8px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .dot-container {
+        text-align: center;
+        padding: 15px 0;
+      }
+      .dot {
+        cursor: pointer;
+        height: 14px;
+        width: 14px;
+        margin: 0 6px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+      }
+
+      .dot.active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+      p{
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body id="owl">
+    <div class="owlheader">
+      <div class="owloverlay"></div>
+      <div class="owlheader-text">Barred Owl</div>
+    </div>
+    <div id="menu">
+      <a href="index.html">Home</a>
+      <div id="moreLinks">
+        <a href="coyote.html">Coyote</a>
+        <a href="owl.html">Barred Owl</a>
+        <a href="seal.html">Harbour seal</a>
+        <a href="raccoon.html">Raccoon</a>
+        <a href="heron.html">Heron</a>
+        <a href="eagle.html">Eagle</a>
+        <a href="quiz.html">Memory Game</a>
+          <a href="personality.html">Personality Quiz</a>
+      </div>
+      <a id="icon" onclick="showHideMenu()">...</a>
+    </div>
+
+    <div class="owlinfo">
+      <div class="owlimgbackground">
+        <img src="owlflying.jpg" alt="Flying Barred Owl">
+      </div>
+      <div class="owltext">
+        <p>
+          Barred owls are nocturnal large, brown and white owls. Barred owls
+          were very common around the area of Vancouver before the massive
+          amount of urbanization. Now they are very rare to spot but they’re
+          sometimes seen in quiet, green parks especially at dusk or after dark.
+          Currently a family of 4 barred owls (two adults and two babies) reside
+          at Douglas Park and they are expected to stay until mid-July.
+        </p>
+      </div>
+    </div>
+
+    <div class="map-facts-container">
+      <div class="quick-facts">
+        <h3>Facts:</h3>
+        <ul>
+          <li><strong>Scientific name:</strong> Strix varia</li>
+          <li><strong>Average size:</strong> 0.5–1.1 kg (1.1–2.4 lbs)</li>
+          <li><strong>Lifespan:</strong> 8–10 years (in the wild)</li>
+          <li>
+            <strong>Habitat:</strong> Mature forests, wetlands, and city parks
+            with large trees
+          </li>
+          <li>
+            <strong>Food:</strong> Small mammals, birds, amphibians, and
+            invertebrates
+          </li>
+          <li>
+            On the map to the right you can see the park where a family of
+            barred owls are nesting.
+          </li>
+        </ul>
+      </div>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.996512062111!2d-123.12457174359396!3d49.2522938488634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673ecede74c75%3A0x7b492de3a0e23eca!2sDouglas%20Pk%2C%20Vancouver%2C%20BC!5e0!3m2!1sen!2sca!4v1749153577596!5m2!1sen!2sca"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <div class="audio-container">
+        <p><strong>Listen to a barred owl's hoot:</strong></p>
+        <audio controls>
+          <source src="Barredowl.m4a" type="audio/mp4">
+
+        </audio>
+      </div>
+    </div>
+
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="babyowl.jpg" alt="Baby Barred Owls">
+        <div class="text">Baby Barred Owls</div>
+      </div>
+
+      <div class="mySlides">
+        <img src="owl.jpg" alt="Barred Owl">
+        <div class="text">Barred Owl</div>
+      </div>
+
+      <div class="mySlides">
+        <img
+          src="sittingowl.jpg" alt="Barred Owl Sitting" style="max-width: 30%">
+        <div class="text">Barred Owl</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      function showHideMenu() {
+        var links = document.getElementById("moreLinks");
+        if (links.style.display === "block") {
+          links.style.display = "none";
+        } else {
+          links.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

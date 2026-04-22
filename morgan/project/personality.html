@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Which Vancouver Animal Are You?</title>
+  <style>
+
+
+    .header {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-image: url('forest.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+.header-text {
+  position: relative;
+  z-index: 2;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+      div#menu {
+        overflow: hidden;
+        background-color: gray;
+        position: relative;
+      }
+
+      div#menu a {
+        color: white;
+        padding: 16px 20px;
+        text-decoration: none;
+        font-size: 1.25em;
+        display: block; 
+      }
+
+      div#menu #moreLinks {
+        display: none; 
+      }
+
+      div#menu a:hover {
+        color: black;
+        background-color: lightgray;
+      }
+
+      div#menu a#icon {
+        background-color: black;
+        color: white;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+  div#menu {
+  overflow: hidden;
+  background-color: gray;
+  position: relative;
+}
+
+div#menu a {
+  color: white;
+  padding: 16px 20px;
+  text-decoration: none;
+  font-size: 1.25em;
+  display: block;
+}
+
+div#menu #moreLinks {
+  display: none;
+}
+
+div#menu a:hover {
+  color: black;
+  background-color: lightgray;
+}
+
+div#menu a#icon {
+
+  background-color: black;
+  color: white;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+body {
+  font-family: Helvetica, sans-serif;
+        margin: 15px 75px;
+  background-color: rgba(112, 132, 60, 0.85);
+  color: white;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+.question {
+  display: none;
+  border: 3px solid rgb(71, 85, 35);
+  background-color: rgba(112, 132, 56, 1);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 25px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.question.active {
+  display: block;
+}
+
+.question p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin: 8px 0;
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+label:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+button {
+  display: inline-block;
+  margin: 15px 10px 0 0;
+  padding: 10px 18px;
+  font-size: 1em;
+  background-color: #3e502b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #586c3e;
+}
+
+#result {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #e8f5e9;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-image: url('forest.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: sans-serif;
+}
+
+.header-text {
+  position: relative;
+  z-index: 2;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+div#menu {
+  overflow: hidden;
+  background-color: gray;
+  position: relative;
+}
+
+p{
+  font-size: 20px;
+}
+
+
+  </style>
+</head>
+<body>
+<div class="header">
+        <div class="overlay"></div>
+        <div class="header-text">
+          Which Vancouver Animal are You?
+        </div>
+      </div>
+
+         <div id="menu">
+        <a href="index.html">Home</a>
+        <div id="moreLinks">
+          <a href="coyote.html">Coyote</a>
+          <a href="owl.html">Barred Owl</a>
+          <a href="seal.html">Harbour seal</a>
+          <a href="raccoon.html">Raccoon</a>
+          <a href="heron.html">Heron</a>
+          <a href="eagle.html">Eagle</a>
+          <a href="quiz.html">Memory Game</a>
+             <a href="personality.html">Personality Quiz</a>
+        </div>
+        <a id="icon" onclick="showHideMenu()">...</a>
+      </div>
+
+            <h1>Introduction</h1>
+      <p>Answer the following questions based on your personality. Make sure to answe all the questions and at the end press "See my animal" to find out which animal from my website matches your personality!</p>
+
+<form id="quizForm">
+  <div class="question active" id="q0">
+    <p>1. What’s your favourite time of day?</p>
+    <label><input type="radio" name="q0" value="owl"> Whenever it's dark out</label><br>
+    <label><input type="radio" name="q0" value="coyote">Evening</label><br>
+    <label><input type="radio" name="q0" value="seal"> Around luch time</label><br>
+    <label><input type="radio" name="q0" value="raccoon"> Midnight</label><br>
+    <label><input type="radio" name="q0" value="eagle"> Late afternoon</label><br>
+    <label><input type="radio" name="q0" value="heron"> Early morning</label><br>
+    <button type="button" onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="question" id="q1">
+    <p>2. Where would you like to go?</p>
+    <label><input type="radio" name="q1" value="owl"> A quiet forest</label><br>
+    <label><input type="radio" name="q1" value="heron"> Near a calm body of water</label><br>
+    <label><input type="radio" name="q1" value="coyote"> An open grassland</label><br>
+    <label><input type="radio" name="q1" value="eagle"> On top of a mountain</label><br>
+    <label><input type="radio" name="q1" value="seal"> Near the ocean</label><br>
+    <label><input type="radio" name="q1" value="raccoon"> Wandering town</label><br>
+    <button type="button" onclick="previousQuestion()">Previous</button>
+    <button type="button" onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="question" id="q2">
+    <p>3. How would you describe yourself?</p>
+    <label><input type="radio" name="q2" value="coyote"> Fun and mischievous</label><br>
+    <label><input type="radio" name="q2" value="eagle"> Confident and bold</label><br>
+    <label><input type="radio" name="q2" value="heron"> Calm and patient</label><br>
+    <label><input type="radio" name="q2" value="raccoon"> Curious and clever</label><br>
+    <label><input type="radio" name="q2" value="owl"> Wise and observant</label><br>
+    <label><input type="radio" name="q2" value="seal"> Friendly and adventurous</label><br>
+    <button type="button" onclick="previousQuestion()">Previous</button>
+    <button type="button" onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="question" id="q3">
+    <p>4. What is your favorite color?</p>
+    <label><input type="radio" name="q3" value="seal"> Teal or light blue</label><br>
+    <label><input type="radio" name="q3" value="coyote"> Orange or yellow</label><br>
+    <label><input type="radio" name="q3" value="owl"> Dark blue or purple</label><br>
+    <label><input type="radio" name="q3" value="heron"> Forest green or grey</label><br>
+    <label><input type="radio" name="q3" value="eagle"> Red or bold yellow</label><br>
+    <label><input type="radio" name="q3" value="raccoon"> I like all colors</label><br>
+    <button type="button" onclick="previousQuestion()">Previous</button>
+    <button type="button" onclick="nextQuestion()">Next</button>
+  </div>
+
+  <div class="question" id="q4">
+    <p>5. What’s your favorite way to unwind?</p>
+    <label><input type="radio" name="q4" value="raccoon"> Time with family and watching TV</label><br>
+    <label><input type="radio" name="q4" value="owl"> Reading or playing a calm instrument</label><br>
+    <label><input type="radio" name="q4" value="eagle"> Exercising</label><br>
+    <label><input type="radio" name="q4" value="seal"> Swimming with friends</label><br>
+    <label><input type="radio" name="q4" value="heron"> Alone time in nature</label><br>
+    <label><input type="radio" name="q4" value="coyote"> Playing games</label><br>
+    <button type="button" onclick="previousQuestion()">Previous</button>
+    <button type="button" onclick="nextQuestion()">Next</button>
+  </div>
+
+<div class="question" id="q5">
+  <p>6. How do you typically approach a group project?</p>
+  <label><input type="radio" name="q5" value="heron"> I like to take my time, focusing on my tasks and contributing when I’m ready</label><br>
+  <label><input type="radio" name="q5" value="seal"> I enjoy collaborating with others, communicating with everyone and creating a relaxed atmosphere</label><br>
+  <label><input type="radio" name="q5" value="coyote"> I enjoy having fun while finding creative solutions and keeping things lighthearted</label><br>
+  <label><input type="radio" name="q5" value="raccoon"> I prefer to explore different ideas but let others take charge while I do my own thing</label><br>
+  <label><input type="radio" name="q5" value="eagle"> I like to take charge and ensure things are moving forward confidently</label><br>
+  <label><input type="radio" name="q5" value="owl"> I prefer to observe and analyze the situation before offering insights</label><br>
+  <button type="button" onclick="previousQuestion()">Previous</button>
+  <button type="button" onclick="nextQuestion()">Next</button>
+</div>
+
+<div class="question" id="q6">
+  <p>7. What type of outfit do you gravitate towards?</p>
+  <label><input type="radio" name="q6" value="eagle"> I choose something bold that makes a statement</label><br>
+  <label><input type="radio" name="q6" value="raccoon"> I enjoy mixing and matching different styles</label><br>
+  <label><input type="radio" name="q6" value="heron"> I like to keep it simple and classic with neutral colors</label><br>
+  <label><input type="radio" name="q6" value="coyote"> I wear whatever I can find</label><br>
+  <label><input type="radio" name="q6" value="owl"> I like to pay attention to details with my outfits making sure I feel put-together</label><br>
+  <label><input type="radio" name="q6" value="seal">  I like to wear something comfortable but colorful</label><br>
+  <button type="button" onclick="previousQuestion()">Previous</button>
+  <button type="button" onclick="nextQuestion()">Next</button>
+</div>
+
+
+
+  <div class="question" id="q7">
+  <p>All done! Click below to find out your animal.</p>
+  <button type="button" onclick="previousQuestion()">Previous</button>
+<button id="seeResultBtn" type="button" onclick="getResult()">See My Animal</button>
+  <button type="button" onclick="resetQuiz()">Reset Quiz</button>
+</div>
+</form>
+
+<div id="result" style="margin-top: 20px; font-weight: bold;"></div>
+
+<script>
+
+  function resetQuiz() {
+
+  document.getElementById("quizForm").reset();
+
+
+  currentQuestion = 0;
+
+  showQuestion(currentQuestion);
+
+  document.getElementById("result").innerHTML = "";
+  document.getElementById("seeResultBtn").style.display = "inline-block";
+}
+
+      function showHideMenu() {
+        var links = document.getElementById("moreLinks");
+        if (links.style.display == "block") {
+          links.style.display = "none";
+        } else {
+          links.style.display = "block";
+        }
+      }
+  let currentQuestion = 0;
+  const totalQuestions = 8; 
+  function showQuestion(index) {
+    const questions = document.querySelectorAll('.question');
+    questions.forEach(q => q.classList.remove('active'));
+    if (questions[index]) {
+      questions[index].classList.add('active');
+    }
+  }
+
+  function nextQuestion() {
+    if (currentQuestion < totalQuestions - 1) {
+      currentQuestion++;
+      showQuestion(currentQuestion);
+    }
+  }
+
+  function previousQuestion() {
+    if (currentQuestion > 0) {
+      currentQuestion--;
+      showQuestion(currentQuestion);
+    }
+  }
+function getResult() {
+  const form = document.forms.quizForm;
+  const scores = {
+    owl: 0,
+    coyote: 0,
+    seal: 0,
+    raccoon: 0,
+    eagle: 0,
+    heron: 0
+  };
+
+  let allAnswered = true;
+  for (let i = 0; i < totalQuestions - 1; i++) {
+    const answer = form[`q${i}`]?.value;
+    if (!answer) {
+      allAnswered = false;
+      break; 
+    }
+  }
+if (!allAnswered) {
+  alert("Please answer all the questions before seeing your result.");
+  return;
+}
+
+
+  for (let i = 0; i < totalQuestions - 1; i++) {
+    const answer = form[`q${i}`]?.value;
+    if (answer) {
+      scores[answer]++;
+    }
+  }
+
+  let max = Math.max(...Object.values(scores));
+  let topAnimals = Object.keys(scores).filter(animal => scores[animal] === max && max > 0);
+
+  const resultDiv = document.getElementById("result");
+  const resultText = {
+    owl: "You're a barred owl! Quiet, wise, and observant. You prefer to watch and listen before you speak, often offering insights that others may have missed. People enjoy spending time with you because you are patient and wise.",
+    coyote: "You're a coyote! Clever and adaptable. You thrive in ever-changing situations, always finding new ways to solve problems. People enjoy spending time with you because you’re quick-witted, resourceful, and never without a fun idea.",
+    seal: "You're a harbour seal! Chill and curious. You feel comfortable in lots of different environments and love to explore, while always radiating a sense of calm around you. In group settings you make others feel at ease which is why people love to spend time with you.",
+    raccoon: "You're a raccoon! Curious and resourceful. You love to explore, always finding new ways to adapt and solve problems while also making the most of what’s around you. Your curiosity and adaptability make others enjoy your company.",
+    eagle: "You're a bald Eegle! Proud and bold. You are confident, determined, and love to lead. Others enjoy your company because of your determination and boldness are inspiring, and you aren't afraid of standing out.",
+    heron: "You're a heron! Calm and focused. You move through life with a quiet grace and are always very thoughtful. People enjoy spending time with you because of your calm presence and the way you help them find clarity in moments of uncertainty."
+  };
+
+  const resultImages = {
+    owl: "owl.jpg",  
+    coyote: "cayote.jpg",
+    seal: "seal.jpg",
+    raccoon: "raccoon.jpg",
+    eagle: "eagle.jpg",
+    heron: "heron.jpg"
+  };
+
+  const chosenAnimal = topAnimals.length > 1 
+    ? topAnimals[Math.floor(Math.random() * topAnimals.length)] 
+    : topAnimals[0];
+
+  resultDiv.innerHTML = `
+    <h2>${resultText[chosenAnimal]}</h2>
+    <img src="${resultImages[chosenAnimal]}" alt="${chosenAnimal}" style="width: 300px; display: block; margin: 20px auto;">
+  `;
+}
+
+
+
+  showQuestion(currentQuestion);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 4</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/x-icon" href="faviconnews.ico">
+		<!--create and edit style.css-->
+		<style>
+			body {
+				background-color: #C1EDFA;
+				color: #799FCB;
+				font-family: Monospace;
+				margin: 25px 125px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="backy">
+			<h1>HTML/CSS Quiz</h1>
+			<form>
+				<label>What is the tag for the biggest heading in HTML?</label>
+				<br>
+				<input id="option1" type="radio" value="heading1" name="headings">
+				<label>h1</label>
+				<br>
+				<input id="option2" type="radio" value="heading2" name="headings">
+				<label>h2</label>
+				<br>
+				<input id="option3" type="radio" value="heading3" name="headings">
+				<label>h3</label>
+				<br>
+				<input id="option4" type="radio" value="heading4" name="headings">
+				<label>h4</label>
+				<br>
+				<input id="option5" type="radio" value="heading5" name="headings">
+				<label>h5</label>
+				<br>
+				<input id="option6" type="radio" value="heading6" name="headings">
+				<label>h6</label>
+				<br>
+				<input type="button" value="Submit" onclick="radiobutton();">
+				<br>
+				<input type="reset">
+				<br>
+				<!--ask at least two questions related to HTML/CSS/JS-->
+			</form>
+			<br>
+			<form>
+				<label>CSS that is written in a .css file is called</label>
+				<select id="cssoption">
+					<!--no input for dropdown-->
+					<option value="inline">inline CSS</option>
+					<option value="external">external CSS</option>
+					<option value="internal">internal CSS</option>
+					<!-- id in select, value in option-->
+				</select>
+				<br>
+				<input type="button" value="Check" onclick="dropmenu();">
+				<input type="reset">
+				<br>
+			</form>
+			<p id="cssoptionshow">...</p>
+			<form>
+				<label>Which of the following are HTML tags?</label>
+				<br>
+				<input id="choice1" type="checkbox" value="choiceh1">
+				<label>&lt;h1&gt;</label>
+				<input id="choice2" type="checkbox" value="choicedoctype">
+				<label>&lt;!DOCTYPE&gt;</label>
+				<br>
+				<input id="choice3" type="checkbox" value="choicebr">
+				<label>&lt;br&gt;</label>
+				<input id="choice4" type="checkbox" value="choicep">
+				<label>&lt;p&gt;</label>
+				<br>
+				<input type="button" value="Submit" onclick="checkboxes();">
+				<br>
+				<input type="reset">
+				<br>
+			</form>
+			<hr>
+			<h2>Cookie Clicker</h2>
+			<p>
+				<em>Click <a href="cookie.html">here</a> to play the Cookie Clicker. </em>
+			</p>
+			<script>
+				function radiobutton() {
+					var correctAns = document.getElementById("option1").checked;
+					// this answer will either be true or false
+					if (correctAns == true) {
+						alert("Correct!")
+					} else {
+						alert("Try again!");
+					}
+				}
+
+				function dropmenu() {
+					var choice = document.getElementById("cssoption").value;
+					// one of; volvo, fiat, saab, bmw
+					choice = choice.toLowerCase();
+					if (choice == "external") {
+						document.getElementById("cssoptionshow").innerHTML = "Correct!";
+					} else {
+						document.getElementById("cssoptionshow").innerHTML = "Incorrect!";
+					}
+				}
+
+				function checkboxes() {
+					var choice1 = document.getElementById("choice1").checked;
+					var choice2 = document.getElementById("choice2").checked;
+					var choice3 = document.getElementById("choice3").checked;
+					var choice4 = document.getElementById("choice4").checked;
+					var correct = (choice1 == true && choice2 == false && choice3 == true && choice4 == true);
+					if (correct == true) {
+						alert("Correct");
+					} else {
+						alert("Incorrect");
+					}
+				}
+			</script>
+		</div>
+	</body>
+</html>

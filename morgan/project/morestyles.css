@@ -1,0 +1,128 @@
+      div#menu {
+        /*affect <div id="menu"> */
+        overflow: hidden;
+        background-color: gray;
+        position: relative;
+      }
+
+      div#menu a {
+        color: white;
+        padding: 16px 20px;
+        text-decoration: none;
+        font-size: 1.25em;
+        display: block; /*show*/
+      }
+
+      div#menu #moreLinks {
+        display: none; /*hide by default*/
+      }
+
+      div#menu a:hover {
+        color: black;
+        background-color: lightgray;
+      }
+
+      div#menu a#icon {
+        /*reposition ...*/
+        background-color: black;
+        color: white;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      #icon {
+        cursor: pointer;
+      }
+
+      .map-facts-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #4a6448;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+
+      .quick-facts {
+        flex: 1;
+        min-width: 250px;
+      }
+
+      .quick-facts h3 {
+        margin-top: 0;
+        font-size: 1.5em;
+        color: #fff;
+      }
+
+      .quick-facts li {
+        margin-bottom: 10px;
+      }
+
+      .audio-container {
+        flex: 2;
+        min-width: 300px;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .slideshow-container {
+        max-width: 1100px;
+        margin: 40px auto;
+        position: relative;
+        text-align: center;
+        user-select: none;
+      }
+
+      .mySlides {
+        display: none;
+        animation: fade 1s ease-in-out;
+      }
+
+      .mySlides img {
+        border-radius: 10px;
+        max-width: 50%;
+      }
+
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 12px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        user-select: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+

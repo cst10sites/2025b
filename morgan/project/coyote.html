@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Coyote</title>
+    <link rel="stylesheet" href="morestyles.css">
+    <style>
+      body#coyote {
+        font-family: Helvetica, sans-serif;
+        background-color: #876241;
+        margin: 15px 75px;
+        color: white;
+      }
+
+      .coyoteheader {
+        position: relative;
+        width: 100%;
+        height: 150px;
+        background-image: url("coyote.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .coyoteoverlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      .coyoteheader-text {
+        position: relative;
+        z-index: 2;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .coyoteinfo {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        margin: 30px auto;
+        max-width: 900px;
+        flex-wrap: wrap;
+      }
+
+      .coyotetext {
+         flex: 3;
+        margin-left: 20px;
+        font-size: 19px;      }
+
+      .coyoteimg {
+        flex: 1;
+        max-width: 50%;
+       
+      }
+
+
+      .textcontent {
+        flex: 3;
+        margin-left: 20px;
+        font-size: 19px;
+      }
+
+      .coyoteimg img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 12px -12px #4a6448;
+      }
+
+      .map-facts-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #4a6448;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+
+      .quick-facts {
+        flex: 1;
+        min-width: 250px;
+        font-size: 18px;
+      }
+
+      .quick-facts h3 {
+        margin-top: 0;
+        font-size: 1.5em;
+        color: #fff;
+      }
+
+      .quick-facts li {
+        margin-bottom: 10px;
+      }
+
+      .audio-container {
+        flex: 1.1;
+        min-width: 300px;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .text {
+        color: #f2f2f2;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      p{
+        font-size:20px;
+      }
+
+
+    </style>
+  </head>
+  <body id="coyote">
+    <div class="coyoteheader">
+      <div class="coyoteoverlay"></div>
+      <div class="coyoteheader-text">Coyote</div>
+    </div>
+    <div id="menu">
+      <a href="index.html">Home</a>
+      <div id="moreLinks">
+        <a href="coyote.html">Coyote</a>
+        <a href="owl.html">Barred Owl</a>
+        <a href="seal.html">Harbour seal</a>
+        <a href="raccoon.html">Raccoon</a>
+        <a href="heron.html">Heron</a>
+        <a href="eagle.html">Eagle</a>
+        <a href="quiz.html">Memory Game</a>
+          <a href="personality.html">Personality Quiz</a>
+      </div>
+      <a id="icon" onclick="showHideMenu()">...</a>
+    </div>
+
+    <div class="coyoteinfo">
+      <div class="coyoteimg">
+        <img src="cayote.jpg" alt="Coyote image">
+      </div>
+      <div class="coyotetext">
+        <p>
+          Coyotes are clever, adaptable mammals that have learned to survive and
+          even thrive in urban environments like Vancouver. These wild canines
+          are often spotted trotting through parks, alleyways, and even quiet
+          streets. If you spot a coyote, avoid feeding or approaching it.
+        </p>
+      </div>
+    </div>
+
+    <div class="map-facts-container">
+      <div class="quick-facts">
+        <h3>Facts:</h3>
+        <ul>
+          <li><strong>Scientific name:</strong> Canis latrans</li>
+          <li><strong>Average size:</strong> 9–14 kg (20–30 lbs)</li>
+          <li><strong>Lifespan:</strong> 10–14 years (in the wild)</li>
+          <li>
+            <strong>Habitat:</strong> Open grasslands, forests, deserts, urban
+            and suburban areas
+          </li>
+          <li>
+            <strong>Food:</strong> Mainly small mammals and rodents like rabbits
+          </li>
+        </ul>
+      </div>
+      <div class="audio-container">
+        <p><strong>Listen to a coyote call:</strong></p>
+        <audio controls>
+          <source src="coyote.m4a" type="audio/mp4">
+        </audio>
+        <h2>Indigenous connection:</h2>
+        <p>Coyotes are powerful characters in many traditional Indigneous stories. They are usually represented as clever and mischievous tricksters that are known for causing chaos while also teaching lessons to the other characters.</p>
+      </div>
+    </div>
+
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="coyote.jpg" alt="Coyote in nature">
+        <div class="text">Coyote in the wild</div>
+      </div>
+      <div class="mySlides">
+        <img src="babycoyote.jpg" alt="Baby Coyote">
+        <div class="text">Baby Coyote</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+      function showSlides(n) {
+        let slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+      }
+
+      function showHideMenu() {
+        var links = document.getElementById("moreLinks");
+        if (links.style.display === "block") {
+          links.style.display = "none";
+        } else {
+          links.style.display = "block";
+        }
+      }
+
+      showSlides(slideIndex);
+    </script>
+  </body>
+</html>

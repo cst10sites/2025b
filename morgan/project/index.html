@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Wildlife of vancouver</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      
+      p{
+        font-size: 19px;
+      }
+      
+    </style>
+  </head>
+
+  <body id="home">
+      <div class="header">
+        <div class="overlay"></div>
+        <div class="header-text">
+          Mammals and Birds in the City of Vancouver
+        </div>
+      </div>
+      <div id="menu">
+        <a href="index.html">Home</a>
+        <div id="moreLinks">
+          <a href="coyote.html">Coyote</a>
+          <a href="owl.html">Barred Owl</a>
+          <a href="seal.html">Harbour seal</a>
+          <a href="raccoon.html">Raccoon</a>
+          <a href="heron.html">Heron</a>
+          <a href="eagle.html">Eagle</a>
+          <a href="quiz.html">Memory Game</a>
+            <a href="personality.html">Personality Quiz</a>
+        </div>
+        <a id="icon" onclick="showHideMenu()">...</a>
+      </div>
+
+      <div id="content">
+        <div id="info">
+          <h2>Intorduction</h2>
+        <p >
+          Vancouver is home to a variety of wildlife, even within the city
+          limits. Fascinating mammals and birds can be spotted throughout the
+          city, and this site will guide you through basic knowledge about them and fun
+          facts. Don't forget to play the fun memory game and the personality quiz at the end and learn about what you can do to help the environment and the animals. *Click on the images below to explore the different animals and use the menu bar to easily navigate.
+        </p>
+        </div>
+        <div id="animals">
+          <div
+            class="sanimal"
+            onclick="location.href='coyote.html';"
+            style="cursor: pointer"
+          >
+            <label>Coyote</label>
+            <img alt="Coyote image" src="cayote.jpg">
+          </div>
+          <div
+            class="sanimal"
+            onclick="location.href='owl.html';"
+            style="cursor: pointer"
+          >
+            <label>Barred owl</label>
+            <img alt="Barred owl image" src="owl.jpg">
+          </div>
+          <div
+            class="sanimal"
+            onclick="location.href='seal.html';"
+            style="cursor: pointer"
+          >
+            <label>Harbour seal</label>
+            <img alt="Harbour seal image" src="seal.jpg">
+          </div>
+          <div
+            class="sanimal"
+            onclick="location.href='raccoon.html';"
+            style="cursor: pointer"
+          >
+            <label>Raccoon</label>
+            <img alt="Raccoon image" src="raccoon.jpg">
+          </div>
+          <div
+            class="sanimal"
+            onclick="location.href='heron.html';"
+            style="cursor: pointer"
+          >
+            <label>Heron</label>
+            <img alt="Heron image" src="heron.webp">
+          </div>
+          <div
+            class="sanimal"
+            onclick="location.href='eagle.html';"
+            style="cursor: pointer"
+          >
+            <label>Bald eagle</label>
+            <img alt="Eagle image" src="eagle.jpg">
+          </div>
+        </div>
+      </div>
+
+
+    <script>
+      function showHideMenu() {
+        var links = document.getElementById("moreLinks");
+        if (links.style.display == "block") {
+          links.style.display = "none";
+        } else {
+          links.style.display = "block"; 
+        }
+      }
+    </script>
+  </body>
+</html>

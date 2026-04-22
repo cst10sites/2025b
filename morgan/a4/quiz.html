@@ -1,0 +1,190 @@
+<!--quiz html-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>a4 quiz</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <style></style>
+  </head>
+  <body>
+    <div class="centertext">
+      <img alt="quiz image" src="quiz.png" style="width: 25%;" />
+
+      <h2>Welcome to my quiz! If you complete it you will be pleasantly surprised! Try to get full marks and good luck!</h2>
+
+      <br />
+      <!--Question 1-->
+      <br>
+      <form>
+        <label> <strong>Which attribute is not used in an &lt;iframe&gt;?</strong></label><br>
+        <input id="choice1" type="radio" value="href" name="qu1" />
+        <label>href</label><br />
+        <input id="choice2" type="radio" value="allowfullscreen" name="qu1" />
+        <label>allowfullscreen</label><br />
+        <input id="choice3" type="radio" value="src" name="qu1" />
+        <label>src</label><br />
+        <input id="choice4" type="radio" value="width/height" name="qu1" />
+        <label>width and height</label><br />
+        <br />
+        <hr />
+        <br />
+        <!--Question 2-->
+        <br>
+        <label
+          ><strong>Which of the following are text/font style-elements in CSS. click all
+          that apply.</strong></label
+        >
+        <br>
+        <input id="q2choice1" type="checkbox" value="text-decoration" />
+        <label>text-decoration</label>
+        <input id="q2choice2" type="checkbox" value="text-color" />
+        <label>text-color</label><br />
+        <input id="q2choice3" type="checkbox" value="font-family" />
+        <label>font-family</label>
+        <input id="q2choice4" type="checkbox" value="text-weight" />
+        <label>text-weight</label><br />
+        <br />
+        <hr>
+        <br>
+          <!--Question 3 written text what can be used to make an ordered list? (opening tag and closing tag without any list items)-->
+
+      <h4>What can be used to make an ordered list? (opening tag and closing tag without any list items.)</h4>
+      <textarea id="orderedlist" name="ordered list" rows="2" cols="50">Write your answer here without spaces.</textarea>
+      <br>
+            <br>
+            <hr>
+            <br>
+            <input type="button" value="Submit" onclick="questions();">
+        <input type="reset" /><br />
+      </form>
+
+      <p>Click this button to play my cookie clicker:</p>
+      <a class="btn" href="cookie.html">Cookie Clicker!</a>
+    </div>
+
+    <script>
+      //question 1
+      function questions() {
+        var answer1 = document.getElementById("choice1").checked;
+        var score = 0;
+        var question1;
+
+        if (answer1) {
+          question1 = "Correct";
+          score++;
+        } else {
+          question1 = "Incorrect - Try again";
+        }
+
+        var textdecoration = document.getElementById("q2choice1").checked;
+        var textcolor = document.getElementById("q2choice2").checked;
+        var fontfamily = document.getElementById("q2choice3").checked;
+        var textweight = document.getElementById("q2choice4").checked;
+
+        var answer2 =
+          textdecoration == true &&
+          textcolor == false &&
+          fontfamily == true &&
+          textweight == false;
+        var question2;
+        //question2
+        if (answer2) {
+          question2 = "Correct";
+          score++;
+        } else {
+          question2 = "Incorrect - Try again";
+        }
+        //question 3
+        var ol = document.getElementById("orderedlist").value.trim();
+var answer3 = ol.toLowerCase() === "<ol></ol>";
+var question3;
+
+if (answer3) {
+  question3 = "Correct";
+  score++;
+} else {
+  question3 = "Incorrect - Try again";
+}
+
+
+        alert(
+          "Your score is " +
+            score +
+            "/3 \n question 1 is " +
+            question1 +
+            "\n question 2 is " +
+            question2 +
+            "\n question 3 is " +
+            question3
+        );
+
+        if (answer1 && answer2 && answer3) {
+          shoot()
+       
+        } else {
+          shootbad()
+        }
+
+    }  
+//code from https://confetti.js.org/#
+     
+const defaults = {
+  spread: 400,
+  ticks: 100,
+  gravity: 0,
+  decay: 0.94,
+  startVelocity: 30,
+};
+
+function shoot() {
+  confetti({
+    ...defaults,
+    particleCount: 80,
+    scalar: 3,
+    shapes: ["circle", "square"],
+    colors: ["#a864fd", "#29cdff", "#78ff44", "#ff718d", "#fdff6a"],
+  });
+
+  confetti({
+    ...defaults,
+    particleCount: 36,
+    scalar: 5.5,
+    shapes: ["emoji"],
+    shapeOptions: {
+      emoji: {
+        value: ["🤩", "🎉"],
+      },
+    },
+  });
+}
+
+function shootbad() {
+  confetti({
+    ...defaults,
+    particleCount: 80,
+    scalar: 3,
+    shapes: ["circle", "square"],
+    colors: ["#2091d2", "#1c1616", "#7e1313", "#1e2dab", "#713c3c"],
+  });
+
+  confetti({
+    ...defaults,
+    particleCount: 36,
+    scalar: 5.5,
+    shapes: ["emoji"],
+    shapeOptions: {
+      emoji: {
+        value: ["😡", "😭"],
+      },
+    },
+  });
+}
+
+
+    </script>
+  </body>
+</html>

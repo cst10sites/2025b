@@ -1,0 +1,88 @@
+/*style.css for cookie clicker*/
+
+body {
+	font-family: helvetica;
+	background-color: wheat;
+	color: saddlebrown;
+}
+
+	.centertext {
+		text-align: center;
+	}
+
+button {
+	font-family: helvetica;
+	background-color: saddlebrown;
+	color: wheat ;
+	font-weight: bold;
+	font-size: 2em;
+	border-radius: 10px;
+	border: solid thick peru;
+
+}
+
+ input[type="button"] {
+	font-family: helvetica;
+	background-color: saddlebrown;
+	color: wheat ;
+	font-weight: bold;
+	font-size: 2em;
+	border-radius: 10px;
+	border: solid thick peru;
+}
+		input[type="button"]:hover{
+		background-color: papayawhip;
+		color: saddlebrown;
+	}
+ input[type="reset"] {
+	font-family: helvetica;
+	background-color: saddlebrown;
+	color: wheat ;
+	font-weight: bold;
+	font-size: 2em;
+	border-radius: 10px;
+	border: solid thick peru;
+}
+	input[type="reset"]:hover{
+		background-color: papayawhip;
+		color: saddlebrown;
+	}
+
+
+h3 {
+	font-size: 1.25em;
+}
+
+a.btn {
+		background-color: papayawhip;
+		color: saddlebrown;
+		text-decoration: none; /*remove default underline for links*/
+		padding: 9px 15px;
+		border: solid thick saddlebrown; /* border: style thickness color */
+		border-radius: 12px;
+		font-size: 2em;
+		display: inline-block;
+		box-shadow: 5px 10px peru;
+		font-weight: bold;
+		}
+
+		a.btn:hover{
+		background-color: white;
+		box-shadow: none;
+		}
+
+hr {
+		border-top: 6px dashed white;
+		border-radius: 5px;
+}
+
+div#cookieinfo {
+	border-radius: 15;
+	background-color: peru;
+	border: solid thick saddlebrown;
+	padding: 9px 15px;
+	font-size: 1em;
+	display: inline-block;
+	border-radius: 12px;
+	color: wheat;
+}

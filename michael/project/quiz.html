@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Will AI Become Sentient?</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="robotfav.ico">
+  </head>
+  <body>
+    <div id="menu">
+      <a class="redirect" href="index.html">Introduction Page</a>
+      <a class="redirect" href="meaning.html">Meaning of Sentience</a>
+      <a class="redirect" href="ethical.html">Ethical Implications</a>
+      <a class="redirect" href="current.html">Current state of AI</a>
+      <a class="redirect" href="quiz.html">Personalized Quiz</a>
+    </div>
+    <div id="whiteline2">
+      <h2>Do you think AI will become sentient?</h2>
+      <p class=center>Take the quiz to find out.</p>
+      <form id="quizForm">
+        <div class="question">
+          <p>What do you believe consciousness is?</p>
+          <label>
+            <input type="radio" name="q1" value="b">A purely biological process only achievable by organic brains </label>
+          <br>
+          <label>
+            <input type="radio" name="q1" value="a">A pattern of information processing that could emerge in machines </label>
+          <br>
+        </div>
+        <div class="question">
+          <p>How important is embodiment (e.g., having a body and sensory experiences) to developing consciousness?</p>
+          <label>
+            <input type="radio" name="q2" value="a">Not necessary — abstract processing can lead to sentience </label>
+          <br>
+          <label>
+            <input type="radio" name="q2" value="b">Essential — real experience requires a body </label>
+          <br>
+        </div>
+        <div class="question">
+          <p>If an AI convincingly expresses emotions, do you think it feels them?</p>
+          <label>
+            <input type="radio" name="q3" value="a">Yes, if it behaves consistently over time </label>
+          <br>
+          <label>
+            <input type="radio" name="q3" value="b">No, it's just imitation </label>
+          <br>
+        </div>
+        <div class="question">
+          <p>Would you consider an AI "sentient" if it convincingly passed all human tests for self-awareness and emotion?</p>
+          <label>
+            <input type="radio" name="q4" value="b">No — tests can be deceived </label>
+          <br>
+          <label>
+            <input type="radio" name="q4" value="a">Yes — behavior is what matters </label>
+          <br>
+        </div>
+        <div class="question">
+          <p>How much do you trust current scientific explanations of consciousness?</p>
+          <label>
+            <input type="radio" name="q5" value="b">Not much — consciousness is still a deep mystery </label>
+          <br>
+          <label>
+            <input type="radio" name="q5" value="a">Very much — they’re on the right track </label>
+          <br>
+        </div>
+        <br>
+        <button type="submit">Submit Quiz</button>
+      </form>
+      <br>
+      <div id="result" class="result">Your answer will appear here.</div>
+    </div>
+    <script src="scriptquiz.js"></script>
+  </body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memory Matching Game</title>
+    <link rel="stylesheet" href="morestyles.css">
+
+    <style>
+      body {
+        font-family: Helvetica, sans-serif;
+        background-color:  rgba(112, 132, 60, 0.85);
+        color: white;
+        margin: 0;
+        margin: 15px 75px;
+        min-height: 100vh;
+      }
+
+      h1 {
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      .game-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(112, 132, 56, 1);;
+        padding: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .score-panel {
+        margin-bottom: 20px;
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+
+      .score-panel span {
+        margin: 0 15px;
+        color: white;
+      }
+
+      .game-board {
+        display: grid;
+        grid-template-columns: repeat(4, 150px);
+        grid-template-rows: repeat(3, 150px);
+        gap: 10px;
+        margin: 0 auto 20px auto;
+      }
+
+      .card {
+        background-color:  rgba(207, 217, 194, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        cursor: pointer;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .header {
+        position: relative;
+        width: 100%;
+        height: 150px;
+        background-image: url("pond.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: sans-serif;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      .header-text {
+        position: relative;
+        z-index: 2;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+      }
+
+      .card img {
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
+        pointer-events: none;
+        display: none;
+      }
+
+      .card.revealed {
+        background-color: #e9ecef;
+        color: #333;
+      }
+
+      .card.matched {
+        opacity: 0.6;
+        cursor: default;
+      }
+
+      #restartButton {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-size: 1.1em;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 20px;
+      }
+
+      #restartButton:hover {
+        background-color: gray;
+      }
+
+      #info{
+        text-align: left;
+      }
+
+      p {
+        font-size: 25px;
+      }
+
+      li{
+        font-size: 20px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="overlay"></div>
+      <div class="header-text">Memory Matching Game</div>
+    </div>
+    <div id="menu">
+      <a href="index.html">Home</a>
+      <div id="moreLinks">
+        <a href="coyote.html">Coyote</a>
+        <a href="owl.html">Barred Owl</a>
+        <a href="seal.html">Harbour seal</a>
+        <a href="raccoon.html">Raccoon</a>
+        <a href="heron.html">Heron</a>
+        <a href="eagle.html">Eagle</a>
+        <a href="quiz.html">Memory Game</a>
+           <a href="personality.html">Personality Quiz</a>
+      </div>
+      <a id="icon" onclick="showHideMenu()">...</a>
+    </div>
+
+    <div class="game-container">
+      <h1>Game Introduction</h1>
+            <p>In this game you will flip over cards and try to make matches with the different animal images. The game highlighting how every interaction with the environment carries weight, whether remembered or not. Continue scrolling down to learn about what you can do to help the hurting ecosytemes. </p>
+      <div class="score-panel">
+        <span class="moves">Moves: 0</span>
+
+        <span class="matches">Matches: 0</span>
+      </div>
+
+      <div class="game-board" id="gameBoard"></div>
+
+      <button id="restartButton">Restart Game</button>
+<br>
+<hr style="width: 100%; border: none; height: 3px; background-color: white; margin: 30px 0;">
+      <br>
+<div id="info">
+      <h1>Helping Animals and the Environment</h1>
+      <ul><li>Try to bike or bus as commute instead of driving to reduce fuel emmissions</li>
+        <li>Avoid feeding wild animals. It can be harmful for them because the food could be unhealthy and they could grow dependant on humans</li>
+        <li>Support the community by joining clean-up which will help to prevent animals from eating litter.</li>
+        <li>Reducce, reuse, recycle to reduce waste</li>
+      </ul>
+      <br>
+      <p>If you are enjoying my website make sure to check Alyssa's website! Click <a href="https://mrkam-student-websites.on.drv.tw/public/alyssa/project/">here</a> to go there. </p>
+    </div>
+    </div>
+
+    <script>
+      const imagePaths = [
+        "cayote.jpg",
+        "owl.jpg",
+        "eagle.jpg",
+        "raccoon.jpg",
+        "heron.jpg",
+        "seal.jpg",
+      ];
+
+      let cards = [...imagePaths, ...imagePaths];
+      let flippedCards = [];
+      let matchedCards = 0;
+      let moves = 0;
+
+      const gameBoard = document.getElementById("gameBoard");
+      const movesDisplay = document.querySelector(".moves");
+      const matchesDisplay = document.querySelector(".matches");
+      const restartButton = document.getElementById("restartButton");
+
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+
+      function createCard(imageSrc) {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.dataset.image = imageSrc;
+
+        const img = document.createElement("img");
+        img.src = imageSrc;
+        img.style.display = "none";
+        img.alt = "card image";
+
+        card.appendChild(img);
+
+        card.addEventListener("click", () => {
+          if (
+            card.classList.contains("revealed") ||
+            card.classList.contains("matched") ||
+            flippedCards.length === 2
+          )
+            return;
+
+          card.classList.add("revealed");
+          img.style.display = "block";
+          flippedCards.push(card);
+
+          if (flippedCards.length === 2) {
+            moves++;
+            movesDisplay.textContent = `Moves: ${moves}`;
+            const [first, second] = flippedCards;
+            if (first.dataset.image === second.dataset.image) {
+              first.classList.add("matched");
+              second.classList.add("matched");
+              flippedCards = [];
+              matchedCards++;
+              matchesDisplay.textContent = `Matches: ${matchedCards}`;
+              if (matchedCards === imagePaths.length) {
+                setTimeout(() => alert("You won!"), 500);
+              }
+            } else {
+              setTimeout(() => {
+                first.querySelector("img").style.display = "none";
+                second.querySelector("img").style.display = "none";
+                first.classList.remove("revealed");
+                second.classList.remove("revealed");
+                flippedCards = [];
+              }, 800);
+            }
+          }
+        });
+
+        return card;
+      }
+
+      function startGame() {
+        gameBoard.innerHTML = "";
+        moves = 0;
+        matchedCards = 0;
+        flippedCards = [];
+        movesDisplay.textContent = `Moves: ${moves}`;
+        matchesDisplay.textContent = `Matches: ${matchedCards}`;
+        shuffle(cards);
+
+        cards.forEach((symbol) => {
+          const card = createCard(symbol);
+          gameBoard.appendChild(card);
+        });
+      }
+
+      function showHideMenu() {
+        var links = document.getElementById("moreLinks");
+        if (links.style.display === "block") {
+          links.style.display = "none";
+        } else {
+          links.style.display = "block";
+        }
+      }
+
+      restartButton.addEventListener("click", startGame);
+      startGame();
+    </script>
+  </body>
+</html>

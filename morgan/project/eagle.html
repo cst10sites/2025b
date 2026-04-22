@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Bald Eagles</title>
+    <link rel="stylesheet" href="morestyles.css">
+    <style>
+      body#eagle {
+        font-family: Helvetica, sans-serif;
+        background-color: #292D35 ;
+        margin: 15px 75px;
+        color: white;
+      }
+
+      #icon {
+        cursor: pointer;
+      }
+
+      .header {
+        position: relative;
+        width: 100%;
+        height: 150px;
+        background-image: url("eagleeyes.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: sans-serif;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+
+      .header-text {
+        position: relative;
+        z-index: 2;
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .info {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        margin: 30px auto;
+        max-width: 900px;
+        flex-wrap: wrap;
+      }
+
+      .imgbackground {
+        flex: 1;
+        max-width: 50%;
+      }
+
+      .imgbackground img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 12px -12px #BA8927;
+      }
+
+      .textcontent {
+        flex: 3;
+        margin-left: 20px;
+        font-size: 19px;
+      }
+
+      .map-facts-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #BA8927;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+      .quick-facts {
+        flex: 1.2;
+        min-width: 250px;
+        color: white;
+      }
+
+      .quick-facts h3 {
+        margin-top: 0;
+        
+      }
+
+      .quick-facts ul {
+        padding-left: 20px;
+        font-size: 18px;
+      }
+
+      .quick-facts li {
+        margin-bottom: 10px;
+      }
+
+      .audio-container {
+        flex: 1;
+        min-width: 300px;
+        padding: 10px;
+        box-sizing: border-box;
+        color: white;
+      }
+
+      audio {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 8px;
+        outline: none;
+      }
+
+      .map-container {
+        flex: 1.1;
+        min-width: 300px;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 320px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .text {
+        color: #f2f2f2;
+        margin-top: 8px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .dot-container {
+        text-align: center;
+        padding: 15px 0;
+      }
+
+      .dot {
+        cursor: pointer;
+        height: 14px;
+        width: 14px;
+        margin: 0 6px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+      }
+p{
+  font-size: 20px;
+}
+
+    </style>
+  </head>
+  <body id="eagle">
+    <div class="header">
+      <div class="overlay"></div>
+      <div class="header-text">Bald Eagles</div>
+    </div>
+    <div id="menu">
+      <a href="index.html">Home</a>
+      <div id="moreLinks">
+        <a href="coyote.html">Coyote</a>
+        <a href="owl.html">Barred Owl</a>
+        <a href="seal.html">Harbour Seal</a>
+        <a href="raccoon.html">Raccoon</a>
+        <a href="heron.html">Heron</a>
+        <a href="eagle.html">Bald Eagle</a>
+        <a href="quiz.html">Quiz</a>
+                  <a href="personality.html">Personality Quiz</a>
+      </div>
+      <a id="icon" onclick="showHideMenu()">...</a>
+    </div>
+
+    <div class="info">
+      <div class="imgbackground">
+        <img src="eagle.jpg" alt="Flying Great Blue Heron">
+      </div>
+      <div class="textcontent">
+        <p>
+    Bald eagles are a powerful bird of prey native to North America, most often found near lakes, rivers, and coastal areas. It is easily recognized by its white head and tail, contrasting with its dark brown body and wings. Known for its sharp eyesight and impressive wingspan, bald eagles hunt for all their food since they are carnivores and they often swoop down to snatch prey with its strong talons.
+        </p>
+      </div>
+    </div>
+
+    <div class="map-facts-container">
+      <div class="quick-facts">
+        <h2>Facts:</h2>
+        <ul>
+          <li><strong>Scientific name:</strong> Haliaeetus leucocephalus</li>
+          <li><strong>Average size:</strong> Adult males are about 90 cm long, while females can reach up to 108 cm. Males have a wingspan of about 2 meters, and females can have a wingspan of up to 2.5 meters. 
+1</li>
+          <li><strong>Lifespan:</strong> around 20-30 years old</li>
+          <li>
+            <strong>Habitat:</strong> Areas with tall trees or cliffs for nesting and perching sometimes near large lakes, rivers, or coastal waters
+          </li>
+          <li>
+            <strong>Food:</strong> Fish, small mammals and small birds
+          </li>
+        </ul>
+      </div>
+
+      <div class="map-container">
+        <h2>Indigenous Connection:</h2>
+      <p>In many Indigenous cultures across North America, eagles are deeply respected and spiritually significant. They are seen as messengers between the physical world and the spirit world because they fly so high and close to the Creator. Their feathers are sacred and often used in ceremonies, prayers, and regalia to represent honor, courage, and a strong connection to the Creator.</p>
+      </div>
+
+      <div class="audio-container">
+<h2>Eagle Feather:</h2>
+ <img src="feather.jpg" alt="Eagle feather" width=85%>
+      </div>
+    </div>
+
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src="eagles.jpg" alt="Bald Eagle">
+        <div class="text">Bald Eagle</div>
+      </div>
+
+      <div class="mySlides">
+        <img src="flyingeagle.jpg" alt="Flying Bald Eagle">
+        <div class="text">Flying Bald Eagle</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      function showHideMenu() {
+        var links = document.getElementById("moreLinks");
+        if (links.style.display === "block") {
+          links.style.display = "none";
+        } else {
+          links.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
