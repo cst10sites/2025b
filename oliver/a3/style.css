@@ -1,0 +1,105 @@
+/*style.css*/
+
+body {
+        font-family: verdana;
+        background-image: url("back.png");
+        background-attachment: fixed;
+        background-position: top;
+        background-size: 100% auto;
+        /*below; to make image not repeat*/
+        background-repeat: no-repeat;
+        background-color: darkblue;
+}
+
+h1#Header1 {
+        text-align: center;
+}
+
+div#head {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background-color: white;
+}
+
+h2#Header2 {
+        text-align: center;
+}
+
+a.btn {
+        background-color: lightblue;
+        color: black;
+        text-decoration: none;
+        padding: 15px 25px;
+        border: solid thick blue;
+        border-radius: 50px;
+        font-size: 1.25em;
+        display: inline-block;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 25px;
+}
+
+a.btn:hover {
+        background-color: darkblue;
+        box-shadow: 5px 5px;
+}
+
+a#btn {
+        background-color: lightblue;
+        color: black;
+        text-decoration: none;
+        padding: 15px 25px;
+        border: solid thick blue;
+        border-radius: 50px;
+        font-size: 1.25em;
+        display: inline-block;
+        text-align: center;
+        margin-left: 100px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 25px;
+}
+
+a#btn:hover {
+        background-color: darkblue;
+        box-shadow: 5px 5px;
+}
+
+/*table css*/
+
+div#table {
+        margin: 10px 150px 150px 150px;
+}
+
+table,
+th,
+td {
+        border: 5px solid royalblue;
+        border-collapse: collapse;
+}
+
+th {
+        background-color: rgba(30, 30, 200, 0.5);
+}
+
+table {
+        width: 100%;
+        margin-top: 20%;
+}
+
+td {
+        background-color: rgba(150, 150, 150, 0.5);
+}
+
+th,
+td {
+        text-align: center;
+        padding-top: 3px;
+        padding-bottom: 3px;
+}

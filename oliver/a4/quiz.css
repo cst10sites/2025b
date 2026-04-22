@@ -1,0 +1,25 @@
+body {
+	font-family: Verdana;
+	text-align: center;
+	background-image: url(https://static.vecteezy.com/system/resources/thumbnails/007/653/541/small_2x/seamless-pattern-background-with-bright-sign-question-marks-on-blue-backdrop-feedback-brainstorm-opinion-reaction-questionnaire-learning-concept-business-office-wallpaper-vector.jpg);
+	background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    color: white;
+}
+
+hr {
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+div#content {
+	background-color: rgba(0, 0, 0, 0.7);
+	padding: 10%;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+a {
+	color: cyan;
+}

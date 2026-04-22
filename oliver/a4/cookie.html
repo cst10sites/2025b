@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" type="image/x-icon" href="cookie.ico">
+
+<!--create and edit style.css-->
+</head>
+<body>
+
+<h1>Cookie Clicker</h1>
+<input type="image" alt="cookie" id="cookie" style="width: 30%; margin-left: 35%;" src="https://static.vecteezy.com/system/resources/previews/035/490/024/non_2x/ai-generated-cookie-clipart-design-illustration-free-png.png" onclick="updateCPS();">
+<div id="Data">
+<p id="cpsDisplay"></p><p id="nDisplay"></p>
+<p id="timeDisplay"></p>
+<button onclick="reset();">Reset</button>
+
+
+
+<hr>
+<h2>HTML/CSS Quiz</h2>
+<p>Click <a href="quiz.html">here</a> to play the quiz.</p>
+</div>
+<!--Here’s your completed JavaScript function with the missing parts filled in:-->
+<script>
+var nClicks = 0;
+var startTime = new Date();
+
+function updateCPS() {
+    //first click
+    if (nClicks == 0) {
+        startTime = new Date(); //calculate start time
+        nClicks++; //increase n clicks
+        document.getElementById("nDisplay").innerHTML = "Number of Clicks: " + nClicks; // display nClicks
+    // subsequent clicks 
+    } else {
+        var currentTime = new Date(); // calculate current time
+        var timeElapsed = (currentTime - startTime) / 1000; // calculate time elapsed
+        var CPS = nClicks / timeElapsed; //calculate CPS
+        document.getElementById("cpsDisplay").innerHTML = "Clicks Per Second: " + CPS.toFixed(2); //display CPS
+        nClicks++; //increase nClicks
+        document.getElementById("nDisplay").innerHTML = "Number of Clicks: " + nClicks; //display number of Clicks
+    }
+}
+//reset
+function reset() {
+    location.reload();
+}
+
+// Update time automatically every 100ms
+setInterval(updateTime, 100);
+
+function updateTime() {
+    if (nClicks > 0) {
+        var currentTime = new Date();
+        var timeElapsed = (currentTime - startTime) / 1000;
+        document.getElementById("timeDisplay").innerHTML = "Time Passed: " + timeElapsed.toFixed(2) + " seconds";
+    }
+}
+</script>
+</body>
+</html>
+
+
+

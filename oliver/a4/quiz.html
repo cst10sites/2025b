@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="stylesheet" type="text/css" href="quiz.css">
+<link rel="icon" type="image/x-icon" href="questionmark.ico">
+
+<!--create and edit style.css-->
+</head>
+<body>
+<div id="content">
+<h2>HTML/CSS Quiz</h2>
+<form>
+	<label>How many diffrent heading tags are there in HTML</label><br><br>
+	<textarea id="answer1" name="answer1" rows="2" cols="30"></textarea><br>
+	<input type="button" value="Submit" onclick="question1();">
+	<input type="reset">
+<!--ask at least two questions related to HTML/CSS/JS-->
+</form>
+<br>
+
+<form>
+	<label>What is the correct syntax for a iframe?</label><br><br>
+	<input type="radio" id="option1" value="iframe" name="dominic">
+	<label>&lt;iframe src="url">&lt;/iframe></label><br>
+	<input type="radio" id="option2" value="ifram" name="dominic">
+	<label>&lt;iframe src="url"></label><br>
+	<input type="radio" id="option3" value="ifra" name="dominic">
+	<label>&lt;frame href="url">&lt;/frame></label><br>
+	<input type="radio" id="option4" value="ifr" name="dominic">
+	<label>&lt;iframe href="url"></label><br><br>
+	<input type="button" value="Submit" onclick="question2();">
+	<input type="reset">
+
+</form>
+
+<hr>
+<h2>Cookie Clicker</h2>
+<p>Click <a href="cookie.html">here</a> to play the Cookie Clicker.</p>
+</div>
+<script>
+	function question1() {
+		if (document.getElementById("answer1").value == "6" || document.getElementById("answer1").value == "six") {
+			alert("Good job!!!");
+		} 
+		
+
+		else {
+			alert("Try again");
+		}
+
+	answer1 = answer1.toLowerCase();
+
+
+		}
+
+	function question2() {
+	var answer = document.getElementById("option1").checked; // true OR false
+
+	if (answer == true) {
+		alert("Good job!!!");
+	}
+	else {
+		alert("Try again");
+	}
+}
+</script>
+</body>
+</html>
+
+

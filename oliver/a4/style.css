@@ -1,0 +1,41 @@
+h2{
+	text-align: center;
+	color: gold;
+
+}
+
+body{
+	font-family: Comic Sans MS;
+	background-image: url(https://static.vecteezy.com/system/resources/thumbnails/039/350/524/small_2x/factory-interior-silhouette-car-manufacturing-process-industrial-machine-workshop-with-robotic-arm-conveyor-assembly-line-landscape-background-vector.jpg);
+	background-attachment: fixed;
+        background-position: top;
+        background-size: cover;
+    }
+       
+input#cookie:active {
+	scale: 0.95;
+}
+ 
+
+div#Data {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+hr {
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+a{
+	color: yellow;
+}
+
+p{
+	color: white;
+}
+
+h1 {
+	color: gold;
+	text-align: center; 
+}
