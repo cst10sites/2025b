@@ -1,0 +1,51 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: url("images/stars.jpg");
+	background-size: 100%;
+}
+
+#title::first-letter {
+	text-transform: capitalize;
+}
+
+table {
+	border-collapse: collapse;
+	display: inline-block;
+	margin-top: 5%;
+}
+
+td, th {
+	border: thin white solid;
+	padding: 2em 1em 2em 1em;
+
+	font-size: 15pt;
+}
+
+#content {
+	text-align: center;
+	width: 70%;
+	margin: auto;
+	margin-top: 1%;
+	padding: 1em;
+	padding-top: 3em;
+	height: 90vh;
+	color: white;
+}
+
+.glass {
+	background: rgba(255,255,255,0.5);
+	backdrop-filter: blur(5px);
+	box-shadow: 0 8px 32px 10px rgba( 31, 38, 135, 0.37 );
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+a {
+	color: white;
+}

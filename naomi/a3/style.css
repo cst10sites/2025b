@@ -1,0 +1,107 @@
+/* style.css */
+
+body {
+	font-family: Helvetica;
+	margin: 25px 100px;
+	background-image: url("whitebackground.jpg");
+	background-attachment: fixed;
+	background-position: top;
+	background-size: 100% auto;
+	
+}
+
+  h1, h2, h3 {
+	color: grey;
+}
+
+
+div#tittle {
+	background-color: white;
+	padding: 10px 10px;
+	border: thick solid grey;
+}
+
+
+
+/* menu CSS */
+
+div#menu {
+	overflow: hidden;
+	background-color: grey;
+	position: relative;
+}
+
+div#menu a {
+	color: white;
+	padding: 16px 20px;
+	text-decoration: none;
+	font-size: 1.25em;
+	display: block; 
+}
+
+div#menu #moreLinks {
+	display: none; 
+}
+
+div#menu a:hover {
+	color: black;
+	background-color: lightgrey;
+}
+
+
+div#content {
+	padding: 25px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+	
+}
+
+
+ div#example a {
+        background-color: white;
+        color: grey;
+        text-decoration: none;
+        padding: 15px 25px;
+        border: dashed thick grey;
+        border-radius: 15px;
+        font-size: 1em;
+        display: inline-block;
+      }
+
+      div#example a:hover {
+        background-color: grey;
+        color: white;
+        border: dashed thick grey;
+    }
+
+
+/* table CSS */
+
+table, th, td {
+	border: 5px solid grey;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	padding: 5px;
+	text-align: left; 
+}
+
+th {
+	font-size: 1.25em;
+	text-decoration: underline;
+	background-color: white;
+}
+
+tr {
+	background-color: white;
+}
+
+td#example {
+	background-color: lightblue;
+}
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Quiz Game!</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style id="correctColors"></style>
+</head>
+<body>
+	<form>
+		<div class="glass" style="margin-bottom:0.5%">
+
+		<div id="Question1div" class="colorContainer">
+		<h2>Quiz</h2><br>
+			<p>1. What is the function to fetch an element via its ID in Javascript? (function())</p>
+			<input type="text" id="Question1">
+		</div>
+		<div id="Question2div" class="colorContainer">
+			<p>2. What element is used to embed a webpage into another webpage? (&lt;tag&gt;)</p>
+			<input type="text" id="Question2">
+		</div>
+		<div id="Question3div" class="colorContainer">
+			<p>3. Which of these is is used to style a website?</p>
+				<input type="radio" name="3gen"><label>HTML</label><br>
+				<input type="radio" name="3gen" id="correct"><label>CSS</label><br>
+				<input type="radio" name="3gen"><label>PHP</label><br>
+				<input type="radio" name="3gen"><label>Javascript</label>
+		</div>
+
+		<div id="Question4div" class="colorContainer">
+			<p>4. Which of these is a real CSS color?</p>
+				<input type="radio" name="math" id="correct2"><label>Tomato</label><br>
+				<input type="radio" name="math"><label>Vanilla</label><br>
+				<input type="radio" name="math"><label>SlateGreen</label><br>
+				<input type="radio" name="math"><label>DeepPurple</label>
+			<br>
+
+			
+		</div>
+		</div>
+		<div id="results">
+			<input class="glass glassbutton" type="button" value="Submit" onclick="submitAnswers()" style="float: left; width: 41.6%;">
+			<input class="glass glassbutton" type="reset" onclick="resetColors()" style="float: right; width: 41.6%;">
+			<p id="scoreDisplay" class="glass"></p>
+		</div>
+
+	</form>
+
+	<a href="index.html" class="glass glassbutton">Home</a>
+
+	<script>
+		var correctColors = document.getElementById("correctColors");
+
+		function updateColor(qnum){
+			correctColors.innerHTML += ` #Question${qnum}div { background: rgba(182, 237, 52, 0.2); }`
+			return("Changed");
+		}
+
+		function submitAnswers(){
+			var correct = 0;
+
+			if (document.getElementById("Question1").value == "getElementById()"){
+				correct++;
+				updateColor(1);
+			}
+
+			if (document.getElementById("Question2").value == "<iframe>"){
+				correct++;
+				updateColor(2);
+			}
+
+			if (document.getElementById("correct").checked){
+				correct++;
+				updateColor(3);
+			}
+
+			if (document.getElementById("correct2").checked){
+				correct++;
+				updateColor(4);
+			}
+
+			correctColors.innerHTML += ` .colorContainer { background: rgba(250, 120, 120, 0.2); }`
+
+			document.getElementById("scoreDisplay").innerHTML = `Score: ${correct}/4`;
+
+			correctColors.innerHTML += "#scoreDisplay{ scale: 1 1;}"
+
+		}
+
+	function resetColors() {
+		correctColors.innerHTML = "";
+		document.getElementById("scoreDisplay").innerHTML = "";
+	}
+	</script>
+</body>
+</html>

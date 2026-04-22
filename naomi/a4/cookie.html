@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Assignment 4</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="cookie.png">
+  </head>
+  <body>
+    <div id="cookieclicker">
+      <h1>Cookie Clicker</h1>
+      <h3 id="totalClicks">Clicks: 0</h3>
+      <button id="hoverbtn" onclick="updateCPS();" style="background-color: burlywood; border-style: none;">
+        <img alt="" src="cookie.png" style=" width: 300px;">
+      </button>
+      <p id="cpsDisplay">Clicks Per Second: 0</p>
+      <hr>
+      <h2>HTML/CSS/JS Quiz</h2>
+      <p>Click <a href="quiz.html">here</a> to play the quiz. </p>
+    </div>
+    <script>
+      var nClicks = 0;
+      var startTime = new Date();
+
+      function updateCPS() {
+        console.log("f");
+        if (nClicks == 0) {
+          // first click
+          startTime = new Date();
+          nClicks += 1;
+          document.getElementById("cpsDisplay").innerHTML = "Clicks Per Second: 0";
+          document.getElementById("totalClicks").innerHTML = "Clicks: " + nClicks;
+        } else {
+          var currentTime = new Date();
+          var timePassed = (currentTime - startTime) / 1000;
+          var cps = nClicks / timePassed;
+          nClicks = nClicks + 1;
+          var cpsRound = cps.toFixed(2);
+          document.getElementById("cpsDisplay").innerHTML = "Clicks Per Second: " + cpsRound;
+          document.getElementById("totalClicks").innerHTML = "Clicks: " + nClicks;
+          console.log(currentTime);
+        }
+      }
+    </script>
+    <script src="https://www.drv.tw/inc/wd.js?s=mrkam-student-websites"></script>
+  </body>
+</html>

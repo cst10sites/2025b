@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cookie Clicker</title>
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!--create and edit style.css-->
+</head>
+<body>
+	<div id="content">
+		<h2>Cookie Clicker</h2>
+			<div id="cookieContainer"><img onclick="cookieClick();" src="images/Cookie.webp" alt="A cookie." id="cookie"></div>
+			<p id="cpsDisplay">CPS: 0</p>
+			<p id="clickDisplay">Clicks: 0</p>
+			<p id="timeDisplay">Time Passed: 0.0</p>
+	</div>
+		<a class="glass glassbutton" onclick="reset()" style="display: block; margin-bottom: 1%;">Reset</a>
+		<a href="index.html" class="glass glassbutton">Home</a>
+<script>
+// global variables
+var nClicks = 0;
+var startTime = 0;
+var intId;
+var cpsDisplay = document.getElementById("cpsDisplay");
+var clickDisplay = document.getElementById("clickDisplay");
+var timeDisplay = document.getElementById("timeDisplay");
+
+
+// basic version of Cookie Clicker code
+function cookieClick() {
+	if (nClicks == 0) {
+		startTime = new Date();
+		intId = setInterval(updateCPS, 100);
+	}
+	nClicks++;
+
+	clickDisplay.innerHTML = "Clicks: " + nClicks;
+
+}
+
+function updateCPS(){
+	var currentTime = new Date();
+	var timeElapsed = currentTime - startTime;
+	cpsDisplay.innerHTML = "CPS: " + (nClicks / (timeElapsed / 1000)).toFixed(2);
+	timeDisplay.innerHTML = "Time Passed: " + (timeElapsed / 1000).toFixed(2);
+}
+
+function reset() {
+	nClicks = 0;
+	startTime = new Date();
+	clearInterval(intId);
+	clickDisplay.innerHTML = "Clicks: 0"
+	cpsDisplay.innerHTML = "CPS: 0";
+}
+
+</script>
+</body>
+</html>

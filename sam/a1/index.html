@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>About me!</title>
+		<style>
+			@keyframes turning{
+				0% {
+					transform: rotate(0deg)
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+			@keyframes turningccw{
+				0% {
+					transform: rotate(360deg)
+				}
+				100% {
+					transform: rotate(0deg);
+				}
+			}
+			.turn {
+				animation: 2s infinite linear turning;
+			}
+
+			.rainbow{
+				animation: turningccw 3s linear infinite;
+				position: fixed;
+				top: 0%;
+				left: 0%;
+				scale: 300%;
+				background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+				background-size: cover;
+				background-position: center;
+				z-index: -1;
+			}
+		</style>
+	</head>
+	<body>
+		<img class="rainbow" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea015264-1416-4cb6-9092-7b722f6d6953/df6jtq5-8b15af79-c9dd-412d-ba34-88750d88ad19.png/v1/fill/w_1280,h_960,q_80,strp/horizontal_rainbow_color_gradient_by_thestockwarehouse_df6jtq5-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6IlwvZlwvZWEwMTUyNjQtMTQxNi00Y2I2LTkwOTItN2I3MjJmNmQ2OTUzXC9kZjZqdHE1LThiMTVhZjc5LWM5ZGQtNDEyZC1iYTM0LTg4NzUwZDg4YWQxOS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.phxJaxqLBoEfk-ytcSyp1RNLJMyScWE5BQyi6WNBAk0" alt="rainbow background">
+		<h1>All about me, Sam</h1>
+		<img alt="It's all about me." src="https://c.tenor.com/qWYEsnGfzs8AAAAC/tenor.gif" style="width:20%">
+		<p>
+			My name is Sam, I am a teenager, my bank pin is 7832. I live in Vancouver and go to school at Kitsilano Secondary. I use Linux on my desktop computer, specifically Arch Linux (by the way).
+		</p>
+		<p>I took this course because I like computers and programming. I know some python and rudimentary C.</p>
+		<br>
+		<img class="turn" style="width: 20%" alt="Tux logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/265px-Tux.svg.png">
+		<br>
+		<p>
+			My favourite website is <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">this one</a>.
+		</p>
+		<iframe src="index.html?recurse=1"></iframe>
+		<p>
+			<em>
+				I, Sam, fully acknowledge that all homepage files must be renamed to index.html. I have tested this website on https://tinyurl.com/cst10sites and will also do so with upcoming assignments. My code has been checked on https://validator.w3.org/ and has been corrected. 
+			</em>
+		</p>
+	</body>
+</html>

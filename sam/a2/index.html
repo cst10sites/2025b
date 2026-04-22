@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assignment 2</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+
+			@keyframes movie {
+				from {
+					background-position: 0 0;
+				}
+
+				to {
+					background-position: 10000px 1000px;
+				}
+			}
+
+			::selection {
+				background-color: black;
+				color: white;
+			}
+
+			body {
+				background-image: url("images/hats.jpg");
+				animation: 100s linear infinite movie;
+			}
+
+			.content {
+				font-family: Raspoutine Classic, courier;
+				margin: 0% 25%;
+				padding: 1%;
+				background-color: #ffffe2;
+			}
+
+			@font-face {
+				font-family: 'Raspoutine Classic';
+				font-style: normal;
+				font-weight: normal;
+				src: local('Raspoutine Classic'), url('RaspoutineClassic_TB.woff') format('woff');
+			}
+
+			.header * {
+				display: inline;
+				font-family: papyrus;
+			}
+
+			.header {
+				background-color: #ffffff;
+				text-align: center;
+			}
+
+			ul,
+			ol {
+				list-style-position: inside;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<img src="images/chef.png" alt="Logo" style="width:3em;">
+			<h1>Cooking&amp;Co</h1>
+		</div>
+		<div class="content">
+			<h1>Lumber Soup</h1>
+			<img src="images/pinesoup.jpg" alt="Soup" style="width: 20%">
+			<p> We've all wanted to eat a tree at some point in our lives. So why not try with this vegan low-fat gluten-free soup? This soup has a sweet smoky taste from the western red ceder, and a wintery taste from the pine needles which additionally serve to add texture. </p>
+			<p> This recipe was invented by my Latvian great-grandmother when she was nine, while visiting her father who worked at a lumber mill in British Columbia, there was an accident and everyone else evacuated and assumed she was dead, so she was trapped in the lumbermill, at first she lived off the lunches the workers had left behind, but once those ran out she had to get creative. What ensued was this soup, by eating it, she managed to survive for the 11 years and 7 months she was stuck in the mill. Once she escaped, she didn't know English, so she lived in the forest and lived off this soup again. </p>
+			<p> Eventually she was found by my future great-grandfather, who had learned Latvian 5 years earlier on a dare. He taught my great-grandmother English, and together they founded a restaurant called "The Soup Forest". Customers of the restaurant include Willian Lyon Mackenzie King, Winston Churchill, and a young Pierre Trudeau. When my great-grandmother was making the restaurant version of the dish, she tried all the woods in every combination and settled on this one, the restaurant sadly closed in 1976, when my great-grandmother died of a heart condition. Her recipe however lives on in this article. </p>
+			<h2>Ingredients (for 4)</h2>
+			<ul>
+				<li>5 Pinecones</li>
+				<li>3 Cups Pine Needles</li>
+				<li>1&frac12; in <sup>3</sup> piece of western red ceder </li>
+				<li>4 in <sup>2</sup> Spruce Bark </li>
+			</ul>
+			<h2>Instructions</h2>
+			<ol>
+				<li> Boil water at medium heat. </li>
+				<li> While you are waiting for the water to boil, grind the spruce bark. </li>
+				<li> Once the water has boiled add pinecones, ceder, and bark to water and let it simmer. Wait 10 minutes. </li>
+				<li> Strain soup. Add soup back to pot. </li>
+				<li> Add pine needles to the soup, if you are feeling spicy, you can re-add the bark removed in the previous steps. </li>
+				<li> Leave it to cool for 5 minutes and enjoy! </li>
+			</ol>
+		</div>
+	</body>
+</html>

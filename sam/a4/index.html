@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 4</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style id="spin1style"></style>
+	<style id="spin2style"></style>
+</head>
+<body>
+	<div style="width: 70%; margin: auto; margin-top: 1%;">
+
+		<div class="glass" style="text-align: center;">
+			<h2>Assignment 4</h2><br>
+			<p>
+				Welcome to my assignment 4 project. It was made in a glassmorphism style. And contains two simple programs.
+			</p>
+		</div>
+
+		<a href="cookie.html">
+		<div class="glass spin" style="width: 40%; float: left; margin: 1%; height: 40vh;" onmouseenter="timehide('spin1style','spin-back1','spin-front1', 0)" onmouseleave="timeunhide('spin1style','spin-back1', 'spin-front1', 0)">
+			<div class="spin-front" id='spin-front1'>
+				<img src="images/Cookie.webp" alt="A cookie." style="width: 50%; margin: auto;">
+			</div>
+			<div id="spin-back1" class=spin-back style="">
+				<h2>Cookie Clicker</h2>
+				<p>
+					Cookie clicker was originally created by French programmer Julien "Orteil" Thiennot. The game quickly went viral and went on to inspire a whole genre of "idle" games.
+				</p>
+			</div>
+		</div>
+		</a>
+		<a href="quiz.html">
+		<div class="glass spin" style="width: 40%; float: right; margin: 1%; height: 40vh;" onmouseenter="timehide('spin2style','spin-back2','spin-front2', 1)" onmouseleave="timeunhide('spin2style','spin-back2', 'spin-front2', 1)">
+			<div class="spin-front" id='spin-front2'>
+				<img src="images/quizlogo.png" alt="A man sitting on a question mark." style="width: 50%; margin: auto;">
+			</div>
+			<div id="spin-back2" class=spin-back style="">
+				<h2>Quiz Game</h2>
+				<p>
+					Quizzes are tests of knowledge, typically for students. The word probably comes from the Latin "Qui es?"
+				</p>
+			</div>
+		</div>
+		</a>
+	</div>
+
+<script>
+	var intervalId = [];
+	var timerHover = [0, 0];
+
+	function timehide(styleId, hiderId, showerId, intervalNum){
+		clearInterval(intervalId[intervalNum]);
+		intervalId[intervalNum] = setInterval(function(){
+			
+			timerHover[intervalNum] += 0.01;
+			if (timerHover[intervalNum] > 0.25) {
+				document.getElementById(styleId).innerHTML = `#${hiderId} { visibility: visible; } #${showerId} { visibility: hidden; }`;
+			}
+
+			if (timerHover[intervalNum] > 0.5){
+				timerHover[intervalNum] = 0.5;
+				clearInterval(intervalId[intervalNum]);
+			}
+		},10)
+	}
+
+	function timeunhide(styleId, hiderId, showerId, intervalNum){
+		clearInterval(intervalId[intervalNum]);
+
+		intervalId[intervalNum] = setInterval(function(){
+			timerHover[intervalNum] -= 0.01;
+			if (timerHover[intervalNum] < 0.25) {
+				document.getElementById(styleId).innerHTML = `#${hiderId} { visibility: hidden; } #${showerId} { visibility: visible; }`;
+			}
+
+			if (timerHover[intervalNum] < 0){
+				timerHover[intervalNum] = 0;
+				clearInterval(intervalId[intervalNum]);
+			}
+		},10)
+	}
+</script>
+</body>
+</html>

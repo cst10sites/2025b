@@ -1,0 +1,45 @@
+/* style.css */
+
+body {
+	font-family: Rockwell;
+	margin: 25px 100px;
+	background-color: burlywood;
+	background-attachment: fixed;
+	background-position: top;
+	background-size: 100% auto;
+	padding: 20px 100px;
+	color: saddlebrown;
+	
+}
+
+  h1, h2, h3 {
+	color: saddlebrown;
+}
+
+
+div#tittle {
+	background-color: saddlebrown;
+	padding: 10px 10px;
+	border: thick solid grey;
+}
+
+.container {
+  position: relative;
+  height: 100vh; 
+}
+
+div#cookieclicker {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+a {
+	color: ivory;
+}
+
+a:hover {
+	color: black;
+}
+

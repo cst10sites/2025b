@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="q.png">
+  </head>
+  <body>
+    <h1>HTML Quiz</h1>
+    <hr>
+    <form>
+      <label>which HTML atribute gives an element a unique name so you can style or find it later?</label>
+      <br>
+      <input id="correctLang" type="radio" value="one" name="ex2">
+      <label>&lt;id&gt;</label>
+      <br>
+      <input id="option2" type="radio" value="two" name="ex2">
+      <label>&lt;name&gt;</label>
+      <br>
+      <input id="option3" type="radio" value="three" name="ex2">
+      <label>&lt;type&gt;</label>
+      <br>
+      <input type="button" value="Submit" onclick="example2();">
+      <input type="reset">
+      <br>
+    </form>
+    <form>
+      <label>Which of the following tags is NOT a semantic HTML5 element?</label>
+      <select id="lang">
+        <option value="article">&lt;article&gt;</option>
+        <option value="section">&lt;section&gt;</option>
+        <option value="div">&lt;div&gt;</option>
+        <option value="nav">&lt;nav&gt;</option>
+      </select>
+      <br>
+      <input type="button" value="OK" onclick="example4();">
+      <input type="reset">
+      <br>
+    </form>
+    <hr>
+    <p>Go to <a href="cookie.html">Cookie Clicker</a>
+    </p>
+    <script>
+      function example4() {
+        var choice = document.getElementById("lang").value;
+        var ch = choice.toLowerCase();
+        if (ch == "div") {
+          alert("Correct!");
+        } else {
+          alert("Try again!");
+        }
+      }
+
+      function example2() {
+        var correctAns = document.getElementById("correctLang").checked;
+        if (correctAns == true) {
+          alert("Correct!");
+        } else {
+          alert("Try again");
+        }
+      }
+    </script>
+    <script src="https://www.drv.tw/inc/wd.js?s=mrkam-student-websites"></script>
+  </body>
+</html>
