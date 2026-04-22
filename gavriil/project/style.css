@@ -1,0 +1,96 @@
+body {
+  background-color:cornflowerblue;
+  font-family: helvetica;
+  text-align:center;
+}
+
+p {
+  font-size:30px;
+}
+
+h2 {
+  font-size: 30px;
+}
+div {
+  font-size: 1em;
+}
+.uhm {
+  font-size:40px;
+  color: white;
+  border-bottom: 2px dotted black;
+}
+
+.bigger {
+  font-size: 1.5em;
+}
+
+.normal {
+  font-size: 1em;
+}
+
+.invisdiv {
+color: lightblue;
+}
+
+.henry-wants-to-steal-my-limbs {
+  border: 5px outset red;
+  background-color: lightblue;
+  text-align: center;
+}
+
+.figimage {
+  width: 40%;
+}
+
+.fig {
+  width: 40%;
+}
+
+.side {
+  background-color: darkgray;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding-right: 20px;
+  margin-right: 10px;
+  padding-left: 7px;
+}
+
+
+p {
+  margin-bottom: 1em;
+}
+
+.side_buttons{
+  border-color: lightpink;
+  background-color: lightblue;
+  color: black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1.0);
+  cursor: pointer;
+}
+
+.side_buttons_home{
+  font-size: 1.5em;
+  border-color: lightpink;
+  background-color: lightblue;
+  color: black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1.0);
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.selected {
+  border-style: inset;
+}
+
+.huge 
+{
+    font-size: 3em;
+    }
+    

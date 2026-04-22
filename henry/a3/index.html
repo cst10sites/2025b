@@ -1,0 +1,60 @@
+<!-- Run web server: "C:\Users\1531640\Downloads\Python-3.9.4 Portable\App\Python\python.exe" -m http.server -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Assignment 3</title>
+		<!-- I am not going to make this plural -->
+		<link rel="stylesheet" href="style.css">
+		<link rel="icon" href="favicon.svg">
+	</head>
+	<body>
+		<a onclick="swap()" class="button" id="change">&lt;head&gt;</a>
+		<h1>HTML/CSS Guide</h1>
+		<hr>
+		<h2>Common/Helpful HTML tags</h2>
+		<!-- Show inside/outside in an iframe and swap with javascript -->
+		<div id="developer">My iframe src is: <span id="src"></span> & its height is: <span id="height"></span>px </div>
+		<iframe src="inside.html" style="width: 100%; height: 1860px; border: none;" id="content" style="overflow: visible;" scrolling="no"></iframe>
+		<script>
+			// :)
+			let super_secret_developer_mode = false
+			if (super_secret_developer_mode == true) {
+				document.getElementById('developer').style.display = "block"
+			} else {
+				document.getElementById('developer').style.display = "none"
+			}
+			document.getElementById('src').innerHTML = document.getElementById('content').src
+
+			function swap() {
+				let iframe = document.getElementById('content')
+				if (iframe.src.includes("inside.html")) { // check if the current src has inside.html in it (check includes because iframe.src is absolute path)
+					iframe.src = "outside.html" // flip inside to outside
+					document.getElementById('change').innerHTML = "&lt;body&gt;"
+					iframe.style.height = "950px"
+				} else { // in any other senario switch it back to inside. There only is one senario though, which is that it's outside.html
+					iframe.src = "inside.html"
+					document.getElementById('change').innerHTML = "&lt;head&gt;"
+					iframe.style.height = "1860px"
+				}
+				if (super_secret_developer_mode == true) {
+					document.getElementById('src').innerHTML = iframe.src
+					document.getElementById('content').innerHTML = iframe.contentWindow.document.body.scrollHeight
+				}
+				//iframe.style.height = `${iframe.contentWindow.document.body.scrollHeight}px`
+				return `${iframe.contentWindow.document.body.scrollHeight}px` // debug to find each page's height.
+			}
+
+			function toggle_dev_settings() {
+				super_secret_developer_mode = !super_secret_developer_mode
+				if (super_secret_developer_mode == true) {
+					document.getElementById('developer').style.display = "block"
+				} else {
+					document.getElementById('developer').style.display = "none"
+				}
+				return super_secret_developer_mode
+			}
+		</script>
+	</body>
+</html>

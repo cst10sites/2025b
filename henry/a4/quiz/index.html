@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../cookieclicker/src/assets/cookie.png">
+    <title>Quiz</title>
+</head>
+<body>
+
+    <!--boo!!!!1-->
+    <h1>HTML QUIZ</h1>
+    <div id="border">
+        <h2 id="question"></h2>
+        <form name="quiz" id="hide">
+            <!--<input type="text" name="quiz" placeholder="Answer" id="ans">-->
+        </form>
+    </div>
+    <a href="../cookieclicker/src/index.html" style="margin-left: auto; margin-right: auto;">Go to cookie clicker</a>
+    <script>
+        // Extensible questions
+        const questions = ["What does HTML stand for?", "What is the biggest heading?", "What does <head> do?"]
+        const answers   = [["Hyper Text Markup Language", "Hypertext Typed Markup Language", "Hypertext Markdown Language", "Henry's Text Making a Laptop"], ["&lt;head&gt;", "&lt;h6&gt;", "&lt;h1&gt;", "&lt;header&gt;", "&lt;big&gt;"], ["Changes the page style", "Stores invisible data about the page such as the title", "Contains the page content", "Contains the human brain along with other vital body parts"]]
+        const key       = [0, 2, 1]
+        let question    = 0
+        let score       = 0
+        function setquestion() {
+            if (key.length > question) {
+                document.getElementById("hide").innerHTML = ""
+                document.getElementById("question").innerHTML = ""
+                document.getElementById("question").innerText = (question + 1) + ". " + questions[question]
+                // Options
+                for (let i = 0; i < answers[question].length; i++) {
+                    document.getElementById("hide").innerHTML += "<input type='radio' name='quiz' class='option' value='" + answers[question][i] + "'id='" + i  + "'>" + "<label for='" + answers[question][i] + "'>" + answers[question][i] + "</label><br>"
+                }
+                    document.getElementById("hide").innerHTML += '<br><input type="button" value="Submit" onclick="checkcorrect()" class="option">'
+            } else {
+                document.getElementById("hide").innerHTML = ""
+                document.getElementById("question").innerHTML = "Score: " + score + "/" + questions.length + "<br><br><input type='button' onclick='restart()' value='Restart'></button>"
+            }
+        }
+
+        
+        setquestion()
+        function checkcorrect() {
+            if (document.getElementById(key[question]).checked) {
+                score++;
+                question++;
+                setquestion()
+                document.getElementsByTagName("html")[0].style.animation = ""
+                document.getElementsByTagName("html")[0].offsetWidth
+                document.getElementsByTagName("html")[0].style.animation = "correct 1s linear"
+            } else {
+                question++;
+                setquestion()
+                document.getElementsByTagName("html")[0].style.animation = ""
+                document.getElementsByTagName("html")[0].offsetWidth
+                document.getElementsByTagName("html")[0].style.animation = "wrong 1s linear"
+            }
+        }
+
+        function restart() {
+            question = 0
+            score = 0
+            setquestion()
+        }
+    </script>
+</body>
+</html>

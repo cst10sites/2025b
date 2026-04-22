@@ -1,0 +1,71 @@
+# Lesson 2
+
+[text]
+Hello again and welcome back! I hope you had fun playing with your little web page.
+[trigger]
+nextBtn()
+[text]
+Before we get started with your actual lesson, I'd like to show you something I couldn't quite fit into the first one.
+[trigger]
+nextBtn()
+[text]
+<pre><code class="language-html">&lt;a href="https://drv.tw"&gt;link!&lt;/a&gt;</code></pre>
+This is an <code>a</code> tag, or an <em>anchor</em> tag. It's just a <a href="#">clickable link!</a> the bit that says <code>href="https://..."</code> is the bit that says what URL it should link to.
+[trigger]
+nextBtn()
+[text]
+Alright, now that we've gotten that out of the way, let's make this website look less... bland. I've loaded up an example of how our page might've looked like at the end of the last lesson (with a link sprinkled in.) I'll be the first to say it: this page looks bad. If you spotted a website that looked like this, you'd probably laugh.
+[trigger]
+nextBtn()
+[text]
+In our first lesson together, we learnt HTML. That was the programming language we were writing that dictates where things go and what the content is. Now we're going to learn CSS, the language that controls how the website <em><b><u>looks</u></b></em>.
+[trigger]
+nextBtn()
+eventAddStyleTag()
+[text]
+<pre><code class="language-html">&lt;style&gt;...&lt;/style&gt;</code></pre>
+This is the <em>style tag</em>. Inside of it we write our CSS. Isn't that neat? A whole programming language inside of a programming language. Here: I'll write you some so you can get a feel for the structure of it, then we'll break down what it is I just wrote.
+[trigger]
+nextBtn()
+eventAddStyleCode1()
+[text]
+Look at that! Our website looks so fancy! But what have I done?
+[trigger]
+nextBtn()
+[text]
+<pre><code class="language-css">body {
+  ...
+}</code></pre>
+This is the general syntax of CSS. You start with the name of the thing you want to style, and then some curly brackets (These things: {}) And between them, your style code.
+[trigger]
+nextBtn()
+[text]
+<pre><code class="language-css">  background-color: black;</code></pre>
+This is a line of CSS style code. It's written between the curly brackets. Here, we're setting the background colour to be black. (Side note: It's spelt the American way here, unfortunately we'll have to deal with it as the code doesn't support the alternate spelling.)
+
+Try replacing black with a different colour! (Don't change anything else)
+[trigger]
+nextBtn() -> triggerDetectBgChange()
+[text]
+Neat! You've probably noticed the line that just says <code>color</code>. That's the colour of the text. I have no idea why it's named this way, it's very confusing. Anyways, let's try something. I'm going to test you to make sure you've been listening.
+[trigger]
+nextBtn()
+[text]
+I'm going to let you have full control of your code in a second, and you're going to set a &lt;p&gt; tag to have a green background colour. (Don't worry, you can read back through the dialog)
+[trigger]
+nextBtn() -> triggerDetectPTagGreen()
+[text]
+Nice! I don't like this font, though. Let's change it to something else.
+[trigger]
+nextBtn()
+eventAddStyleCode2()
+[text]
+<pre><code class="language-css">  font-family: monospace;</code></pre>
+This changes the font to monospace. Be careful with this: It only works with fonts that are preinstalled with most computers. If most people don't have the font, it probably won't work. With that in mind, try a few fonts like "Helvetica" or "Comic Sans MS".
+[trigger]
+nextBtn() -> triggerDetectFontChange()
+[text]
+Look at that! Our website's shaping up to be something worth visiting. This lesson has barely scratched the surface of what you can do with CSS, so keep learning! Feel free to read on <a href="https://w3schools.com">w3schools</a> to learn more about how to code. (Click the "HTML" or "CSS" buttons)
+[trigger]
+nextBtn()
+finale()

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+	font-family: DepartureMono;
+	src: url("DepartureMonoNerdFont-Regular.otf");
+}
+:root {
+	font-family: Roboto;
+}
+
+body {
+	margin: 0;
+}
+
+th {
+	background-color: #aaa;
+}
+td, th {
+	border: solid black 1px;
+	padding: 4px;
+}
+
+td:nth-child(1) {
+	background-color: #bbb;
+}
+
+td:nth-child(3) {
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+tr:nth-child(even) {
+	background-color: #ddd;
+}
+
+.button {
+	background-color: #00aaff;
+	border-radius: 8px;
+	padding: 8px;
+	color: white;
+	margin: 4px;
+	display: block;
+	width: 3.4em;
+	cursor: pointer;
+}
+
+.hljs {
+	border-radius: 8px;
+	font-family: monospace;
+	font-size: 1em;
+}
+
+.hljs-tag {
+	color: teal !important;
+}
+
+.hljs-name {
+	font-weight: normal !important;
+	color: darkred !important;
+}
+
+
+
+#fun {
+	background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+	color: white;
+	font-weight: bold;
+}

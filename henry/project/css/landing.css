@@ -1,0 +1,67 @@
+button {
+    border-style: solid;
+    padding: 8px 12px 8px 12px;
+    margin-top: 10%;
+    cursor: pointer;
+    background-color: #1e1e1e;
+    color: #d1d1d1;
+    font-family: Monocraft, monospace;
+}
+
+/* I'm so good at animations */
+/* This is all from the dome */
+@keyframes dramaticbutton {
+    0% {
+        padding: 8px 12px 8px 12px;
+    }
+
+    100% {
+        padding: 16px 24px 16px 24px;
+        transform: rotate(39deg);
+        
+    }
+
+    /*75% {
+        transform: rotate(-19deg);
+    }
+
+    100% {
+        padding: 8px 12px 8px 12px;
+        transform: rotate(0deg);
+    }*/
+}
+
+button:hover {
+    animation: dramaticbutton 3s linear;
+    animation-iteration-count: 1;
+}
+
+
+.particle {
+    background-image: radial-gradient(circle, #d1d1d1, #1e1e1e);
+    width: 10px;
+    height: 10px;
+}
+
+
+img {
+    transform: rotate3d(1, 1, 0, -45deg);
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    transition: all 100ms ease-in-out;
+}
+
+img:hover {
+    animation: spin3d 1s ease-in-out;
+    transform: rotate3d(1, 1, 0, 0deg);
+}
+
+
+@keyframes spin3d {
+    0% {
+        transform: rotate3d(1, 1, 0, -45deg);
+    }
+    100% {
+        transform: rotate3d(1, 1, 0, 0deg);
+    }
+}

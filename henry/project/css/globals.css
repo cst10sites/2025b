@@ -1,0 +1,11 @@
+@font-face {
+    font-family: Monocraft;
+    src: url("../assets/Monocraft.otf");
+}
+
+:root {
+    font-family: Monocraft, monospace;
+    text-align: center;
+    background-color: #1e1e1e;
+    color: #d1d1d1;
+}

@@ -1,0 +1,65 @@
+* {
+    font-family: Helvetica, sans-serif;
+    border: none;
+    text-align: center;
+    color: white;
+}
+
+input {
+    border: #eee 3px solid;
+    border-radius: 12px;
+    padding: 12px;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+input[type=radio] {
+    background-color: green;
+}
+
+
+@keyframes wrong {
+    0% {
+        background-color: #1e1e1e;
+    }
+    50% {
+        background-color: #551e1e;
+    }
+    100% {
+        background-color: #1e1e1e;
+    }
+}
+
+@keyframes correct {
+    0% {
+        background-color: #1e1e1e;
+    }
+    50% {
+        background-color: #1e551e;
+    }
+    100% {
+        background-color: #1e1e1e;
+    }
+}
+
+.wrong {
+    animation: wrong 1s linear;
+    animation-play-state: running;
+}
+
+.correct {
+    animation: correct 1s linear;
+    animation-play-state: running;
+}
+
+
+:root {
+    background-color: #1e1e1e;
+}
+
+
+#border {
+    border: solid #5f5f5f;
+    border-radius: 12px;
+    padding-bottom: 12px;
+}

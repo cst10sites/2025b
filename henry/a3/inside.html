@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Assignment 3</title>
+		<link rel="stylesheet" href="style.css">
+		<!-- highlight.js -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+		<script>
+			hljs.highlightAll();
+		</script>
+	</head>
+	<body id="body">
+		<table>
+			<tr>
+				<th>Body Tag</th>
+				<th>Definition</th>
+				<th>Example</th>
+			</tr>
+			<tr>
+				<td>1. &lt;img&gt;
+					<pre>
+										<code class="language-html">&lt;img src="..." style="width: ...; height: ...;" alt="..."&gt;</code>
+									</pre>
+				</td>
+				<td>Display an image on your website. Set the image url with <code>src="..."</code> and set the width/height with <code>style="width: 50%; height: 50%;"</code> & alt text (text that shows if you use a screen reader or have image loading disabled) </td>
+				<td>
+					<img src="https://repository-images.githubusercontent.com/344610266/246c3a80-7cf0-11eb-92d0-fe1d20e11982" style="width: 50%; height: 50%;" alt="bouncing dvd logo">
+				</td>
+			</tr>
+			<tr>
+				<td>2. &lt;a&gt;
+					<pre>
+											<code class="language-html">&lt;a href="..." target="..."&gt;...&lt;/a&gt;</code>
+										</pre>
+				</td>
+				<td>a tag that can link to a url/file and send you there on click. File is set with <code>href="..."</code>. Can make open in a new tab by setting the target to <code>_blank</code>. If you match up the target with an iframe's name (see below), it'll open up in that iframe. </td>
+				<td>
+					<a href="index.html">iframe in an iframe</a>
+				</td>
+			</tr>
+			<tr>
+				<td>3. &lt;div&gt; & &lt;span&gt;
+					<pre>
+											<code class="language-html">&lt;div class="..." id="..." style="..."&gt;...&lt;/div&gt;</code>
+										</pre>
+					<pre>
+											<code class="language-html">&lt;span class="..." id="..." style="..."&gt;...&lt;/span&gt;</code>
+										</pre>
+				</td>
+				<td>don't really do anything by default (span especially) div is just a box with display="block" by default & span is just a box with display="inline" by default. It gets interesting when you add css with class, id, & style.</td>
+				<td>
+					<div id="fun">So much better than p tags</div>
+				</td>
+			</tr>
+			<tr>
+				<td>4. &lt;ol&gt;, &lt;ul&gt;, & &lt;li&gt;
+					<pre>
+											<code class="language-html">&lt;!-- ol: ordered, ul: unordered --&gt;
+&lt;ol&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;</code>
+										</pre>
+				</td>
+				<td>Lists: <code>ol</code> for <b>o</b>rdered <b>l</b>ists, <code>ul</code> for <b>u</b>nordered <b>l</b>ists. <code>li</code> is for <b>l</b>ist <b>i</b>tems </td>
+				<td> Egg Recipe <ol style="text-align: left;">
+						<li>Get a large bowl.</li>
+						<li>Empty 3 dozen eggs into the bowl. Try to keep the egg shells in tact.</li>
+						<li>Apply jackhammer.</li>
+					</ol>
+				</td>
+			</tr>
+			<tr>
+				<td>5. &lt;h1&gt;, &lt;h2&gt;, etc.
+					<pre>
+											<code class="language-html">&lt;h1&gt;Big text&lt;/h1&gt;
+&lt;h2&gt;pretty big text&lt;/h2&gt;
+&lt;h3&gt;larger than normal text&lt;/h3&gt;
+&lt;h4&gt;at this point it's just bold&lt;/h4&gt;
+&lt;h6&gt;it goes to h6&lt;/h6&gt;</code>
+										</pre>
+				</td>
+				<td>Big text. Can be replaced with divs.</td>
+				<td>
+					<h1>Do you ever feel</h1>
+					<h2>Like a plastic bag</h2>
+					<h3>Floating through the air</h3>
+					<h4>Trying to start again</h4>
+					<h5>I really don't know what that means</h5>
+					<h6>Like actually what</h6>
+				</td>
+			</tr>
+			<tr>
+				<td>6. &lt;em&gt;
+					<pre>
+											<code class="language-html">&lt;em&gt;...&lt;/em&gt;</code>
+										</pre>
+				</td>
+				<td>Emphasis: italic text, emphasis when read with screen reader</td>
+				<td>I feel so <em>important</em> today. </td>
+			</tr>
+			<tr>
+				<td>7. &lt;p&gt;
+					<pre>
+											<code>&lt;p&gt;...&lt;/p&gt;</code>
+										</pre>
+				</td>
+				<td>P tags have absolutely no purpose. They do nothing special and are not loved by their parents. Do not use P tags.</td>
+				<td>Example (I'm lying to you this isn't in a p tag because they're USELESS!!!)</td>
+			</tr>
+			<tr id="iframe">
+				<td>8. &lt;iframe&gt;
+					<pre>
+											<code class="language-html">&lt;iframe src="..." name="..."&gt;&lt;/frame&gt;</code>
+										</pre>
+				</td>
+				<td>Put a website in a website. Set the website with <code>src="{{url}}"</code>. You can force a tag redirects to run in the iframe with the <code>name="{{a tag target}}"</code> (set the a tag's target to the same thing) </td>
+				<td>
+					<iframe src="index.html"></iframe>
+				</td>
+			</tr>
+			<tr>
+				<td>9. &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, & &lt;td&gt;
+					<pre>
+											<code class="language-html">&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Table header in first row.&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Table data point in second row.&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code>
+										</pre>
+				</td>
+				<td>Table. Tr: table row. Th: table header. Td: table data.</td>
+				<td>See: this web page</td>
+			</tr>
+			<tr>
+				<td>10. &lt;sup&gt; & &lt;sub&gt;
+					<pre>
+											<code class="language-html">&lt;sup&gt;...&lt;/sup&gt; &lt;sub&gt;...&lt;/sub&gt;</code>
+										</pre>
+				</td>
+				<td>
+					<code>&lt;sup&gt;</code>: text small and at top like when squaring a number. <code>&lt;sub&gt;</code>: text small and at the bottom like in the formula of a compound.
+				</td>
+				<td>5 <sup>2</sup>, H <sub>2</sub>O </td>
+			</tr>
+		</table>
+	</body>
+</html>

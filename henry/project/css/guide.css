@@ -1,0 +1,132 @@
+#content {
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+#workspace {
+    width: 50%;
+    height: 50vh;
+    border-right: 3px solid #555;
+}
+
+#bar {
+    width: 100%;
+    height: 5%;
+    background-color: #444;
+    margin: 0;
+    padding: 0;
+}
+
+#code {
+    width: 100%;
+    height: 95%;
+    border: none;
+    text-align: left;
+    background-color: #333;
+    resize: none;
+    padding: 0;
+    margin: 0;
+}
+
+#code:focus {
+    outline: none;
+}
+
+#outputarea {
+    width: 50%;
+    height: 50vh;
+}
+
+#output {
+    width: 100%;
+    height: 95%;
+    background-color: white;
+    color: black;
+    font-family: serif;
+    text-align: left;
+    border: none;
+}
+
+#dialog {
+  background-color: #1e1e1e;
+  color: #d1d1d1;
+  width: 50%;
+}
+
+.dialogitem {
+  display: none;
+}
+
+button {
+    border-style: solid;
+    padding: 8px 12px 8px 12px;
+    cursor: pointer;
+    background-color: #1e1e1e;
+    color: #d1d1d1;
+    font-family: Monocraft, monospace;
+    margin-top: 12px;
+}
+
+.download {
+  border-style: solid;
+  border-width: 2px;
+  padding: 8px 12px 8px 12px;
+  font-size: .9em;
+  margin-top: 12px;
+  text-decoration: none;
+  color: #d1d1d1;
+  display: inline-block;
+}
+
+button:focus {
+  outline: none;
+}
+
+
+#tutorial {
+  transition: all;
+}
+
+
+#page-mask {
+  background-color: #000;
+  opacity: 0.5;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+.hljs {
+  border-radius: 12px;
+}
+
+table {
+  width: 90%;
+  margin: auto;
+  margin-top: 12px;
+  border-collapse: collapse;
+}
+
+table code {
+  width: 90%;
+  margin: auto;
+  text-align: left;
+}
+
+td, th {
+  border: solid 2px;
+}
+
+#fun {
+  background-image: linear-gradient(red, orange, yellow, green, blue, indigo, violet);
+	color: black;
+	font-weight: bold;
+}
+
+#tips code {
+  text-align: left;
+}

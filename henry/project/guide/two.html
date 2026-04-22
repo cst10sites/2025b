@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/guide.css">
+    <meta http-equiv="Content-Security-Policy" content="frame-src blob: filesystem: * data:;">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <div id="page-mask"></div>
+    <h1>Lesson 2</h1>
+    <div id="content">
+        <div id="workspace">
+            <div id="bar">
+                <span style="background-color: #444;">index.html</span>
+            </div>
+            <div id="code">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Lesson 2&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;
+      Frog Analysis
+    &lt;/p&gt;
+    &lt;p&gt;
+      I really like frogs, and enjoy talking about them.
+      If you want to enjoy frogs with me,
+      check out &lt;a href="https://en.wikipedia.org/Frog"&gt;this&lt;/a&gt;.
+    &lt;/p&gt;
+    &lt;img alt="Frog." src="https://pngimg.com/uploads/frog/frog_PNG35716.png" width=100px height=100px&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</div>
+        </div>
+        <div id="outputarea">
+            <div id="bar">
+                <span style="background-color: #444;" id="title">Lesson 2</span>
+            </div>
+            <iframe id="output" sandbox="allow-same-origin"></iframe>
+        </div>
+    </div>
+    <button id="tutorial" onclick="dialogOpen()">Continue Tutorial</button>
+    <h3 id="afterbtn">Dialog History</h3>
+    <div style="overflow: scroll; width: 30%; height: 300px; margin: auto; margin-top: 2px; border: solid;">
+      <div style="display: initial;">
+        <p>Hello again and welcome back! I hope you had fun playing with your little web page.</p>
+      </div>
+      <div>
+        <p>Before we get started with your actual lesson, I'd like to show you something I couldn't quite fit into the first one.</p>
+      </div>
+      <div>
+        <pre><code class="language-html">&lt;a href="https://drv.tw"&gt;link!&lt;/a&gt;</code></pre>
+        <p>This is an "<code>a</code>" tag, or an <em>anchor</em> tag. It's just a <a href="#" style="cursor: pointer; text-decoration: underline;">clickable link!</a> the bit that says <code>href="https://..."</code> is the bit that says what URL it should link to.</p>
+      </div>
+      <div>
+        <p>Alright, now that we've gotten that out of the way, let's make this website look less... bland. I've loaded up an example of how our page might've looked like at the end of the last lesson (with a link sprinkled in.) I'll be the first to say it: this page looks bad. If you spotted a website that looked like this, you'd probably laugh.</p>
+      </div>
+      <div>
+        <p>In our first lesson together, we learnt HTML. That was the programming language we were writing that dictates where things go and what the content is. Now we're going to learn CSS, the language that controls how the website <em><b><u>looks</u></b></em>.</p>
+      </div>
+      <div><pre><code class="language-html">&lt;style&gt;...&lt;/style&gt;</code></pre>
+        <p>
+This is the <em>style tag</em>. Inside of it we write our CSS. Isn't that neat? A whole programming language inside of a programming language. Here: I'll write you some so you can get a feel for the structure of it, then we'll break down what it is I just wrote.</p>
+      </div>
+      <div>
+        <p>Look at that! Our website looks so fancy! But what have I done?</p>
+      </div>
+      <div><pre><code class="language-css" style="text-align: left;">body {
+  ...
+}</code></pre>
+        <p>
+This is the general syntax of CSS. You start with the name of the thing you want to style, and then some curly brackets (These things: {}) And between them, your style code.</p>
+      </div>
+      <div>
+        <pre><code class="language-css">  background-color: black;</code></pre>
+        <p>This is a line of CSS style code. It's written between the curly brackets. Here, we're setting the background colour to be black.<br>(Side note: It's spelt the American way here, unfortunately we'll have to deal with it as the code doesn't support the alternate spelling.)
+        <br>
+Try replacing black with a different colour! (Don't change anything else)
+</p>
+      </div>
+      <div>
+        <p>Neat! You've probably noticed the line that just says <code>color</code>. That's the colour of the text. I have no idea why it's named this way, it's very confusing. Anyways, let's try something. I'm going to test you to make sure you've been listening.</p>
+      </div>
+      <div>
+        <p>I'm going to let you have full control of your code in a second, and you're going to set a &lt;p&gt; tag to have a green background colour. (Don't worry, you can read back through the dialog)</p>
+      </div>
+      <div>
+        <p>Nice! I don't like this font, though. Let's change it to something else.</p>
+      </div>
+      <div>
+        <pre><code class="language-css">  font-family: monospace;</code></pre>
+        <p>This changes the font to monospace. Be careful with this: It only works with fonts that are preinstalled with most computers. If most people don't have the font, it probably won't work. With that in mind, try a few fonts like "Helvetica" or "Comic Sans MS".</p>
+      </div>
+      <div>
+        <p>Look at that! Our website's shaping up to be something worth visiting. This lesson has barely scratched the surface of what you can do with CSS, so keep learning! Feel free to read on <a href="https://w3schools.com" target="_blank">w3schools</a> to learn more about how to code. (Click the "HTML" or "CSS" buttons)</p>
+      </div>
+    </div>
+    <h2>CSS Tips</h2>
+    <div style="width: 50%; margin: auto;" id="tips">
+      Example of a CSS statement:
+      <pre><code class="language-css">p {
+  background-color: red;
+}</code></pre>
+      <b>REMEMBER TO PUT YOUR CSS IN THE STYLE SECTION:</b>
+      <pre><code class="language-html">&lt;style&gt;
+p {
+  background-color: red;
+}
+&lt;/style&gt;</code></pre>
+    </div>
+<dialog id="dialog">
+      <div id="dialog1" class="dialogitem" style="display: initial;">
+        <p class="dialogtext">Hello again and welcome back! I hope you had fun playing with your little web page.</p>
+        <br><button onclick="next()">Next</button>
+      </div>
+      <div id="dialog2" class="dialogitem">
+        <p class="dialogtext">Before we get started with your actual lesson, I'd like to show you something I couldn't quite fit into the first one.</p>
+        <br><button onclick="next()">Next</button>
+      </div>
+      <div id="dialog3" class="dialogitem">
+        <pre><code class="language-html">&lt;a href="https://drv.tw"&gt;link!&lt;/a&gt;</code></pre>
+        <p class="dialogtext">This is an "<code>a</code>" tag, or an <em>anchor</em> tag. It's just a <a href="#" style="cursor: pointer; text-decoration: underline;">clickable link!</a> the bit that says <code>href="https://..."</code> is the bit that says what URL it should link to.</p>
+        <br><button onclick="next()">Next</button>
+      </div>
+      <div id="dialog4" class="dialogitem">
+        <p class="dialogtext">Alright, now that we've gotten that out of the way, let's make this website look less... bland. I've loaded up an example of how our page might've looked like at the end of the last lesson (with a link sprinkled in.) I'll be the first to say it: this page looks bad. If you spotted a website that looked like this, you'd probably laugh.</p>
+        <br><button onclick="next()">Next</button>
+      </div>
+      <div id="dialog5" class="dialogitem">
+        <p class="dialogtext">In our first lesson together, we learnt HTML. That was the programming language we were writing that dictates where things go and what the content is. Now we're going to learn CSS, the language that controls how the website <em><b><u>looks</u></b></em>.</p>
+        <br><button onclick="styletag()">Next</button>
+      </div>
+      <div id="dialog6" class="dialogitem"><pre><code class="language-html">&lt;style&gt;...&lt;/style&gt;</code></pre>
+        <p class="dialogtext">
+This is the <em>style tag</em>. Inside of it we write our CSS. Isn't that neat? A whole programming language inside of a programming language. Here: I'll write you some so you can get a feel for the structure of it, then we'll break down what it is I just wrote.</p>
+        <br><button onclick="css()">Next</button>
+      </div>
+      <div id="dialog7" class="dialogitem">
+        <p class="dialogtext">Look at that! Our website looks so fancy! But what have I done?</p>
+        <br><button onclick="next()">Next</button>
+      </div>
+      <div id="dialog8" class="dialogitem"><pre><code class="language-css" style="text-align: left;">body {
+  ...
+}</code></pre>
+        <p class="dialogtext">
+This is the general syntax of CSS. You start with the name of the thing you want to style, and then some curly brackets (These things: {}) And between them, your style code.</p>
+        <br><button onclick="next()">Next</button>
+      </div>
+      <div id="dialog9" class="dialogitem">
+        <pre><code class="language-css">  background-color: black;</code></pre>
+        <p class="dialogtext">This is a line of CSS style code. It's written between the curly brackets. Here, we're setting the background colour to be black.<br>(Side note: It's spelt the American way here, unfortunately we'll have to deal with it as the code doesn't support the alternate spelling.)
+        <br>
+Try replacing black with a different colour! (Don't change anything else)
+</p>
+        <br><button onclick="dialog.close(); document.getElementById('page-mask').style.display = 'none'">Continue</button>
+      </div>
+      <div id="dialog10" class="dialogitem">
+        <p class="dialogtext">Neat! You've probably noticed the line that just says <code>color</code>. That's the colour of the text. I have no idea why it's named this way, it's very confusing. Anyways, let's try something. I'm going to test you to make sure you've been listening.</p>
+        <br><button onclick="next()">Next</button>
+      </div>
+      <div id="dialog11" class="dialogitem">
+        <p class="dialogtext">I'm going to let you have full control of your code in a second, and you're going to set a &lt;p&gt; tag to have a green background colour. (Don't worry, you can read back through the dialog)</p>
+        <br><button onclick="makegreen()">Continue</button>
+      </div>
+      <div id="dialog12" class="dialogitem">
+        <p class="dialogtext">Nice! I don't like this font, though. Let's change it to something else.</p>
+        <br><button onclick="next()">Next</button>
+      </div>
+      <div id="dialog13" class="dialogitem">
+        <pre><code class="language-css">  font-family: monospace;</code></pre>
+        <p class="dialogtext">This changes the font to monospace. Be careful with this: It only works with fonts that are preinstalled with most computers. If most people don't have the font, it probably won't work. With that in mind, try a few fonts like "Helvetica" or "Comic Sans MS".</p>
+        <br><button onclick="dialog.close(); document.getElementById('page-mask').style.display = 'none'">Continue</button>
+      </div>
+      <div id="dialog14" class="dialogitem">
+        <p class="dialogtext">Look at that! Our website's shaping up to be something worth visiting. This lesson has barely scratched the surface of what you can do with CSS, so keep learning! Feel free to read on <a href="https://w3schools.com">w3schools</a> to learn more about how to code. (Click the "HTML" or "CSS" buttons)</p>
+        <br><button onclick="finale2()">Continue</button>
+      </div>
+    </dialog>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.42.0/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.42.0/theme-github_dark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="guide.js"></script>
+</body>
+</html>

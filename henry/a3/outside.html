@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Assignment 3</title>
+		<style>
+			.example {
+				color: forestgreen;
+			}
+		</style>
+		<link rel="stylesheet" href="style.css">
+		<!-- highlight.js -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+		<script>
+			hljs.highlightAll();
+		</script>
+	</head>
+	<body id="body">
+		<table>
+			<tr>
+				<th>Head Tag</th>
+				<th>Definition</th>
+				<th>Example</th>
+			</tr>
+			<tr>
+				<td>1. &lt;!DOCTYPE html&gt;
+					<pre>
+										<code class="language-html">&lt;!DOCTYPE html&gt;
+...</code>
+									</pre>
+				</td>
+				<td>Declares that this file is an html file. Generally useless and most browsers will treat a .html file as an html file no matter what. Even if you put it at the start of, say, a .txt file it'll still be read in plain text even though you have that at the start.</td>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<td>2. &lt;meta&gt;
+					<pre>
+										<code class="language-html">&lt;meta charset="utf-8"&gt;</code>
+									</pre>
+				</td>
+				<td>Does a bunch of things including descriptions for search engines but the only thing I'm allowed to know is that you can use it to set the character set. It's also useful for mobile support but they don't want you to know that.</td>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<td>3. &lt;html&gt;
+					<pre>
+										<code class="language-html">&lt;html&gt;
+	...
+&lt;/html&gt;</code>
+									</pre>
+				</td>
+				<td>State that this stuff is HTML. Completely useless save for the lang="..." box that lets your browser know whether or not to engage the translator program thingy</td>
+				<td>N/A</td>
+			</tr>
+			<tr>
+				<td>4. &lt;style&gt;
+					<pre>
+										<code class="language-html">&lt;style&gt;
+	...
+&lt;/style&gt;</code>
+									</pre>
+				</td>
+				<td>box for CSS.</td>
+				<td class="example">N/A but in green</td>
+			</tr>
+			<tr>
+				<td>5. &lt;link&gt;
+					<pre>
+										<code class="language-html">&lt;link rel="stylesheet" href="style.css"&gt;</code>
+									</pre>
+				</td>
+				<td>Link an external CSS file! A favicon! A solemn letter of departure!*</td>
+				<td>
+					<img src="favicon.png" alt="an image of w3school's favicon. It has w3 in green text.">
+				</td>
+			</tr>
+			<tr>
+				<td>6. &lt;title&gt;
+					<pre>
+										<code class="language-html">&lt;title&gt;...&lt;/title&gt;</code>
+									</pre>
+				</td>
+				<td>Page name on tab</td>
+				<td>
+					<img src="title.png" alt="an image of the title Assignment 3 on this web page.">
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

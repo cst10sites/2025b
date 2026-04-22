@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Part Six</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body style="display: flex;">
+    <div class="side">
+      <br>
+      <br>
+      <br>
+      <button onclick="location.href = 'index.html';" class="side_buttons_home">Home</button>
+      <br>
+      <br>
+      <br>
+      <button onclick="location.href = 'PART1.html';" class="side_buttons">Part I</button>
+      <br>
+      <br>
+      <br>
+      <button onclick="location.href = 'PART2.html';" class="side_buttons">Part II</button>
+      <br>
+      <br>
+      <br>
+      <button onclick="location.href = 'PART3.html';" class="side_buttons">Part III</button>
+      <br>
+      <br>
+      <br>
+      <button onclick="location.href = 'PART4.html';" class="side_buttons">Part IV</button>
+      <br>
+      <br>
+      <br>
+      <button onclick="location.href = 'PART_5.html';" class="side_buttons">Part V</button>
+            <br>
+      <br>
+      <br>
+      <button onclick="" class="side_buttons selected">Part VI</button>
+    </div>
+    <div>
+    	<h1 class="uhm">Finishing touches</h1>
+        <br />
+        <br />
+    	<div class="henry-wants-to-steal-my-limbs">
+      		<p>Our first game is ready but it needs some finishing touches to make it a bit nicer. First of all we are going
+to add some background music. This is very easy.</p>
+<h1>Create background music:</h1>
+      		<p>1. From the Resources menu, choose Create Sound. The Sound Properties form appears. Click on
+the Name field and rename it to snd_music.<br />
+2. Click on the Load Sound button, navigate to the Resources folder and select the sound file
+music.mid. Note that this is a midi file. Midi files are often used for background music as they
+use less memory.<br /> <!--yeah maybe in 2003...-->
+3. Press the OK button to close the form.<br />
+4. Reopen the clown object by double clicking on it in the resource list at the left of the window.<br />
+5. Select the Create event. From the main1 page include a Play Sound action. As Sound indicate
+snd_music and set Loop to true because we want the music to repeat itself forever</p>
+      		<p>Secondly we are going to add a background image. The grey background of the room is rather boring. To
+this end we use a new type of resource, the background resource.</p>
+<h1>Add a background image:</h1>
+      		<p>1. From the Resources menu, choose Create Background. The Background Properties form
+appears. Click on the Name field and rename it to back_main.
+2. Click on the Load Background button, navigate to the Resources folder and select the image
+file background.png. The form should now look like image below.</p>
+<img class="figimage" alt"form" src="17.png">
+<br />
+<br />
+<p>3. Press OK to close the form.<br />
+4. Reopen the room by double clicking on it in the resource list.<br />
+5. Select the backgrounds tab. Deselect the property Draw background color.<br />
+6. Click on the little menu icon in the middle and pick the back_main in the popup menu. As you
+will see, in the room we suddenly have a nice background, As in image below. Note the two
+properties Tile Hor. and Tile Vert. They indicate that the background must be tiled horizontally
+and vertically, that is, repeated to fill the whole room. For this to work correctly the background
+image must be made such that it nicely fits against itself without showing cracks.</p>
+<img class="figimage" alt"room backgrnd" src="18.png">
+<br />
+<br />
+<p>If you play the game a bit you will see that it is very easy because you know exactly where the clown is
+going. To make it more difficult we let the clown change its direction of motion from time to time. To
+this end we are going to use an alarm clock. Each instance can have multiple alarm clocks. These clocks
+tick down and at the moment they reach 0 an Alarm event happens. In the creation event of the clown
+we will set the alarm clock. And in the alarm event we change the direction of motion and set the alarm
+again.</p>
+<h1>Adding the alarm clock:</h1>
+<br />
+<br />
+<p>1. Reopen the clown object by double clicking on it in the resource list at the left of the window.<br />
+2. Select the Create event. From the main2 page include a Set Alarm action. As Number of steps
+indicate 50. The alarm number we keep as Alarm 0. See image below.</p>
+<img class="figimage" alt"alarm" src="19.png">
+<br />
+<br />
+<p>3. Click on Add Event. Choose the button Alarm and in the popup menu select Alarm 0.<br />
+4. In the event include the Move Fixed action (from the move tab). Select all eight arrows. Set the
+Speed to 0 and enable the Relative property. In this way 0 is added to the speed, that is, it does
+not change.<br />
+5. To set the alarm clock again, include a Set Alarm action. As Number of steps again indicate 50.</p>
+<p>We set the alarm clock to 50 steps but you might wonder what a step is. Default Game Maker takes 30
+steps per second. So 50 steps is slightly more than 1.5 seconds. (You can change the game speed in the
+settings tab in the room properties.)</p>
+<br />
+<p>Finally, each game must tell the players what the goal is and how the user plays the game. So some help
+is required. Game Maker has a standard mechanism for this.</p>
+<h1>Adding a help text:</h1>
+<br />
+<br />
+<p>1. From the Resources menu select Change Game Information. A simple text editor will appear.<br />
+2. Type in some useful information for the player, in particular about the goal of the game and the
+way to control it. You can use different fonts, sizes, and colors. See for example image below.</p>
+<img class="figimage" alt"game info screen ingame" src="20.png">
+<br />
+<br />
+<p>During the game this text is automatically shown when the player presses the F1 key (like in most other
+programs).</p>
+<br />
+<br />
+<br />
+<h1 class="huge">YOU'RE DONE!</h1>
+<br />
+<br />
+<br /> <!--again, ol/ul dont work here-->
+<p>Congratulations. You finished your first game. And the first game is always the most difficult one. You
+also learned about the most important aspects of Game Maker: sprites, images and sounds, the game
+objects, events and actions, and the rooms.<br /><br />
+Before continuing with a new game you might want to play a bit more with the Catch the Clown game.
+Here are some things you might want to try to add:<br />
+- Have two clowns moving around. (This is extremely easy because you can place multiple
+instances of the same object in a room.)<br /><br />
+- Have a different dark clown that you should not catch because it will cost you part of your score.<br /><br />
+</p>
+<h1>But you surely can come up with other creative ideas.</h1>
+<br />
+<br />
+    	</div>
+	</div>
+  </body>
+</html>

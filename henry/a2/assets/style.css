@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+	--background: #351119;
+	--text: white;
+	--primary: #79443b;
+	background-color: var(--background);
+	color: var(--text);
+	font-family: "Poppins";
+}
+
+.flex {
+	display: block;
+}
+
+a {
+	color: #00aaff;
+}
+
+a:visited {
+	color: #00aaff;
+}
+
+img {
+	border-radius: 12px;
+	width: 50%;
+	height: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+h1 {
+	text-align: center;
+}
+
+#text {
+	width: auto;
+}
+
+/* Support for mobile! (really just tailwindcss code) */
+@media (width >= 48rem) {
+	#content {
+		margin: 0px 5% 0px 5%;
+		border: var(--primary) solid;
+		border-radius: 12px;
+		display: flex;
+	}
+
+	img {
+		width: 20%;
+		height: 20%;
+		margin-left: auto;
+		margin-right: 0px;
+		margin-top: 0em;
+		margin-bottom: 0em;
+	}
+
+	.flex {
+		display: flex;
+	}
+
+	#text {
+		width: 70%;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--background: #eec9d1;
+		--text: black;
+		--primary: #c49187;
+	}
+}

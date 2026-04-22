@@ -1,0 +1,64 @@
+# pseudo-code dialogue script.
+
+
+[text]
+Hello! Let's code a website! Here, I've setup a coding space for you. On the left is your code written in HTML, and on the right is your website.
+[trigger]
+nextBtn
+[text]
+This probably looks overwhelming, but it's actually pretty simple. In fact, we're going to <em>ignore most of it</em>, but let's not get ahead of ourselves.
+[trigger]
+nextBtn
+[text]
+<highlight>&lt;body&gt;...&lt;/body&gt;</highlight>
+This is a <em>tag</em>. Websites are made up of them. There are many tags, and they apply properties to text. Everything between two tags with the same name gets affected: &lt;&gt;HERE&lt;/&gt; You can tell what a closing tag is based off its name starting with a /.
+[trigger]
+nextBtn
+[text]
+Now that we know what they are, let's look at two of them!
+[trigger]
+nextBtn
+[text]
+<highlight>&lt;title&gt;...&lt;/title&gt;</highlight>
+This is the title tag. It's what shows the text on the tab. We'll leave it as is for now.
+[trigger]
+nextBtn
+[text]
+<highlight>&lt;body&gt;...&lt;/body&gt;</highlight>
+This is the body of the page. In here is all the content. See how what's in here shows on the right? Let's write some new text, since "Hello, World!" is a little boring.
+[trigger]
+nextBtn
+outputInnerTextUpdate
+[text] NOTIF
+Nice! Our page would probably do with some content, though. Let's add an image.
+[trigger]
+nextBtn
+(setup: imageScaffold)
+[text]
+Okay, I've made a few changes. First, I put your text in a &lt;p&gt; tag, or <em>paragraph</em> tag. This just separates one set of text from another, as there are by default <em>no newlines</em> in HTML. I also added an &lt;img&gt; tag.
+[trigger]
+nextBtn
+[text]
+<highlight>&lt;img&gt;</highlight>
+This is an img or <em>image tag</em>. You may notice something, which is that this tag has <em>no ending tag</em>. This is because it doesn't have any text to be put inside.
+[trigger]
+nextBtn
+[text]
+You may also notice that this isn't displaying an image, it's displaying a question mark. To add an image you need to put the name of it in an src="" block inside the tag. That sentence probably didn't make much sense, so I'll just show you.
+[trigger]
+nextBtn
+(setup: imageScaffold2)
+[text]
+Now can you see what I meant previously, right? src stands for source. I've put a few images in here for you. Feel free to try some! Just put the name of the file inside the quotes.
+Options: html.png, css.png, js.png
+[trigger]
+nextBtn
+outputValidImageUpdate
+[text]
+Cool! But for a second, let's talk about accessibility. The web should be accessible to all people, so let's add some alt text in the alt="..." section. Alt text is the text that shows if the image doesn't load, or what's read if you have a screen reader. Set it to something that describes the image.
+[trigger]
+nextBtn
+outputValidAltText
+[text]
+Awesome! That's all for this lesson, but feel free to play around before going to the next one.
+

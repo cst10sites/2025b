@@ -1,0 +1,9 @@
+# Lesson 3
+
+[text]
+Welcome to your final lesson! This time, I'm going to teach you one more feature and then leave you to make a website.
+[trigger]
+nextBtn()
+[text]
+<pre><code class="language-html">&lt;h1&gt;Big Title Text&lt;/h1&gt;</code></pre>
+This is an h1 header.

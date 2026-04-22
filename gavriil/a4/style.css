@@ -1,0 +1,22 @@
+body {
+  background-color:cornflowerblue;
+  font-family: helvetica;
+  text-align:center;
+}
+
+p {
+  font-size:30px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h1 {
+  font-size:40px;
+}
+
+
+#startButtonDisplay {
+  width: 20%;
+}

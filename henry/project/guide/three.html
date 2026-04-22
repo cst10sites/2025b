@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/guide.css">
+    <meta http-equiv="Content-Security-Policy" content="frame-src blob: filesystem: * data:;">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <div id="page-mask"></div>
+    <h1>Lesson 3</h1>
+    <div id="content">
+        <div id="workspace">
+            <div id="bar">
+                <span style="background-color: #444;">index.html</span>
+            </div>
+            <div id="code">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Lesson 3&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    Hello, World!
+  &lt;/body&gt;
+&lt;/html&gt;</div>
+        </div>
+        <div id="outputarea">
+            <div id="bar">
+                <span style="background-color: #444;" id="title">Lesson 3</span>
+            </div>
+            <iframe id="output" sandbox="allow-same-origin"></iframe>
+        </div>
+    </div>
+    <button id="tutorial" onclick="dialogOpen()">Finish</button>
+    <dialog id="dialog">
+      <div id="dialog1" class="dialogitem" style="display: initial;">
+        <p class="dialogtext">Welcome to your final lesson! This time, I'm going to teach you one more feature and then leave you to make a website.</p>
+        <br><button onclick="next()">Next</button>
+      </div>
+      <div id="dialog2" class="dialogitem">
+<pre><code class="language-html">&lt;h1&gt;Big Title Text&lt;/h1&gt;</code></pre>
+        <p class="dialogtext">This is an h1 header. There are varying sizes of these, with h1 being the biggest, all the way down to h6, being significantly smaller than normal text. You can use this to show the title of your website, but you should change the title element too if you're going to do that.</p>
+        <br><button onclick="next()">Next</button>
+      </div>
+      <div id="dialog3" class="dialogitem">
+        <p class="dialogtext">That's all I've got this time! Good luck. I've provided a chart containing some useful tags you might need.</p>
+        <br><button onclick="dialog.close(); document.getElementById('page-mask').style.display = 'none'">Start Making</button>
+      </div>
+      <div id="dialog4" class="dialogitem">
+        <p class="dialogtext">You've finished? Amazing. Let's take a look.</p>
+        <br><button onclick="showcase()">Showcase</button>
+      </div>
+      <div id="dialog5" class="dialogitem">
+        <p class="dialogtext">Neat! But I've got one last gift for you. If you'd like to take your website off of mine and put it into a file, hit the download button. It will save it as "index.html". If you open this in your web browser, it'll show the website. You can edit it with notepad, though I recommend downloading a code editor. If you are interested in getting your new website online, I would highly recommend <a href="https://neocities.org" target="_blank">neocities</a>, as it allows you to host your website for free with minimal effort.</p>
+        <a class="download" id="download" href="download" download="index.html">Download</a>
+        <button onclick="finale3()">Enter Code Sandbox</button>
+      </div>
+</dialog>
+<div id="scroll">
+    <h2>Cheatsheet</h2>
+    <h3>Some of the more useful HTML tags.</h3><br>
+<table>
+			<tr>
+				<th>Body Tag</th>
+				<th>Definition</th>
+				<th>Example</th>
+			</tr>
+			<tr>
+				<td>1. &lt;img&gt;
+					<pre>
+										<code class="language-html">&lt;img src="..." style="width: ...; height: ...;" alt="..."&gt;</code>
+									</pre>
+				</td>
+        <td>Display an image on your website. Set the image url with <code>src="..."</code> and set the width/height with <code>style="width: 50%; height: 50%;"</code> &amp; alt text (text that shows if you use a screen reader or have image loading disabled) <br>Unrelated: shout out to fediverse users for making alt text become second-nature in my brain </td>
+				<td>
+					<img src="https://repository-images.githubusercontent.com/344610266/246c3a80-7cf0-11eb-92d0-fe1d20e11982" style="width: 50%; height: 50%;" alt="bouncing dvd logo">
+				</td>
+			</tr>
+			<tr>
+				<td>2. &lt;a&gt;
+					<pre>
+											<code class="language-html">&lt;a href="..." target="..."&gt;...&lt;/a&gt;</code>
+										</pre>
+				</td>
+				<td>a tag that can link to a url/file and send you there on click. File is set with <code>href="..."</code>. Can make open in a new tab by setting the target to <code>_blank</code>. If you match up the target with an iframe's name, it'll open up in that iframe. </td>
+				<td>
+					<a href="https://www.youtube.com/results?search_query=frog">Frog YouTube</a>
+				</td>
+			</tr>
+			<tr>
+				<td>3. &lt;div&gt; &amp; &lt;span&gt;
+					<pre>
+											<code class="language-html">&lt;div class="..." id="..." style="..."&gt;...&lt;/div&gt;</code>
+										</pre>
+					<pre>
+											<code class="language-html">&lt;span class="..." id="..." style="..."&gt;...&lt;/span&gt;</code>
+										</pre>
+				</td>
+				<td>doesn't really do anything by default (span especially) div is just a box with display="block" by default &amp; span is just a box with display="inline" by default. It gets interesting when you add css with class, id, &amp; style.</td>
+				<td>
+					<div id="fun">So much better than p tags</div>
+				</td>
+			</tr>
+			<tr>
+				<td>4. &lt;ol&gt;, &lt;ul&gt;, &amp; &lt;li&gt;
+					<pre>
+											<code class="language-html">&lt;!-- ol: ordered, ul: unordered --&gt;
+&lt;ol&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;</code>
+										</pre>
+				</td>
+				<td>Lists: <code>ol</code> for <b>o</b>rdered <b>l</b>ists, <code>ul</code> for <b>u</b>nordered <b>l</b>ists. <code>li</code> is for <b>l</b>ist <b>i</b>tems </td>
+				<td> Egg Recipe <ol style="text-align: left;">
+						<li>Get a large bowl.</li>
+						<li>Empty 3 dozen eggs into the bowl. Try to keep the egg shells in tact.</li>
+						<li>Consume raw.</li>
+					</ol>
+				</td>
+			</tr>
+			<tr>
+				<td>5. &lt;h1&gt;, &lt;h2&gt;, etc.
+					<pre>
+											<code class="language-html">&lt;h1&gt;Big text&lt;/h1&gt;
+&lt;h2&gt;pretty big text&lt;/h2&gt;
+&lt;h3&gt;larger than normal text&lt;/h3&gt;
+&lt;h4&gt;at this point it's just bold&lt;/h4&gt;
+&lt;h6&gt;it goes to h6&lt;/h6&gt;</code>
+										</pre>
+				</td>
+				<td>Big text.</td>
+				<td>
+					<h1>h1 (Big)</h1>
+					<h2>h2 (Still Big)</h2>
+					<h3>h3 (Large)</h3>
+					<h4>h4 (No one uses this)</h4>
+					<h5>h5 (No one uses this)</h5>
+					<h6>h6 (No one uses this)</h6>
+				</td>
+			</tr>
+			<tr>
+				<td>6. &lt;em&gt;
+					<pre>
+											<code class="language-html">&lt;em&gt;...&lt;/em&gt;</code>
+										</pre>
+				</td>
+				<td>Emphasis: italic text, emphasis when read with screen reader</td>
+				<td>I feel so <em>important</em> today. </td>
+			</tr>
+			<tr>
+				<td>7. &lt;p&gt;
+					<pre>
+											<code>&lt;p&gt;...&lt;/p&gt;</code>
+										</pre>
+				</td>
+				<td>P tags (paragraph tags) are more of a code readability thing, don't feel bad if you just replace them with divs.</td>
+				<td>Example (I'm lying to you this isn't in a p tag at all but you couldn't tell)</td>
+			</tr>
+			<tr id="iframe">
+				<td>8. &lt;iframe&gt;
+					<pre>
+											<code class="language-html">&lt;iframe src="..." name="..."&gt;&lt;/frame&gt;</code>
+										</pre>
+				</td>
+				<td>Put a website in a website. Set the website with <code>src="{{url}}"</code>. You can force a tag redirects to run in the iframe with the <code>name="{{a tag target}}"</code> (set the a tag's target to the same thing) </td>
+				<td>
+					<iframe src="sandbox.html"></iframe>
+				</td>
+			</tr>
+			<tr>
+				<td>9. &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &amp; &lt;td&gt;
+					<pre>
+											<code class="language-html">&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;Table header in first row.&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;Table data point in second row.&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;</code>
+										</pre>
+				</td>
+				<td>Table. Tr: table row. Th: table header. Td: table data.</td>
+				<td>See: this web page</td>
+			</tr>
+			<tr>
+				<td>10. &lt;sup&gt; &amp; &lt;sub&gt;
+					<pre>
+											<code class="language-html">&lt;sup&gt;...&lt;/sup&gt; &lt;sub&gt;...&lt;/sub&gt;</code>
+										</pre>
+				</td>
+				<td>
+					<code>&lt;sup&gt;</code>: text small and at top like when squaring a number. <code>&lt;sub&gt;</code>: text small and at the bottom like in the formula of a compound.
+				</td>
+				<td>5<sup>2</sup>, H<sub>2</sub>O </td>
+			</tr>
+      <tr>
+				<td>11. &lt;br&gt;
+					<pre>
+											<code class="language-html">&lt;br&gt;</code>
+										</pre>
+				</td>
+				<td>
+					Breakline, newline, whatever you'd like to call it. Described as \n in some languages, it's the equivalent of hitting enter and typing on another line.
+				</td>
+				<td>
+          Words on one line
+          <br>
+          Words on another line!
+        </td>
+			</tr>
+		</table>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.42.0/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.42.0/theme-github_dark.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="guide.js"></script>
+</body>
+</html>
