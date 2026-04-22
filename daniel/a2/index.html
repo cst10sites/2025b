@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Container for centering content */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        /* Heading Styles */
+        h1 {
+            color: #ff6f61;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #ff6f61;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ff6f61;
+            display: inline-block;
+            padding-bottom: 5px;
+            font-family: 'Georgia', serif;
+        }
+
+        /* Paragraph Styles */
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Image Styles */
+        img {
+            max-width: 80%; /* Resized to 80% of its original width */
+            height: auto;
+            border-radius: 10px;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block; /* Ensures the image is centered */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* List Styles */
+        ul, ol {
+            margin-left: 20px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        ul {
+            list-style-type: none; /* Remove default bullets */
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "🍴"; /* Fork and knife emoji */
+            position: absolute;
+            left: 0;
+            color: #ff6f61;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+        }
+
+        /* Link Styles */
+        a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #ff6f61;
+            color: #fff;
+            border-radius: 10px;
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        /* Decorative Divider */
+        .divider {
+            height: 2px;
+            background-color: #ff6f61;
+            margin: 30px 0;
+            opacity: 0.3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            img {
+                max-width: 90%; /* Slightly larger on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Recipe: Mac and Cheese</h1>
+
+        <h2>Introduction</h2>
+        <p>Mac and Cheese is my favorite comfort food because it is creamy, cheesy, and delicious. It reminds me of family gatherings and cozy nights in. Here is an image of my favorite Mac and Cheese dish:</p>
+        <img src="macandchesee.jpg" alt="Delicious Mac and Cheese">
+
+        <div class="divider"></div>
+
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 cups of elbow macaroni</li>
+            <li>2 cups of shredded cheddar cheese</li>
+            <li>1/2 cup of milk</li>
+            <li>2 tablespoons of butter</li>
+            <li>1/4 teaspoon of salt</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2>Instructions</h2>
+        <ol>
+            <li>Boil ½ cup of water to 100°C.</li>
+            <li>Add the elbow macaroni and cook until tender (about 8-10 minutes).</li>
+            <li>Drain the macaroni and return it to the pot.</li>
+            <li>Add the butter, milk, and shredded cheddar cheese to the pot.</li>
+            <li>Stir over low heat until the cheese is melted and the sauce is creamy.</li>
+            <li>Season with salt and serve hot.</li>
+        </ol>
+
+        <div class="footer">
+            I, Daniel, fully acknowledge that all homepage files must be renamed to index.html. I have tested this website on <a href="https://tinyurl.com/cst10sites" target="_blank">https://tinyurl.com/cst10sites</a> and will also do so with upcoming assignments. My code has been checked on <a href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a> and has been corrected. Failure to do so will result in severe loss of marks.
+        </div>
+    </div>
+
+</body>
+</html>

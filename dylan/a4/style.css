@@ -1,0 +1,76 @@
+h2 {
+color: white;
+text-align: center;
+font-size: 29px;
+  font-family: monospace;
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+text-align: center;
+  font-family: monospace;
+}
+
+body {
+  background-color: black;
+}
+
+p{
+  color: white;
+  text-align: center;
+  font-size: 19px;
+  font-family: monospace;
+}
+
+a  {
+  color: whitesmoke;
+}
+
+a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+
+.cookie-button {
+  text-align: center;
+}
+
+label {
+color: white;
+}
+
+h2:hover {
+  color: yellow;
+  font-family: monospace;
+}
+
+h1:hover {
+  color: royalblue;
+  font-family: cursive;
+}
+
+label {
+  font-size: 20px;
+}
+
+a.btn {
+ 
+    background: Brown;
+      color: white;
+      text-decoration: none; /* removes underline */
+      padding: 15px 25px;
+      border: solid thick White; /* does all 3 things in one border command*/
+      border-radius: 50px; /* rounds corners in border */
+      display: inline-block; /* prevents border from blocking text in p element*/
+}
+
+.reset {
+  text-align: center;
+}
+
+.time {
+  font-size: 30px;
+  color: red;
+  font-family: monospace;
+}

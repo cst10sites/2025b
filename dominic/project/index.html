@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>JingleBells Production</title>
+</head>
+<body>
+	<header>
+		<h1 class="topofpage">JingleBells</a></h1>
+		<nav>
+			<ul>
+				<li><a class="navbar" href="index.html">Home</a></li>
+				<li><a class="navbar" href="company.html">Company</a></li>
+				<li><a class="navbar" href="howto.html">How To</a></li>
+			</ul>
+		</nav>
+	</header>
+	<h1>Productions</h1>
+	<div class="all">
+		<p>
+			This is JingleBells Production, a production company making Short films and Commercials!
+		</p>
+</div>
+	<div class="container">
+		<a class="box1" href="film1.html" data-title="The Phone Call">
+			<img src="photos/thumbnail1.jpg">
+		</a>
+		<a class="box2" href="film2.html" data-title="Hoochy Booch Funny Commercial">
+			<img src="photos/hoochybooch.png" >
+		</a>
+		<a class="box3" href="film3.html" data-title="Short film">
+			<img src="photos/thumbnail3.png">
+		</a>
+	</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            const container = document.querySelector('.container'); // Get the container of the boxes
+            const allBoxes = document.querySelectorAll('.container a'); // Get all box elements
+
+            if (header && container) {
+                // Create search bar elements
+                const searchContainer = document.createElement('div');
+                searchContainer.className = 'search-container';
+
+                const searchInput = document.createElement('input');
+                searchInput.type = 'text';
+                searchInput.placeholder = 'Search productions...';
+                searchInput.className = 'search-input';
+
+                const searchButton = document.createElement('button');
+                searchButton.textContent = 'Search';
+                searchButton.className = 'search-button';
+
+                // Function to filter boxes
+                function filterBoxes() {
+                    const searchTerm = searchInput.value.toLowerCase().trim(); // Get and clean search term
+
+                    allBoxes.forEach(box => {
+                        // Get the search data from the data-title attribute
+                        const boxTitle = box.dataset.title ? box.dataset.title.toLowerCase() : '';
+
+                        if (boxTitle.includes(searchTerm) || searchTerm === '') {
+                            // If title matches or search term is empty, show the box
+                            box.style.display = ''; // Resets to default display (e.g., block, flex, inline-block)
+                        } else {
+                            // Otherwise, hide the box
+                            box.style.display = 'none';
+                        }
+                    });
+                }
+
+                // Add event listeners for filtering
+                searchButton.addEventListener('click', filterBoxes);
+                searchInput.addEventListener('keyup', filterBoxes); // Filter as user types
+
+                // Append search bar to header
+                searchContainer.appendChild(searchInput);
+                searchContainer.appendChild(searchButton);
+                header.appendChild(searchContainer);
+
+            } else {
+                console.error('Header or container element not found. Please ensure your HTML has a <header> and a .container div.');
+            }
+        });
+    </script>
+
+</body>
+</html>

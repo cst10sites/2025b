@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML/CSS/JS Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>📝 HTML/CSS/JS Quiz</h1>
+        
+        <form id="quiz-form">
+            <!-- Question 1: Checkboxes -->
+            <div class="question-card">
+                <p class="question-text">1. Which are valid JavaScript data types? (Select all)</p>
+                <label class="option">
+                    <input type="checkbox" name="q1" value="string" data-correct>
+                    String
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="q1" value="number" data-correct>
+                    Number
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="q1" value="float">
+                    Float
+                </label>
+                <label class="option">
+                    <input type="checkbox" name="q1" value="boolean" data-correct>
+                    Boolean
+                </label>
+            </div>
+
+            <!-- Question 2: Dropdown -->
+            <div class="question-card">
+                <p class="question-text">2. What does CSS stand for?</p>
+                <select name="q2" class="dropdown">
+                    <option value="">-- Select --</option>
+                    <option value="a">Computer Style Sheets</option>
+                    <option value="b" data-correct>Cascading Style Sheets</option>
+                    <option value="c">Creative Style System</option>
+                </select>
+            </div>
+
+            <!-- Question 3: Text Input -->
+            <div class="question-card">
+                <p class="question-text">3. What symbol selects an ID in CSS?</p>
+                <input type="text" name="q3" placeholder="Your answer" class="text-input">
+                <span class="answer-hint">Answer: #</span>
+            </div>
+
+            <div class="form-controls">
+                <input type="submit" value="Submit" class="submit-btn">
+                <input type="reset" value="Reset" class="reset-btn">
+            </div>
+        </form>
+
+        <div id="results-panel" class="hidden">
+            <h2>Results</h2>
+            <div id="score-display"></div>
+            <div id="feedback"></div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <a href="cookie.html" class="game-link">Play Cookie Clicker →</a>
+    </div>
+
+    <script>
+        document.getElementById('quiz-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let score = 0;
+            const results = [];
+            
+            // Check Q1 (Checkboxes)
+            const q1Correct = ['string', 'number', 'boolean'];
+            const q1Selected = Array.from(document.querySelectorAll('input[name="q1"]:checked')).map(el => el.value);
+            const q1IsCorrect = q1Correct.length === q1Selected.length && 
+                               q1Correct.every(val => q1Selected.includes(val));
+            
+            if (q1IsCorrect) {
+                score++;
+                results.push("Question 1: Correct!");
+            } else {
+                results.push("Question 1: Incorrect. The correct answers are String, Number, and Boolean.");
+            }
+
+            // Check Q2 (Dropdown)
+            const q2 = document.querySelector('select[name="q2"]');
+            if (q2.options[q2.selectedIndex].hasAttribute('data-correct')) {
+                score++;
+                results.push("Question 2: Correct!");
+            } else {
+                results.push("Question 2: Incorrect. CSS stands for Cascading Style Sheets.");
+            }
+
+            // Check Q3 (Text input)
+            const q3 = document.querySelector('input[name="q3"]').value.trim();
+            if (q3 === '#') {
+                score++;
+                results.push("Question 3: Correct!");
+            } else {
+                results.push("Question 3: Incorrect. The correct answer is #.");
+            }
+
+            // Display results
+            const resultDiv = document.getElementById('results-panel');
+            resultDiv.innerHTML = `
+                <h3>You scored ${score} out of 3!</h3>
+                <ul>${results.map(r => `<li>${r}</li>`).join('')}</ul>
+            `;
+            resultDiv.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

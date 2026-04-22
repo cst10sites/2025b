@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Egg Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Perfect Egg Timer</h1>
+        
+        <div class="doneness-selector">
+            <h2>Select Egg Doneness:</h2>
+            <div class="options">
+                <label>
+                    <input type="radio" name="doneness" value="360" checked>
+                    <span>Soft Boiled (6 mins)</span>
+                </label>
+                <label>
+                    <input type="radio" name="doneness" value="540">
+                    <span>Medium Boiled (9 mins)</span>
+                </label>
+                <label>
+                    <input type="radio" name="doneness" value="720">
+                    <span>Hard Boiled (12 mins)</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="timer-display" id="timer">06:00</div>
+
+        <button id="control-btn">Start</button>
+
+        <audio id="alarm" src="buzzer.mp3" preload="auto"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

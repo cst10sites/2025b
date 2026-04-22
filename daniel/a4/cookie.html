@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deluxe Cookie Clicker</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #fff5e6;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-image: radial-gradient(#ffcc80 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border: 5px solid #ffb74d;
+        }
+        
+        h1 {
+            color: #e65100;
+            text-shadow: 2px 2px 0 #ffcc80;
+            margin-bottom: 10px;
+        }
+        
+        .cookie-container {
+            position: relative;
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+        
+        .cookie {
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="%23d2691e"/><circle cx="30" cy="40" r="5" fill="%238b4513"/><circle cx="60" cy="30" r="5" fill="%238b4513"/><circle cx="70" cy="60" r="5" fill="%238b4513"/><circle cx="40" cy="70" r="5" fill="%238b4513"/><path d="M35,50 Q50,40 65,50 Q50,60 35,50" fill="%238b4513"/></svg>');
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+        }
+        
+        .cookie:active {
+            transform: scale(0.95);
+        }
+        
+        .counter {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e65100;
+            margin: 20px 0;
+        }
+        
+        .upgrades {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .upgrade {
+            background-color: #ffcc80;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 3px 0 #e65100;
+        }
+        
+        .upgrade:hover {
+            background-color: #ffb74d;
+            transform: translateY(-2px);
+        }
+        
+        .upgrade:active {
+            transform: translateY(1px);
+            box-shadow: 0 1px 0 #e65100;
+        }
+        
+        .upgrade:disabled {
+            background-color: #cccccc;
+            box-shadow: 0 3px 0 #999999;
+            cursor: not-allowed;
+        }
+        
+        .stats {
+            background-color: #ffe0b2;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        
+        .click-effect {
+            position: absolute;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff9800;
+            animation: float-up 1s forwards;
+            pointer-events: none;
+        }
+        
+        @keyframes float-up {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+        }
+        
+        .auto-clicker-active {
+            animation: pulse 0.5s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+        
+        .achievement {
+            background-color: #ffecb3;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Deluxe Cookie Clicker</h1>
+        <div class="counter">Cookies: <span id="cookie-count">0</span></div>
+        <div class="cookie-container" id="cookie-container">
+            <div class="cookie" id="cookie"></div>
+        </div>
+        <div class="cookies-per-second">Cookies per second: <span id="cps">0</span></div>
+        
+        <div class="upgrades">
+            <button class="upgrade" id="auto-clicker" onclick="buyAutoClicker()">Auto Clicker (50 cookies)</button>
+            <button class="upgrade" id="grandma" onclick="buyGrandma()">Grandma (100 cookies)</button>
+            <button class="upgrade" id="farm" onclick="buyFarm()">Cookie Farm (500 cookies)</button>
+            <button class="upgrade" id="factory" onclick="buyFactory()">Cookie Factory (1000 cookies)</button>
+            <button class="upgrade" id="mine" onclick="buyMine()">Cookie Mine (5000 cookies)</button>
+        </div>
+        
+        <div class="stats">
+            <h3>Stats</h3>
+            <p>Total clicks: <span id="total-clicks">0</span></p>
+            <p>Auto Clickers: <span id="auto-clicker-count">0</span></p>
+            <p>Grandmas: <span id="grandma-count">0</span></p>
+            <p>Farms: <span id="farm-count">0</span></p>
+            <p>Factories: <span id="factory-count">0</span></p>
+            <p>Mines: <span id="mine-count">0</span></p>
+        </div>
+        
+        <div id="achievements"></div>
+    </div>
+
+    <script>
+        // Game state
+        let cookies = 0;
+        let totalClicks = 0;
+        let autoClickers = 0;
+        let grandmas = 0;
+        let farms = 0;
+        let factories = 0;
+        let mines = 0;
+        
+        // Prices
+        const autoClickerPrice = 50;
+        const grandmaPrice = 100;
+        const farmPrice = 500;
+        const factoryPrice = 1000;
+        const minePrice = 5000;
+        
+        // Rates
+        const autoClickerRate = 0.5;
+        const grandmaRate = 1;
+        const farmRate = 5;
+        const factoryRate = 10;
+        const mineRate = 50;
+        
+        // Achievements
+        const achievements = [
+            { id: 'first-click', name: 'First Click!', description: 'Click the cookie for the first time', earned: false, check: () => totalClicks >= 1 },
+            { id: 'hundred-cookies', name: 'Hundredaire', description: 'Reach 100 cookies', earned: false, check: () => cookies >= 100 },
+            { id: 'thousand-cookies', name: 'Thousandaire', description: 'Reach 1,000 cookies', earned: false, check: () => cookies >= 1000 },
+            { id: 'auto-clicker', name: 'Automation', description: 'Buy your first auto-clicker', earned: false, check: () => autoClickers >= 1 },
+            { id: 'cookie-empire', name: 'Cookie Empire', description: 'Own one of every building', earned: false, check: () => grandmas >= 1 && farms >= 1 && factories >= 1 && mines >= 1 }
+        ];
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            updateUI();
+            loadGame();
+            
+            // Set up game loop
+            setInterval(gameLoop, 1000);
+            
+            // Set up auto-save
+            setInterval(saveGame, 30000);
+        });
+        
+        // Game loop
+        function gameLoop() {
+            // Calculate passive income
+            const passiveIncome = 
+                (autoClickers * autoClickerRate) + 
+                (grandmas * grandmaRate) + 
+                (farms * farmRate) + 
+                (factories * factoryRate) + 
+                (mines * mineRate);
+                
+            addCookies(passiveIncome);
+            
+            // Update CPS display
+            document.getElementById('cps').textContent = passiveIncome.toFixed(1);
+            
+            // Check achievements
+            checkAchievements();
+            
+            updateUI();
+        }
+        
+        // Click handler
+        document.getElementById('cookie-container').addEventListener('click', (e) => {
+            // Create click effect
+            const clickEffect = document.createElement('div');
+            clickEffect.className = 'click-effect';
+            clickEffect.textContent = '+1';
+            clickEffect.style.left = (e.clientX - e.target.getBoundingClientRect().left) + 'px';
+            clickEffect.style.top = (e.clientY - e.target.getBoundingClientRect().top) + 'px';
+            document.getElementById('cookie-container').appendChild(clickEffect);
+            
+            // Remove effect after animation
+            setTimeout(() => {
+                clickEffect.remove();
+            }, 1000);
+            
+            // Add cookie
+            addCookies(1);
+            totalClicks++;
+            document.getElementById('total-clicks').textContent = totalClicks;
+            
+            // Add small visual feedback
+            document.getElementById('cookie').style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                document.getElementById('cookie').style.transform = 'scale(1)';
+            }, 100);
+            
+            updateUI();
+        });
+        
+        function addCookies(amount) {
+            cookies += amount;
+            document.getElementById('cookie-count').textContent = Math.floor(cookies);
+        }
+        
+        function buyAutoClicker() {
+            if (cookies >= autoClickerPrice) {
+                cookies -= autoClickerPrice;
+                autoClickers++;
+                document.getElementById('cookie-container').classList.add('auto-clicker-active');
+                updateUI();
+            }
+        }
+        
+        function buyGrandma() {
+            if (cookies >= grandmaPrice) {
+                cookies -= grandmaPrice;
+                grandmas++;
+                updateUI();
+            }
+        }
+        
+        function buyFarm() {
+            if (cookies >= farmPrice) {
+                cookies -= farmPrice;
+                farms++;
+                updateUI();
+            }
+        }
+        
+        function buyFactory() {
+            if (cookies >= factoryPrice) {
+                cookies -= factoryPrice;
+                factories++;
+                updateUI();
+            }
+        }
+        
+        function buyMine() {
+            if (cookies >= minePrice) {
+                cookies -= minePrice;
+                mines++;
+                updateUI();
+            }
+        }
+        
+        function updateUI() {
+            // Update counters
+            document.getElementById('cookie-count').textContent = Math.floor(cookies);
+            document.getElementById('auto-clicker-count').textContent = autoClickers;
+            document.getElementById('grandma-count').textContent = grandmas;
+            document.getElementById('farm-count').textContent = farms;
+            document.getElementById('factory-count').textContent = factories;
+            document.getElementById('mine-count').textContent = mines;
+            
+            // Update button states
+            document.getElementById('auto-clicker').disabled = cookies < autoClickerPrice;
+            document.getElementById('grandma').disabled = cookies < grandmaPrice;
+            document.getElementById('farm').disabled = cookies < farmPrice;
+            document.getElementById('factory').disabled = cookies < factoryPrice;
+            document.getElementById('mine').disabled = cookies < minePrice;
+        }
+        
+        function checkAchievements() {
+            const achievementsContainer = document.getElementById('achievements');
+            
+            achievements.forEach(achievement => {
+                if (!achievement.earned && achievement.check()) {
+                    achievement.earned = true;
+                    const achievementElement = document.createElement('div');
+                    achievementElement.className = 'achievement';
+                    achievementElement.id = achievement.id;
+                    achievementElement.innerHTML = `
+                        <strong>${achievement.name}</strong><br>
+                        ${achievement.description}
+                    `;
+                    achievementsContainer.appendChild(achievementElement);
+                    
+                    // Show the achievement
+                    achievementElement.style.display = 'block';
+                    
+                    // Hide after 5 seconds
+                    setTimeout(() => {
+                        achievementElement.style.display = 'none';
+                    }, 5000);
+                }
+            });
+        }
+        
+        function saveGame() {
+            const gameData = {
+                cookies,
+                totalClicks,
+                autoClickers,
+                grandmas,
+                farms,
+                factories,
+                mines,
+                achievements
+            };
+            
+            localStorage.setItem('cookieClickerSave', JSON.stringify(gameData));
+        }
+        
+        function loadGame() {
+            const savedData = localStorage.getItem('cookieClickerSave');
+            if (savedData) {
+                const gameData = JSON.parse(savedData);
+                
+                cookies = gameData.cookies || 0;
+                totalClicks = gameData.totalClicks || 0;
+                autoClickers = gameData.autoClickers || 0;
+                grandmas = gameData.grandmas || 0;
+                farms = gameData.farms || 0;
+                factories = gameData.factories || 0;
+                mines = gameData.mines || 0;
+                achievements = gameData.achievements || achievements;
+                
+                if (autoClickers > 0) {
+                    document.getElementById('cookie-container').classList.add('auto-clicker-active');
+                }
+                
+                updateUI();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<!--create and edit style.css-->
+</head>
+<body>
+
+<h2>HTML/CSS Quiz</h2>
+<form>
+<label>If you want a numbered list what tag should you use?</label>
+<input id='correct' type='radio' value='OL' name='q1'>
+<label>&lt;OL&gt;</label>
+<input id='option2' type='radio' value='UL' name='q1'>
+<label>&lt;UL&gt;</label>
+<input id='option3' type='radio' value='NL' name='q1'>
+<label>&lt;NL&gt;</label>
+<input id='option4' type='radio' value='LIST' name='q1'>
+<label>&lt;List&gt;</label>
+<input type='button' value='Submit' onclick='press();'>
+<input type='reset'><br>
+<br>
+<br>
+
+ <label>What is the largest heading tag?</label>
+	    <select id="tagValue"><!--no input for dropdown-->
+	        <option value="h10">h10</option>
+	        <option value="h3">h3</option>
+	        <option value="h6">h6</option>
+	        <option value="h1">h1</option>
+	        <!-- id in select, value in option-->
+	    </select>
+	    <br>
+	    <input type="button" value="OK" onclick="dropdown();">
+	    <input type="reset"><br> 
+
+
+
+
+
+</form>
+
+<hr>
+<h2>Cookie Clicker</h2>
+<p>Click <a href="cookie.html">here</a> to play the Cookie Clicker.</p>
+
+<script>
+	function press() {
+		var answer= document.getElementById('correct').checked;
+
+		if (answer ==true) {
+			alert('correct');
+
+		}
+
+		else{
+			alert('try again')
+		}
+
+
+	}
+
+	function dropdown() {
+		var answer= document.getElementById('tagValue').value;
+
+		if (answer =='h1') {
+			alert('correct');
+
+		}
+
+		else{
+			alert('try again')
+		}
+
+	}
+
+
+
+
+	
+</script>
+</body>
+</html> 

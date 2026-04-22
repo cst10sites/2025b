@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boxing Timer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+     <div class="menu">
+      <div class='hover'>
+      <a class="div"  href="homepage.html">Homepage</a>
+    </div>
+    <div class='hover'>
+      <a class="div"  href="Techniques.html">Techniques</a>
+    </div>
+    <div class='hover'>
+      <a class="div"  href="gearandtips.html">Gear and Tips</a>
+    </div>
+    </div>
+    <br><br>
+    <h1 class='workouth1'>Workout Timer</h1>
+   
+    <p class="training">Train smarter with our simple boxing timer which is perfect for anyone just starting out. Each round is set to 3 minutes, just like real boxing. Every time you hit reset, it adds a round so you can keep track of your progress. No fuss, just focus on your workout.</p>
+    
+    <div class='jstimer'>
+    <div id="round">Round: 1</div>
+    <div id="timer">03:00</div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+    <script>
+  var timeLeft = 180;
+  var timer;
+  var round = 1;
+
+  function updateDisplay() {
+    var minutes = Math.floor(timeLeft / 60);
+    var seconds = timeLeft % 60;
+
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+
+    document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+    document.getElementById("round").innerHTML = "Round: " + round;
+  }
+
+  function startTimer() {
+    if (timer) {
+      clearInterval(timer);
+    }
+
+    timer = setInterval(function() {
+      if (timeLeft > 0) {
+        timeLeft = timeLeft - 1;
+        updateDisplay();
+      } else {
+        clearInterval(timer);
+        alert("Time's up!");
+      }
+    }, 1000);
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    round = round + 1;
+    timeLeft = 180;
+    updateDisplay();
+  }
+
+  updateDisplay();
+</script>
+
+  </body>
+</html>

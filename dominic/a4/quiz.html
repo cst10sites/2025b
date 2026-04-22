@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Assignment 4</title>
+<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+<!--create and edit style.css-->
+<style>
+ body {
+    font-family: 'Comic Sans MS';
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    background-image: url('https://www.shutterstock.com/shutterstock/videos/1100731021/thumb/12.jpg?ip=x480.jpg');
+    background-size: cover;
+    height: 90%;
+  }
+div.body{
+  background-color: rgb(255, 255, 255, 0.8);
+  margin-left: 200px;
+  margin-right: 200px;
+  padding-bottom: 130px;
+}
+hr{
+  width: 20%;
+}
+
+  button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  #cpsDisplay {
+    font-size: 1.2em;
+  }
+</style>
+</head>
+<body>
+<div class="body">
+<h2>HTML/CSS Quiz</h2>
+<form>
+	<label>what html verson are we on in 2025?</label> <br>
+	<textarea id="answer1" name="answer1" rows="2" cols="20"></textarea><br>
+	<input type="button" value="submit" onclick="question1();">
+	<input type="reset">
+</form>
+<br>
+<form>
+	<label>What is first tag you wite on a HTML page?</label><br>
+	<input type="radio" id="option1" name="oliver" value="oliver2.0">
+	<label>&lt;!HTML doctype></label><br>
+	<input type="radio" id="option2" name="oliver" value="oliver2.0">
+	<label>&lt;DOCTYPE html></label><br>
+	<input type="radio" id="option3" name="oliver" value="oliver2.0">
+	<label>&lt;!DOCTYPE hmtl></label><br>
+	<input type="radio" id="option4" name="oliver" value="oliver2.0">
+	<label>&lt;!DOCTYPE html></label><br>
+	<input type="button" value="submit" onclick="question2();">
+	<input type="reset">
+</form> 
+<!--ask at least two questions related to HTML/CSS/JS-->
+
+<hr>
+<h2>Cookie Clicker</h2>
+<p>Click <a href="index.html">here</a> to play the Cookie Clicker.</p>
+</div>
+<script>
+	function question1() {
+		if (document.getElementById('answer1').value == "5" || document.getElementById('answer1').value == "five") {
+			alert('GREAT JOB!!!');
+
+		} 
+		else {
+			alert('try again!');
+		}
+	}
+
+	function question2() {
+	var answer = document.getElementById("option4").checked;
+
+	if (answer == true) {
+		alert('correct')
+	}
+	else {
+		alert('try again')
+	}
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+img {
+	width: 60%;
+	border: black solid;
+
+}
+
+h1, h2 {
+	text-align: center;
+	font-family: Arial;
+	color: black;
+}
+
+p {
+	font-family: Arial;
+	text-align: center;
+	color: black;
+}
+
+.list {
+  text-align: center;
+  list-style-position: inside;
+}
+
+ul li {
+  font-family: Arial;
+}
+
+
+
+
+.div {
+	text-decoration: none;
+	color: white;
+	font-family: Arial;
+	font-size: 25px;
+}
+
+.img {
+	text-align: center;
+}
+
+
+
+
+.iframe {
+	text-align: center;
+}
+
+.intro {
+	font-size: 50px;
+}
+
+/* Remove all default margins and paddings */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* make sure body is full height */
+}
+
+body {
+  box-sizing: border-box;
+   padding-top: 30px;
+}
+
+.break {
+  box-sizing: border-box;
+   padding-top: 70px;
+}
+
+
+.menu {
+  border:  #000435 solid;
+  background-color:  #000435;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch; /* stretch links vertically */
+  height: 90px; /* fixed height */
+  margin: 0;  /* no margin */
+  padding: 0; /* no padding */
+  box-sizing: border-box;
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* make it full width */
+  z-index: 1000; /* make sure it stays on top */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 100%;  /* fill menu height */
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+  background-color: white;
+  color:  #000435;
+}
+
+.page {
+  margin: 120px 120px;
+}
+
+ #timer {
+        font-size: 90px;
+        margin-bottom: 10px;
+        font-family: Arial;
+      }
+
+      #round {
+        font-size: 60px;
+        margin-bottom: 20px;
+        font-family: Arial;
+      }
+
+  .jstimer {
+    text-align: center;
+    scale: 100%;
+  }
+
+  .training {
+    border: solid thick red;
+    background-color: black;
+    color: white;
+    padding: 30px;
+   margin: 120px 120px;
+  }
+
+  .workouth1 {
+    color: red;
+    font-size: 50px;
+  }
+
+  .gear {
+    text-align: center;
+  }
+
+  a {
+    color: blue;
+    font-family: Arial;
+  }
+
+  .gearimg {
+       scale: 50%;
+     }
+
+  a:hover {
+    color: lightgreen;
+  }

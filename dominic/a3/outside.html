@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 3</title>
+	<link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<div class="content">
+ <a class="top" href="index.html">Home</a>
+ <h1>HTML/CSS Guide</h1>
+ <h2>Common Tags outside &lt;body&gt;</h2>
+<table>
+          <tr>
+            <th>Tag</th>
+            <th>Definition</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td>&lt;!DOCTYPE html&gt;</td>
+            <td>This tag is a decloration.</td>
+            <td>No example*</td>
+          </tr>
+          <tr>
+            <td>&lt;lang="language"&gt;</td>
+            <td>This defines the language of the website.</td>
+            <td>No example*</td>
+          </tr>
+          <tr>
+            <td>&lt;style&gt;&lt;/style&gt;</td>
+            <td>This tag opens the world to make your website visually more appealing.</td>
+            <td><h3 style="color: greenyellow;">This is greenyellow.</h3></td>
+          </tr>
+          <tr>
+            <td>&lt;title&gt;&lt;/title&gt;</td>
+            <td>You can create a title with this tag.</td>
+            <td>No example*</td>
+          </tr>
+          <tr>
+            <td>&lt;link rel="stylesheet" href="style.css"&gt;</td>
+            <td>This tag connects your html page with a stylesheet.</td>
+            <td>No example*</td>
+          </tr>
+          <tr>
+            <td>&lt;script&gt;&lt;/script&gt;</td>
+            <td>With this tag you can add JavaScript to your website.</td>
+            <td>
+              <div id="animatedText">Hello!</div>
+              <script>
+//Optional Javascript to change the text.
+function changeText() {
+    const textDiv = document.getElementById("animatedText");
+    const texts = ["auf gehts", "allez", "Ganba", "let's go"];
+    let index = 1; //start at index 1 to show the first message first.
+
+    setInterval(() => {
+        textDiv.textContent = texts[index];
+        index = (index + 1) % texts.length; // cycle through array
+        textDiv.style.animation = 'none'; //reset animation
+        textDiv.offsetHeight; // trigger reflow
+        textDiv.style.animation = null; //restart animation
+    }, 5000); // Change every 5 seconds
+}
+changeText(); //call the function.
+</script>
+            </td>
+          </tr>
+          <tr>
+            <td>&lt;meta charset="UTF-8"&gt;</td>
+            <td>This tag is crucial for defining the character encoding of a webpage. This tag ensures that the browser correctly interprets and displays the text content, including special characters and symbols.</td>
+            <td>No Example*</td>
+          </tr>
+          <tr>
+            <td>&lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;</td>
+            <td>This adds a small image at the top of your html page next to the title.</td>
+            <td><img src="screenshot_favicon.png" alt="favicon" class="rotated-image">  </td>
+          </tr>
+        </table>
+</div>
+</body>
+</html>

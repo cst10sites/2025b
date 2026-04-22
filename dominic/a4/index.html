@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cookie Clicker 2.0</title>
+<style>
+  body {
+    font-family: 'Comic Sans MS';
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230512/pngtree-kitchen-yellow-warm-color-cup-cartoon-image_2466104.jpg');
+    background-size: cover;
+    height: 90%;
+  }
+div.body{
+  background-color: rgb(255, 255, 255, 0.8);
+  margin-left: 200px;
+  margin-right: 200px;
+  padding-bottom: 130px;
+}
+hr{
+  width: 20%;
+}
+
+  button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  #cpsDisplay {
+    font-size: 1.2em;
+  }
+  input#cookie:active {
+    scale: 98%;
+  }
+</style>
+</head>
+<body>
+<div class="body">
+<h1>Cookie Clicker 2.0</h1>
+<input type="image" alt="cookie" id="cookie" src="https://static.vecteezy.com/system/resources/previews/035/490/024/large_2x/ai-generated-cookie-clipart-design-illustration-free-png.png" style="width: 34%; " onclick="updateCPS();"><p id="cpsDisplay">Cookies per second: 0</p>
+<p id="clickCount">Clicks: 0</p>
+<p id="timeDisplay"></p>
+<button onclick="reset();">Reset</button>
+
+<hr>
+<h2>HTML/CSS/JS Quiz</h2>
+<p>Click <a href="quiz.html">here</a> to play the quiz.</p>
+
+</div>
+<script>
+// global variables
+var nClicks = 0;
+var startTime = new Date();
+
+// basic version of Cookie Clicker code
+function updateCPS() {
+    var currentTime = new Date();
+    if (nClicks === 0) {
+        // first click
+        // 1. reset startTime
+        startTime = currentTime; // Corrected: Use currentTime
+        // 2. increase nClicks by 1
+        nClicks += 1;
+    } 
+    else {
+        // subsequent clicks:
+        // 1. create variable currentTime (already declared)
+        // 2. create variable timeElapsed and subtract start and currentTime
+        var timeElapsed = currentTime.getTime() - startTime.getTime(); // Corrected: getTime() for milliseconds
+        // 3. calculate CPS = nClicks ÷ timeElapsed
+        var cps = (nClicks / timeElapsed) * 1000;  // Corrected:  *1000 to get clicks per second
+        // 4. display CPS using id
+        document.getElementById("cpsDisplay").textContent = "Cookies per second: " + cps.toFixed(2); //Added toFixed
+        // 5. increase nClicks by 1
+        nClicks += 1;
+    }
+    document.getElementById("clickCount").textContent = "Clicks: " + nClicks;
+
+}
+
+function reset() {
+      location.reload();
+    }
+
+    setInterval(updateTime, 100);
+
+    function updateTime() {
+      if (nClicks > 0) {
+        var currentTime = new Date();
+        var timeElapsed = (currentTime - startTime) / 1000;
+        document.getElementById("timeDisplay").innerHTML = 'Time passed: ' + timeElapsed.toFixed(2) + " seconds";
+      }
+    }
+</script>
+</body>
+</html>
