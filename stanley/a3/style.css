@@ -1,0 +1,37 @@
+body {
+		font-family:   sans-serif	;
+		color: 	black	 ;
+		background-image: url("bg.png")   ;
+}
+
+div#title {
+	color: 	white;
+	text-align: 	center;
+}
+
+div#div-example {
+	background-color: limegreen;
+}
+
+div#content {
+	margin: 20px;
+	padding: 25px;
+}
+
+td, th{
+	padding: 8px;
+}
+
+tr {
+	background-color: whitesmoke	;
+}
+
+.button {
+  background-color: seagreen;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}

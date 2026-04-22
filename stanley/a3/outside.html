@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <style>
+      td.internal-css {
+        background-color: black;
+        color: white;
+      }
+    </style>
+    <title>Assignment 3</title>
+  </head>
+  <body>
+    <div id=title>
+      <h1>HTML/CSS Guide</h1>
+      <h2>Common HTML Tags outside &lt;body&gt;</h2>
+      <div id="button">
+        <a href="index.html" class="button"> Inside </a>
+      </div>
+    </div>
+    <div id="content">
+      <table>
+        <tr>
+          <th>Tag</th>
+          <th>Definition</th>
+          <th>Examples</th>
+        </tr>
+        <tr>
+          <td>&lt;!DOCTYPE html&gt;</td>
+          <td>This tag informs the browser that the document is written in HTML.</td>
+          <td>
+            <p>N/A</p>
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;html lang="en"&gt;</td>
+          <td>This tag informs the browser that the document is by default English, which is helpful for programs like Google Translate.</td>
+          <td>
+            <p>N/A</p>
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;meta charset="UTF-8"&gt;</td>
+          <td>This tag allows the browser to display things outside of the basic ASCII characters, such as emojis.</td>
+          <td>
+            <p>N/A</p>
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;meta http-equiv="refresh" content="0; url=$URL"&gt;</td>
+          <td>This tag can refresh the page after a certain amount of time.</td>
+          <td>
+            <p>N/A</p>
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;title&gt;</td>
+          <td>This tag gives the webpage a name in the tab at the top of the screen.</td>
+          <td>
+            <img alt="title" style="width:200px;" src="title_picture.png">
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;style&gt;</td>
+          <td>The style tag allows you to do CSS code within your .html file.</td>
+          <td class="internal-css">Using &lt;style&gt;td.internal-css {background-color: black;color: white;}&lt;style&gt; we can give this box specifically a black background.</td>
+        </tr>
+        <tr>
+          <td>&lt;link&gt;</td>
+          <td>Using the link tag, we can link .html files to .css files, allowing us to do CSS code in a seperate file.</td>
+          <td>
+            <p>This page and the inside page of this website share a common CSS file.</p>
+          </td>
+        </tr>
+        <tr>
+          <td>&lt;link rel="icon"&gt;</td>
+          <td>In addition to linking CSS with the link tag, we can give our website a favicon (little icon to the left of the title in the page's tag).</td>
+          <td>
+            <img alt="favicon" style="width:40px;" src="favicon_picture.png">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
